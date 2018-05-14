@@ -1,0 +1,69 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:10-alpine # https://hub.docker.com/_/postgres/
+
+  click-migration:
+    image: kamilsk/click:latest # https://hub.docker.com/r/kamilsk/click/
+    command: [ "migrate", "up", "--with-demo" ]
+    depends_on:
+    - db
+  click:
+    image: kamilsk/click:latest
+    command: [ "run", "--with-profiler", "--with-monitoring" ]
+    depends_on:
+    - click-migration
+
+  forma-migration:
+    image: kamilsk/form-api:latest # https://hub.docker.com/r/kamilsk/form-api/
+    command: [ "migrate", "up", "--with-demo" ]
+    depends_on:
+    - db
+  forma:
+    image: kamilsk/form-api:latest
+    command: [ "run", "--with-profiler", "--with-monitoring" ]
+    depends_on:
+    - forma-migration
+
+  hugo:
+    image: kamilsk/hugo:latest # https://hub.docker.com/r/kamilsk/hugo/
+
+  passport-migration:
+    image: kamilsk/passport:latest # https://hub.docker.com/r/kamilsk/passport/
+    command: [ "migrate", "up" ]
+    depends_on:
+    - db
+  passport:
+    image: kamilsk/passport:latest
+    command: [ "run", "--with-profiler", "--with-monitoring" ]
+    depends_on:
+    - passport-migration
+
+  server:
+    image: kamilsk/nginx:alpine # https://hub.docker.com/r/kamilsk/nginx/
+    depends_on:
+    - click
+    - forma
+    - hugo
+    - passport
+
+# TODO
+# - common
+#   - env files
+# - db
+#   - ports
+#   - volumes
+# - click
+#   - ports
+# - forma
+#   - ports
+# - hugo
+#   - ports
+#   - volumes
+# - passport
+#   - ports
+# - server
+#   - ports
+#   - volumes
+#   - configs
