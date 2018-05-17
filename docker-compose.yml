@@ -60,11 +60,15 @@ services:
 
   server:
     image: kamilsk/nginx:alpine # https://hub.docker.com/r/kamilsk/nginx/
+    command: [ "hugs.octolab.net" ]
     depends_on:
     - click
     - forma
     - hugo
     - passport
+    entrypoint: |
+      /bin/bash -c "echo $$BASIC_USER:`(echo $$BASIC_PASS | openssl passwd -crypt -stdin -noverify)` >> /etc/nginx/.htpasswd \
+                    && ./entrypoint.sh"
     env_file:
     - etc/env/balancer.env
     ports:
