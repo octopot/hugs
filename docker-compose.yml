@@ -79,13 +79,12 @@ services:
     - ${HUGS_HTTP_PORT}:80
     - ${HUGS_HTTPS_PORT}:443
     volumes:
-    - ssl:/etc/nginx/ssl
-    - letsencrypt:/etc/letsencrypt
+    - etc/nginx/ssl:/etc/nginx/ssl:ro
     - etc/nginx/conf.d:/etc/nginx/sites-available:ro
+    - letsencrypt:/etc/letsencrypt
 
 volumes:
 
   pgdata:      { driver: local }
 
-  ssl:         { driver: local }
   letsencrypt: { driver: local }
