@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+
   database:
     image: postgres:10-alpine # https://hub.docker.com/_/postgres/
     env_file:
@@ -14,22 +15,30 @@ services:
     command: [ "migrate", "up", "--with-demo" ]
     depends_on:
     - database
+    env_file:
+    - etc/env/click.env
   click:
     image: kamilsk/click:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
     depends_on:
     - click-migration
+    env_file:
+    - etc/env/click.env
 
   forma-migration:
     image: kamilsk/form-api:latest # https://hub.docker.com/r/kamilsk/form-api/
     command: [ "migrate", "up", "--with-demo" ]
     depends_on:
     - database
+    env_file:
+    - etc/env/forma.env
   forma:
     image: kamilsk/form-api:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
     depends_on:
     - forma-migration
+    env_file:
+    - etc/env/forma.env
 
   hugo:
     image: kamilsk/hugo:latest # https://hub.docker.com/r/kamilsk/hugo/
@@ -39,11 +48,15 @@ services:
     command: [ "migrate", "up" ]
     depends_on:
     - database
+    env_file:
+    - etc/env/passport.env
   passport:
     image: kamilsk/passport:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
     depends_on:
     - passport-migration
+    env_file:
+    - etc/env/passport.env
 
   server:
     image: kamilsk/nginx:alpine # https://hub.docker.com/r/kamilsk/nginx/
@@ -64,25 +77,15 @@ services:
 
 volumes:
 
-  # {database:
-  pgdata: { driver: local }
-  # /database}
+  pgdata:      { driver: local }
 
-  # {server:
   ssl:         { driver: local }
   letsencrypt: { driver: local }
-  # /server}
 
 
 # TODO
 # - common
 #   - env files
-# - click
-#   - ports
-# - forma
-#   - ports
 # - hugo
 #   - ports
 #   - volumes
-# - passport
-#   - ports
