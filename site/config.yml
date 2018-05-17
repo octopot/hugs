@@ -1,0 +1,74 @@
+baseURL:        https://hugs.octolab.net/
+metaDataFormat: yaml
+theme:          materialkit
+
+author:
+  name:     Kamil Samigullin
+  homepage: https://kamil.samigullin.info/
+
+disableKinds:               [RSS]
+disableLiveReload:          false
+disableHugoGeneratorInject: true
+
+disableKinds:               []
+disableLiveReload:          false
+disableHugoGeneratorInject: true
+
+enableRobotsTXT: true
+sitemap:
+  changefreq: monthly
+  priority:   0.5
+  filename:   sitemap.xml
+
+pygmentsCodeFences: true
+
+outputs:
+  home:         [HTML]
+  page:         [HTML]
+  section:      [HTML]
+  taxonomy:     [HTML]
+  taxonomyTerm: [HTML]
+
+# language fallback
+
+params:
+  keywords: ~
+
+  search:
+    ru:
+      url:   https://yandex.ru/search
+      title: поиск
+      desc:  введите слово
+      site:  blog.octolab.org
+
+    en:
+      url:   https://www.google.com/search
+      title: search
+      desc:  enter word
+      site:  blog.octolab.org
+
+# language specific
+
+enableMissingTranslationPlaceholders: false
+
+languages:
+  ru:
+    languageCode: ru
+    weight:       1
+
+    title:     Hugs
+    copyright: Проект [OctoLab](https://www.octolab.ru/)
+
+  en:
+    languageCode: en
+    weight:       2
+
+    title:     Hugs
+    copyright: "[OctoLab](https://www.octolab.ru/) project"
+
+# defaults
+
+defaultContentLanguage:         en
+defaultContentLanguageInSubdir: false
+defaultExtension:               html
+defaultLayout:                  post

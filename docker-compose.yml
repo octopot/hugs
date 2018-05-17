@@ -42,6 +42,10 @@ services:
 
   hugo:
     image: kamilsk/hugo:latest # https://hub.docker.com/r/kamilsk/hugo/
+    env_file:
+    - etc/env/hugo.env
+    volumes:
+    - site:/usr/share/site
 
   passport-migration:
     image: kamilsk/passport:latest # https://hub.docker.com/r/kamilsk/passport/
@@ -85,11 +89,3 @@ volumes:
 
   ssl:         { driver: local }
   letsencrypt: { driver: local }
-
-
-# TODO
-# - common
-#   - env files
-# - hugo
-#   - ports
-#   - volumes
