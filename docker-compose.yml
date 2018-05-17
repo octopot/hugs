@@ -1,14 +1,19 @@
 version: "3"
 
 services:
-  db:
+  database:
     image: postgres:10-alpine # https://hub.docker.com/_/postgres/
+    env_file:
+    - etc/env/postgres.env
+    volumes:
+    - etc/postgres/initdb.d:/docker-entrypoint-initdb.d
+    - pgdata:/var/lib/postgresql/data
 
   click-migration:
     image: kamilsk/click:latest # https://hub.docker.com/r/kamilsk/click/
     command: [ "migrate", "up", "--with-demo" ]
     depends_on:
-    - db
+    - database
   click:
     image: kamilsk/click:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
@@ -19,7 +24,7 @@ services:
     image: kamilsk/form-api:latest # https://hub.docker.com/r/kamilsk/form-api/
     command: [ "migrate", "up", "--with-demo" ]
     depends_on:
-    - db
+    - database
   forma:
     image: kamilsk/form-api:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
@@ -33,7 +38,7 @@ services:
     image: kamilsk/passport:latest # https://hub.docker.com/r/kamilsk/passport/
     command: [ "migrate", "up" ]
     depends_on:
-    - db
+    - database
   passport:
     image: kamilsk/passport:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
@@ -48,7 +53,7 @@ services:
     - hugo
     - passport
     env_file:
-    - env/.balancer.env
+    - etc/env/balancer.env
     ports:
     - ${HUGS_HTTP_PORT}:80
     - ${HUGS_HTTPS_PORT}:443
@@ -59,9 +64,9 @@ services:
 
 volumes:
 
-  # {databases:
+  # {database:
   pgdata: { driver: local }
-  # /databases}
+  # /database}
 
   # {server:
   ssl:         { driver: local }
@@ -72,9 +77,6 @@ volumes:
 # TODO
 # - common
 #   - env files
-# - db
-#   - ports
-#   - volumes
 # - click
 #   - ports
 # - forma
