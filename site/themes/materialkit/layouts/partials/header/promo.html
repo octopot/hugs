@@ -1,3 +1,8 @@
+{{- $tmp_gitter  := .Param "tmp.gitter" -}}
+{{- $tmp_mailto  := .Param "tmp.mailto" -}}
+{{- $tmp_project := .Param "tmp.project" -}}
+{{- $tmp_fork    := .Param "tmp.fork" -}}
+
 <nav id="header" class="navbar navbar-color-on-scroll navbar-expand-lg navbar-transparent fixed-top bg-primary">
     <div class="container">
         <div class="navbar-translate">
@@ -15,21 +20,18 @@
                 <li class="nav-item dropdown">
                     <a id="feedback-links" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Feedback</a>
                     <div class="dropdown-menu dropdown-with-icons">
-                        <a class="dropdown-item" href="https://gitter.im/kamilsk/click">Gitter</a>
+                        <a class="dropdown-item" href="{{ $tmp_gitter }}">Gitter</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="https://twitter.com/ikamilsk">@kamilsk</a>
                         <a class="dropdown-item" href="https://twitter.com/octolab_inc">@octolab</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"
-                           href="mailto:feedback@octolab.org?subject=Click!%20(from%20GitHub%20page)">
-                            feedback@octolab.org
-                        </a>
+                        <a class="dropdown-item" href="{{ $tmp_mailto }}">feedback@octolab.org</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a id="github-links" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">GitHub</a>
                     <div class="dropdown-menu dropdown-with-icons">
-                        <a class="dropdown-item" href="https://github.com/kamilsk/click">Project</a>
+                        <a class="dropdown-item" href="{{ $tmp_project }}">Project</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="https://github.com/kamilsk">Kamil Samigullin</a>
                         <a class="dropdown-item" href="https://github.com/octolab">OctoLab</a>
@@ -37,9 +39,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="https://www.patreon.com/octolab">Patreon</a></li>
             </ul>
-            <a class="ribbon" href="https://github.com/kamilsk/click/fork">
-                <img src="/img/fork.png" alt="Fork me on GitHub">
-            </a>
+            <a class="ribbon" href="{{ $tmp_fork }}"><img src="/img/fork.png" alt="Fork me on GitHub"></a>
         </div>
     </div>
 </nav>
