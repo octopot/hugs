@@ -46,6 +46,10 @@ enter-$(1):
 start-$(1):
 	$$(COMPOSE) start $(1)
 
+.PHONY: restart-$(1)
+restart-$(1):
+	$$(COMPOSE) restart $(1)
+
 .PHONY: stop-$(1)
 stop-$(1):
 	$$(COMPOSE) stop $(1)

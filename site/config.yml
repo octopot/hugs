@@ -31,7 +31,7 @@ outputs:
 params:
   click:
     enabled: true
-    prefix:  /goto?url=
+    proxy:   /goto?url=
 
   keywords: [platform, static sites]
 

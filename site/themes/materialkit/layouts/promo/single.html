@@ -1,3 +1,35 @@
-{{ define "title" }}{{ .Title }} | {{ .Description }}{{ with .Param "tagline" }} &mdash; {{ . }}{{ end }}{{ end }}
+{{ define "title" }}
+    {{- .Title }} | {{ .Description }}{{ with .Param "tagline" }} &mdash; {{ . }}{{ end -}}
+{{ end }}
 
-{{ define "content" }}{{ .Content }}{{ end }}
+{{ define "header" }}
+    {{- partial "header/promo" . -}}
+{{ end }}
+
+{{ define "content" }}
+<div id="hero" class="page-header header-filter clear-filter purple-filter" data-parallax="true">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="brand">
+                    <h1 class="title">{{ .Title }}</h1>
+                    <h2>{{ .Description }}</h2>
+                    <h4>&mdash; {{ .Param "tagline" }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main main-raised">
+    <div class="section section-basic">
+        <div class="container">
+            {{ partial (print "content/" .File.TranslationBaseName) . }}
+            {{- .Content -}}
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ define "footer" }}
+    {{- partial "footer/promo" . -}}
+{{ end }}
