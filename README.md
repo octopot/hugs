@@ -5,7 +5,7 @@
 [![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-### Quick start
+## Quick start
 
 Requirements:
 
@@ -31,29 +31,29 @@ $ open https://forma.127.0.0.1.xip.io/
 $ open https://passport.127.0.0.1.xip.io/
 ```
 
-### Related projects
+## Related projects
 
-#### Services
+### Services
 
-##### [github.com/kamilsk/click](https://kamilsk.github.io/click/)
+#### [github.com/kamilsk/click](https://kamilsk.github.io/click/)
 
 Mirror at bitbucket: [bitbucket.org/kamilsk/click](https://bitbucket.org/kamilsk/click/src/master/)
 
-##### [github.com/kamilsk/form-api](https://kamilsk.github.io/form-api/)
+#### [github.com/kamilsk/form-api](https://kamilsk.github.io/form-api/)
 
 Mirror at bitbucket: [bitbucket.org/kamilsk/form-api](https://bitbucket.org/kamilsk/form-api/src/master/)
 
-##### [github.com/kamilsk/passport](https://kamilsk.github.io/passport/)
+#### [github.com/kamilsk/passport](https://kamilsk.github.io/passport/)
 
 Mirror at bitbucket: [bitbucket.org/kamilsk/passport](https://bitbucket.org/kamilsk/passport/src/master/)
 
-#### Infrustructure
+### Infrustructure
 
-##### [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
+#### [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
 
 Mirror at quay.io: [quay.io/kamilsk/nginx](https://quay.io/repository/kamilsk/nginx)
 
-##### [kamilsk/hugo](https://hub.docker.com/r/kamilsk/hugo/)
+#### [kamilsk/hugo](https://hub.docker.com/r/kamilsk/hugo/)
 
 Mirror at quay.io: ~
 
