@@ -16,4 +16,10 @@ sponsors:
 
 googleAnalytics: UA-109817251-15
 
+tmp:
+  gitter:  https://gitter.im/kamilsk/form-api
+  mailto:  mailto:feedback@octolab.org?subject=Forma%20(from%20GitHub%20page)
+  project: https://github.com/kamilsk/form-api
+  fork:    https://github.com/kamilsk/form-api/fork
+
 ---
