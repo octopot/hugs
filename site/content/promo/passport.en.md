@@ -16,4 +16,10 @@ sponsors:
 
 googleAnalytics: UA-109817251-24
 
+tmp:
+  gitter:  https://gitter.im/kamilsk/passport
+  mailto:  mailto:feedback@octolab.org?subject=Passport%20(from%20GitHub%20page)
+  project: https://github.com/kamilsk/passport
+  fork:    https://github.com/kamilsk/passport/fork
+
 ---
