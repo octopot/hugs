@@ -16,4 +16,10 @@ sponsors:
 
 googleAnalytics: UA-109817251-20
 
+tmp:
+  gitter:  https://gitter.im/kamilsk/click
+  mailto:  mailto:feedback@octolab.org?subject=Click!%20(from%20GitHub%20page)
+  project: https://github.com/kamilsk/click
+  fork:    https://github.com/kamilsk/click/fork
+
 ---
