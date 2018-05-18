@@ -31,6 +31,32 @@ $ open https://forma.127.0.0.1.xip.io/
 $ open https://passport.127.0.0.1.xip.io/
 ```
 
+### Related projects
+
+#### Services
+
+##### [github.com/kamilsk/click](https://kamilsk.github.io/click/)
+
+Mirror at bitbucket: [bitbucket.org/kamilsk/click](https://bitbucket.org/kamilsk/click/src/master/)
+
+##### [github.com/kamilsk/form-api](https://kamilsk.github.io/form-api/)
+
+Mirror at bitbucket: [bitbucket.org/kamilsk/form-api](https://bitbucket.org/kamilsk/form-api/src/master/)
+
+##### [github.com/kamilsk/passport](https://kamilsk.github.io/passport/)
+
+Mirror at bitbucket: [bitbucket.org/kamilsk/passport](https://bitbucket.org/kamilsk/passport/src/master/)
+
+#### Infrustructure
+
+##### [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
+
+Mirror at quay.io: [quay.io/kamilsk/nginx](https://quay.io/repository/kamilsk/nginx)
+
+##### [kamilsk/hugo](https://hub.docker.com/r/kamilsk/hugo/)
+
+Mirror at quay.io: ~
+
 ---
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/octolab/hugs)
