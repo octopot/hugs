@@ -7,10 +7,13 @@ draft:       false
 id:          passport-promo
 class:       promo-page
 
-author:      ~
-source:      ~
+author:      kamil.samigullin
+source:      kamilsk/passport
 tagline:     your personal user tracker and auth service
 
-sponsors:    ~
+sponsors:
+- digitalocean
+
+googleAnalytics: UA-109817251-24
 
 ---

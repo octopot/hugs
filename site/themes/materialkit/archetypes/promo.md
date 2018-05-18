@@ -2,7 +2,6 @@
 
 title:       ~
 description: ~
-date:        {{ .Date }}
 draft:       true
 
 id:          ~
@@ -13,5 +12,7 @@ source:      ~
 tagline:     ~
 
 sponsors:    ~
+
+googleAnalytics: ~
 
 ---

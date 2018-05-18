@@ -7,10 +7,13 @@ draft:       false
 id:          click-promo
 class:       promo-page
 
-author:      ~
-source:      ~
+author:      kamil.samigullin
+source:      kamilsk/click
 tagline:     your personal link storage and URL shortener
 
-sponsors:    ~
+sponsors:
+- digitalocean
+
+googleAnalytics: UA-109817251-20
 
 ---

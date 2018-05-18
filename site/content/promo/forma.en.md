@@ -7,10 +7,13 @@ draft:       false
 id:          forma-promo
 class:       promo-page
 
-author:      ~
-source:      ~
+author:      kamil.samigullin
+source:      kamilsk/forma
 tagline:     your personal server for HTML forms
 
-sponsors:    ~
+sponsors:
+- digitalocean
+
+googleAnalytics: UA-109817251-15
 
 ---

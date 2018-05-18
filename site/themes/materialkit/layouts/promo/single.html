@@ -1,1 +1,3 @@
+{{ define "title" }}{{ .Title }} | {{ .Description }}{{ with .Param "tagline" }} &mdash; {{ . }}{{ end }}{{ end }}
+
 {{ define "content" }}{{ .Content }}{{ end }}

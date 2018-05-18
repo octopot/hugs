@@ -11,6 +11,7 @@ disableLiveReload:          false
 disableHugoGeneratorInject: true
 
 enableRobotsTXT: true
+googleAnalytics: UA-109817251-25
 sitemap:
   changefreq: monthly
   priority:   0.5
@@ -28,7 +29,11 @@ outputs:
 # language fallback
 
 params:
-  keywords: ~
+  click:
+    enabled: true
+    prefix:  /goto?url=
+
+  keywords: [platform, static sites]
 
   search:
     ru:

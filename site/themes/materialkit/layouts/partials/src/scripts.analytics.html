@@ -1,4 +1,6 @@
-{{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}
+{{- $ga := .Param "googleAnalytics" | default .Site.GoogleAnalytics -}}
+
+{{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109817251-25"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
