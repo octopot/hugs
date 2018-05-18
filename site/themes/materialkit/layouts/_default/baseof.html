@@ -9,9 +9,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{- block "meta" . -}}
+        {{- partial "meta/description" . -}}
+        {{- partial "meta/keywords" . -}}
+        {{- partial "meta/author" . -}}
+    {{- end -}}
     {{- block "styles" . -}}
+        {{- partial "src/styles.default" . -}}
+        <link rel="stylesheet" href="/css/main.css">
     {{- end -}}
     {{- block "fonts" . -}}
+        {{- partial "src/fonts.default" . -}}
     {{- end -}}
     {{- block "rss" . -}}
         {{- with .RSSLink -}}
@@ -19,15 +27,25 @@
             <link rel="feed" type="application/rss+xml" href="{{ . }}">
         {{- end -}}
     {{- end -}}
-    {{- block "icons" . }}{{ end -}}
+    {{- block "icons" . -}}
+        {{- partial "meta/icons" . -}}
+    {{- end -}}
     {{- block "meta-extra" . -}}
+        {{- partial "meta/verification" . -}}
+        {{- partial "meta/languages" . -}}
+        {{- partial "meta/facebook" . -}}
+        {{- partial "meta/twitter" . -}}
     {{- end -}}
 </head>
 <body id="{{ $id }}" class="{{ $class }}">
-{{- block "header" . }}{{ end -}}
-{{- block "content" . }}{{ end -}}
-{{- block "footer" . }}{{ end -}}
+{{- block "header" . }}{{ partial "header/main" . }}{{ end -}}
+{{- block "content" . }}{{ .Content }}{{ end -}}
+{{- block "footer" . }}{{ partial "footer/main" . }}{{ end -}}
 {{- block "scripts" . -}}
+    {{- partial "src/scripts.default" . -}}
+    <script src="/js/main.js"></script>
 {{- end -}}
+{{- partial "src/scripts.analytics" . -}}
+{{- partial "debug" . -}}
 </body>
 </html>

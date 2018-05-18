@@ -21,7 +21,7 @@ down:
 
 .PHONY: destroy
 destroy:
-	$(COMPOSE) down --rm local
+	$(COMPOSE) down --rmi local --volumes --remove-orphans
 
 
 

@@ -1,1 +1,5 @@
-{{ define "content" }}{{ .Content }}{{ end }}
+{{ define "title" }}{{ .Title }} &mdash; {{ .Description }}{{ end }}
+
+{{ define "content" }}
+    {{- .Content -}}
+{{ end }}

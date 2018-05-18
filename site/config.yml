@@ -6,11 +6,7 @@ author:
   name:     Kamil Samigullin
   homepage: https://kamil.samigullin.info/
 
-disableKinds:               [RSS]
-disableLiveReload:          false
-disableHugoGeneratorInject: true
-
-disableKinds:               []
+disableKinds:               [RSS, taxonomy, taxonomyTerm]
 disableLiveReload:          false
 disableHugoGeneratorInject: true
 

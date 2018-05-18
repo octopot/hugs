@@ -1,0 +1,9 @@
+{{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109817251-25"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-109817251-25');
+</script>
+{{- end -}}
