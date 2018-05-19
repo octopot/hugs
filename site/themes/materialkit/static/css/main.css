@@ -2,6 +2,8 @@ img { max-width: 100%; }
 
 footer .fa-heart { color: red; }
 
+trix-editor.form-control { height: auto; }
+
 .promo-page #header                   { border-radius: 0; margin-bottom: 0; }
 .promo-page #header .navbar-brand img { height: 30px; }
 .promo-page #header .ribbon img       { position: absolute; top: 0; right: 0; }

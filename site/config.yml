@@ -32,6 +32,12 @@ params:
   click:
     enabled: true
     proxy:   /goto?url=
+    live:    https://click.octolab.net
+
+  forma:
+    enabled: true
+    proxy:   /forma
+    live:    https://form.octolab.net
 
   keywords: [platform, static sites]
 
