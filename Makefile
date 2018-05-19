@@ -110,7 +110,7 @@ refresh-nginx:              #| Sync configurations, process them and reload ngin
 publish:
 	docker run --rm -it \
 	           -v $(PWD)/site:/usr/share/site \
-	           -v $(PWD)/public:/usr/share/public \
+	           -v $(PWD)/docs:/usr/share/docs \
 	           -w /usr/share/site \
 	           kamilsk/hugo:latest hugo -d /usr/share/public
 
