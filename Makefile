@@ -2,29 +2,36 @@ MATERIAL_KIT := 2.0.3
 COMPOSE      := docker-compose -f docker-compose.yml -p hugs
 
 
+.PHONY: help
+help:                       #| Shows available help information of Makefile.
+	@fgrep -h "#|" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/#|//'
+#|
+#|                             ---
+#|
 .PHONY: up
-up:
-	$(COMPOSE) up -d
-	$(COMPOSE) rm -f
-
+up:                         #| Builds, (re)creates, starts, and attaches to containers for a service.
+	@($(COMPOSE) up -d)
+	@($(COMPOSE) rm -f)
+#|
 .PHONY: clean
-clean:
-	$(COMPOSE) rm -f
-
+clean:                      #| Removes stopped service containers.
+	@($(COMPOSE) rm -f)
+#|
 .PHONY: status
-status:
-	$(COMPOSE) ps
-
+status:                     #| List containers and their status.
+	@($(COMPOSE) ps)
+#|
 .PHONY: down
-down:
-	$(COMPOSE) down
-
+down:                       #| Stops containers and removes them with networks.
+	@($(COMPOSE) down)
+#|
 .PHONY: destroy
-destroy:
-	$(COMPOSE) down --rmi local --volumes --remove-orphans
-
-
-
+destroy:                    #| Stops containers and removes them with networks, volumes, and images
+                            #| created by `up`.
+	@($(COMPOSE) down --rmi local --volumes --remove-orphans)
+#|
+#|                             ---
+#|
 CONTAINERS = database \
              click \
              forma \
@@ -32,34 +39,45 @@ CONTAINERS = database \
              passport \
              server
 
+.PHONY: services
+services:                   #| Shows available services.
+	@(echo 'available services:'; for container in $(CONTAINERS); do echo '-' $$container; done)
+
 define container_tpl
-
+#|
 .PHONY: up-$(1)
-up-$(1):
-	$$(COMPOSE) up -d $(1)
-
+up-$(1):                    #| Builds, (re)creates, starts, and attaches to a container of the service $(1).
+                            #| For example `make up-server`. See `make services`.
+	@($$(COMPOSE) up -d $(1))
+#|
 .PHONY: enter-$(1)
-enter-$(1):
-	$$(COMPOSE) exec $(1) sh
-
+enter-$(1):                 #| Enter to a running container of the service $(1).
+                            #| For example `make enter-server`. See `make services`.
+	@($$(COMPOSE) exec $(1) sh)
+#|
 .PHONY: start-$(1)
-start-$(1):
-	$$(COMPOSE) start $(1)
-
+start-$(1):                 #| Start an existing container of the service $(1).
+                            #| For example `make start-server`. See `make services`.
+	@($$(COMPOSE) start $(1))
+#|
 .PHONY: restart-$(1)
-restart-$(1):
-	$$(COMPOSE) restart $(1)
-
+restart-$(1):               #| Restart a running container of the service $(1).
+                            #| For example `make restart-server`. See `make services`.
+	@($$(COMPOSE) restart $(1))
+#|
 .PHONY: stop-$(1)
-stop-$(1):
-	$$(COMPOSE) stop $(1)
-
+stop-$(1):                  #| Stop a running container of the service $(1) without removing them.
+                            #| For example `make stop-server`. See `make services`.
+	@($$(COMPOSE) stop $(1))
+#|
 .PHONY: log-$(1)
-log-$(1):
-	$$(COMPOSE) logs -f $(1)
-
+log-$(1):                   #| View output from a container of the service $(1).
+                            #| For example `make log-server`. See `make services`.
+	@($$(COMPOSE) logs -f $(1))
+#|
 endef
-
+#|                             ---
+#|
 render_container_tpl = $(eval $(call container_tpl,$(container)))
 $(foreach container,$(CONTAINERS),$(render_container_tpl))
 
@@ -72,8 +90,8 @@ restore-database:
 	@echo not implemented
 
 .PHONY: psql
-psql:
-	$(COMPOSE) exec database /bin/sh -c 'su - postgres -c psql'
+psql:                       #| Connect to the database with psql.
+	@($(COMPOSE) exec database /bin/sh -c 'su - postgres -c psql')
 
 
 
