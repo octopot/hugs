@@ -29,6 +29,41 @@ $ open https://127.0.0.1.xip.io/
 $ open https://click.127.0.0.1.xip.io/
 $ open https://forma.127.0.0.1.xip.io/
 $ open https://passport.127.0.0.1.xip.io/
+$ make help
+# up:              Builds, (re)creates, starts, and attaches to containers for a service.
+#
+# clean:           Removes stopped service containers.
+#
+# status:          List containers and their status.
+#
+# down:            Stops containers and removes them with networks.
+#
+# destroy:         Stops containers and removes them with networks, volumes, and images
+#                  created by `up`.
+#                  ---
+# services:        Shows available services.
+#
+# up-$(1):         Builds, (re)creates, starts, and attaches to a container of the service $(1).
+#                  For example `make up-server`. See `make services`.
+#
+# enter-$(1):      Enter to a running container of the service $(1).
+#                  For example `make enter-server`. See `make services`.
+#
+# start-$(1):      Start an existing container of the service $(1).
+#                  For example `make start-server`. See `make services`.
+#
+# restart-$(1):    Restart a running container of the service $(1).
+#                  For example `make restart-server`. See `make services`.
+#
+# stop-$(1):       Stop a running container of the service $(1) without removing them.
+#                  For example `make stop-server`. See `make services`.
+#
+# log-$(1):        View output from a container of the service $(1).
+#                  For example `make log-server`. See `make services`.
+#                  ---
+# psql:            Connect to the database with psql.
+#
+# refresh-nginx:   Sync configurations, process them and reload nginx.
 ```
 
 ## Related projects

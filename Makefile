@@ -92,6 +92,10 @@ restore-database:
 .PHONY: psql
 psql:                       #| Connect to the database with psql.
 	@($(COMPOSE) exec database /bin/sh -c 'su - postgres -c psql')
+#|
+.PHONY: refresh-nginx
+refresh-nginx:              #| Sync configurations, process them and reload nginx.
+	@($(COMPOSE) exec server ./entrypoint.sh repeat)
 
 
 
