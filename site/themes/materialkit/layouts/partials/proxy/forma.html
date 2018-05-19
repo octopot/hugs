@@ -1,5 +1,6 @@
 {{- $id    := .id -}}
 {{- $title := .title -}}
+
 {{- with .page -}}
     {{- $config  := .Site.Params.forma -}}
     {{- $enabled := index $config "enabled" | default false -}}
@@ -8,9 +9,10 @@
 <form id="{{ $id }}" class="forma" lang="{{ .Site.Language.Lang }}" title="{{ $title }}"
     {{ if $enabled }}action="{{ $proxy }}/{{ $id }}"{{ else }}action="{{ $live }}/api/v1/{{ $id }}"{{ end }}
     method="post" enctype="application/x-www-form-urlencoded">
-    {{- partial (print "forma/" $id) . -}}
+    {{- partial (print "forma/" $id) (dict "id" $id "page" .) -}}
 </form>
 {{- end -}}
+
 {{- define "powered-by/forma" -}}
 <span class="small text-monospace float-right">powered by <a href="/promo/forma/">Forma</a></span>
 <br class="clearfix">

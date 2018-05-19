@@ -1,22 +1,25 @@
+{{- $id := .id -}}
+
+{{- with .page -}}
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            <label class="bmd-label-floating" for="629c995b-3dc1-4484-8e6c-f74007645bcd_name">Your Name</label>
-            <input id="629c995b-3dc1-4484-8e6c-f74007645bcd_name" class="form-control"
+            <label class="bmd-label-floating" for="{{ $id }}_name">Your Name</label>
+            <input id="{{ $id }}_name" class="form-control"
                    name="name" type="text" maxlength="64" required>
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            <label class="bmd-label-floating" for="629c995b-3dc1-4484-8e6c-f74007645bcd_email">Your Email</label>
-            <input id="629c995b-3dc1-4484-8e6c-f74007645bcd_email" class="form-control"
+            <label class="bmd-label-floating" for="{{ $id }}_email">Your Email</label>
+            <input id="{{ $id }}_email" class="form-control"
                    name="email" type="email" maxlength="64" required>
         </div>
     </div>
 </div>
 <div class="form-group">
-    <input id="629c995b-3dc1-4484-8e6c-f74007645bcd_feedback" name="feedback" type="hidden" maxlength="5120" required>
-    <trix-editor class="form-control" input="629c995b-3dc1-4484-8e6c-f74007645bcd_feedback"></trix-editor>
+    <input id="{{ $id }}_feedback" name="feedback" type="hidden" maxlength="5120" required>
+    <trix-editor class="form-control" input="{{ $id }}_feedback"></trix-editor>
 
     {{- /* template "powered-by/forma" */ -}}
     <span class="small text-monospace float-right">powered by <a href="/promo/forma/">Forma</a></span>
@@ -30,3 +33,4 @@
         </button>
     </div>
 </div>
+{{- end -}}

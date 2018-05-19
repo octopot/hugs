@@ -8,10 +8,7 @@
 
 {{ define "content" }}
     {{- $image := .Param "image.page-header" | default "/img/bg/octopus.png" -}}
-
-
-
-    <div class="page-header header-filter" data-parallax="true" style="background: url('{{ $image }}');">
+    <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ $image }}');">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -24,94 +21,12 @@
             </div>
         </div>
     </div>
-
-
-
     <div class="main main-raised">
         <div class="container">
-
-
-
-            <div class="section text-center">
-                <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto">
-                        <h2 class="title">Let&apos;s talk product</h2>
-                        <h5 class="description">Some cool stuff.</h5>
-                    </div>
-                </div>
-
-
-
-                <div class="features">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-info">
-                                    <i class="material-icons">chat</i>
-                                </div>
-                                <h4 class="info-title">Some title</h4>
-                                <p>Some description.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-success">
-                                    <i class="material-icons">verified_user</i>
-                                </div>
-                                <h4 class="info-title">Some title</h4>
-                                <p>Some description.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-danger">
-                                    <i class="material-icons">fingerprint</i>
-                                </div>
-                                <h4 class="info-title">Some title</h4>
-                                <p>Some description.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="section text-center">
-                <h2 class="title">Here is our team</h2>
-                <div class="team">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <div class="card card-plain">
-                                    <div class="col-md-6 ml-auto mr-auto">
-                                        <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
-                                             alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                                    </div>
-                                    <h4 class="card-title">No Name
-                                        <br>
-                                        <small class="card-description text-muted">Model</small>
-                                    </h4>
-                                    <div class="card-body">
-                                        <p class="card-description">You can write here details about one of your team members.
-                                            You can give more details about what they do. Feel free to add some <a href="#">links</a>
-                                            for people to be able to follow them outside the site.</p>
-                                    </div>
-                                    <div class="card-footer justify-content-center">
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fab fa-twitter"></i></a>
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fab fa-instagram"></i></a>
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fab fa-facebook-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
+            {{- partial "content/home/product" . -}}
+            {{- partial "content/home/team" . -}}
             {{- partial "content/home/feedback" . -}}
+            {{- partial "content/home/subscribe" . -}}
         </div>
     </div>
 {{ end }}

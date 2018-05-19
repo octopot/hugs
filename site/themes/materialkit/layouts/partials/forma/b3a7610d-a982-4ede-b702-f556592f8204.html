@@ -1,0 +1,28 @@
+{{- $id := .id -}}
+
+{{- with .page -}}
+<div class="row">
+    <div class="col-md-8">
+        <span class="bmd-form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="material-icons">mail</i>
+                    </span>
+                </div>
+                <input id="{{ $id }}_email" class="form-control"
+                       placeholder="Your Email..." title="Your Email"
+                       name="email" type="email" maxlength="64" required>
+            </div>
+        </span>
+
+        {{- /* template "powered-by/forma" */ -}}
+        <span class="small text-monospace float-right">powered by <a href="/promo/forma/">Forma</a></span>
+        <br class="clearfix">
+
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-primary btn-block" type="submit">Subscribe</button>
+    </div>
+</div>
+{{- end -}}
