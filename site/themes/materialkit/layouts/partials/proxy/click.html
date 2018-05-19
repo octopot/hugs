@@ -1,0 +1,11 @@
+{{- $id   := .id -}}
+{{- $text := .text -}}
+{{- with .page -}}
+    {{- $config  := .Site.Params.click -}}
+    {{- $enabled := index $config "enabled" | default false -}}
+    {{- $proxy   := index $config "proxy"   | default "/goto?url=" -}}
+    {{- $live    := index $config "live" -}}
+{{- end -}}
+{{- define "powered-by/click" -}}
+<span class="small text-monospace">powered by <a href="/promo/click/">Click!</a></span>
+{{- end -}}
