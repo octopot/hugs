@@ -54,6 +54,8 @@ services:
     - database
     env_file:
     - etc/env/passport.env
+    volumes:
+    - deprecated:/usr/share/passport
   passport:
     image: kamilsk/passport:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
@@ -61,6 +63,8 @@ services:
     - passport-migration
     env_file:
     - etc/env/passport.env
+    volumes:
+    - deprecated:/usr/share/passport
 
   server:
     image: kamilsk/nginx:alpine # https://hub.docker.com/r/kamilsk/nginx/
@@ -88,3 +92,5 @@ volumes:
   pgdata:      { driver: local }
 
   letsencrypt: { driver: local }
+
+  deprecated:  { driver: local }
