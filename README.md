@@ -25,10 +25,6 @@ hugs_hugo_1       /bin/sh -c hugo server --b ...   Up      1313/tcp
 hugs_passport_1   passport run --with-profil ...   Up      80/tcp, 8090/tcp, 8091/tcp
 hugs_server_1     /bin/bash -c echo $BASIC_U ...   Up      0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp
 
-$ open https://127.0.0.1.xip.io/
-$ open https://click.127.0.0.1.xip.io/
-$ open https://forma.127.0.0.1.xip.io/
-$ open https://passport.127.0.0.1.xip.io/
 $ make help
 # up:              Builds, (re)creates, starts, and attaches to containers for a service.
 #
@@ -64,6 +60,10 @@ $ make help
 # psql:            Connect to the database with psql.
 #
 # refresh-nginx:   Sync configurations, process them and reload nginx.
+$ open https://127.0.0.1.xip.io/
+$ open https://click.127.0.0.1.xip.io/
+$ open https://forma.127.0.0.1.xip.io/
+$ open https://passport.127.0.0.1.xip.io/
 ```
 
 ## Related projects

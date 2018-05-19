@@ -5,7 +5,7 @@
     {{- $enabled := index $config "enabled" | default false -}}
     {{- $proxy   := index $config "proxy"   | default "/forma" -}}
     {{- $live    := index $config "live" -}}
-<form lang="{{ .Site.Language.Lang }}" title="{{ $title }}"
+<form id="{{ $id }}" class="forma" lang="{{ .Site.Language.Lang }}" title="{{ $title }}"
     {{ if $enabled }}action="{{ $proxy }}/{{ $id }}"{{ else }}action="{{ $live }}/api/v1/{{ $id }}"{{ end }}
     method="post" enctype="application/x-www-form-urlencoded">
     {{- partial (print "forma/" $id) . -}}
