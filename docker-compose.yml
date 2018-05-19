@@ -17,6 +17,7 @@ services:
     - database
     env_file:
     - etc/env/click.env
+    restart: on-failure
   click:
     image: kamilsk/click:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
@@ -32,6 +33,7 @@ services:
     - database
     env_file:
     - etc/env/forma.env
+    restart: on-failure
   forma:
     image: kamilsk/form-api:latest
     command: [ "run", "--with-profiler", "--with-monitoring" ]
@@ -54,6 +56,7 @@ services:
     - database
     env_file:
     - etc/env/passport.env
+    restart: on-failure
     volumes:
     - deprecated:/usr/share/passport
   passport:

@@ -14,7 +14,7 @@ Requirements:
 - GNU Make 3.81 or above
 
 ```bash
-$ make up status
+$ make up demo status
 
      Name                    Command               State                    Ports
 ---------------------------------------------------------------------------------------------------
