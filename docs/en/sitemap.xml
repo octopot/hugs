@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>https://hugs.octolab.net/</loc>
+        <loc>https://octolab.github.io/hugs/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://hugs.octolab.net/promo/click/</loc>
+        <loc>https://octolab.github.io/hugs/promo/click/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://hugs.octolab.net/promo/forma/</loc>
+        <loc>https://octolab.github.io/hugs/promo/forma/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://hugs.octolab.net/promo/passport/</loc>
+        <loc>https://octolab.github.io/hugs/promo/passport/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://hugs.octolab.net/promo/</loc>
+        <loc>https://octolab.github.io/hugs/promo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
