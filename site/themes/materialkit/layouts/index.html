@@ -1,14 +1,18 @@
-{{ define "title" }}{{ .Title }} &mdash; {{ .Description }}{{ end }}
+{{ define "title" }}
+    {{- .Title }} &mdash; {{ .Description -}}
+{{ end }}
 
-{{- define "styles" -}}
+{{ define "styles" }}
     {{- partial "src/styles.default" . -}}
-    <link rel="stylesheet" href="/css/trix.css">
-    <link rel="stylesheet" href="/css/main.css">
-{{- end -}}
+    <link rel="stylesheet" href="css/trix.css">
+    <link rel="stylesheet" href="css/main.css">
+{{ end }}
 
 {{ define "content" }}
-    {{- $image := .Param "image.page-header" | default "/img/bg/octopus.png" -}}
-    <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ $image }}');">
+    {{- $image := .Param "image.page-header" | default "img/bg/octopus.png" -}}
+
+    <div class="page-header header-filter"
+         style="background-image: url('{{ $image }}');" data-parallax="true">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -16,7 +20,7 @@
                     <h4>Hugs platform helps you to create a live site built by static site generators
                         such as <a href="#">Hugo</a>
                         or <a href="#">Gatsby</a>.</h4>
-                    <span class="text-monospace small">powered by <a href="/promo/click/">Click!</a></span>
+                    <span class="text-monospace small">powered by <a href="promo/click/">Click!</a></span>
                 </div>
             </div>
         </div>
@@ -31,8 +35,8 @@
     </div>
 {{ end }}
 
-{{- define "scripts" -}}
+{{ define "scripts" }}
     {{- partial "src/scripts.default" . -}}
-    <script src="/js/trix.js"></script>
-    <script src="/js/main.js"></script>
-{{- end -}}
+    <script src="js/trix.js"></script>
+    <script src="js/main.js"></script>
+{{ end }}

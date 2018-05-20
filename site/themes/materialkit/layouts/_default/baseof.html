@@ -17,7 +17,7 @@
     {{- end -}}
     {{- block "styles" . -}}
         {{- partial "src/styles.default" . -}}
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="css/main.css">
     {{- end -}}
     {{- block "fonts" . -}}
         {{- partial "src/fonts.default" . -}}
@@ -44,7 +44,7 @@
 {{- block "footer" . }}{{ partial "footer/main" . }}{{ end -}}
 {{- block "scripts" . -}}
     {{- partial "src/scripts.default" . -}}
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 {{- end -}}
 {{- partial "src/scripts.analytics" . -}}
 {{- partial "debug" . -}}

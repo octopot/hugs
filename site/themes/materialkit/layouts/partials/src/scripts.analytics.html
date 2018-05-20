@@ -1,11 +1,11 @@
 {{- $ga := .Param "googleAnalytics" | default .Site.GoogleAnalytics -}}
 
 {{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109817251-25"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-109817251-25');
+    gtag('config', '{{ $ga }}');
 </script>
 {{- end -}}

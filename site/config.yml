@@ -30,12 +30,12 @@ outputs:
 
 params:
   click:
-    enabled: false
+    enabled: true
     proxy:   /goto?url=
     live:    https://click.octolab.net
 
   forma:
-    enabled: false
+    enabled: true
     proxy:   /forma
     live:    https://form.octolab.net
 
