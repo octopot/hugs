@@ -1,11 +1,17 @@
-find: ~
+---
 
 list:
-- id: kamilsk/click
+
+- &click
   origin: https://github.com/kamilsk/click
 
-- id: kamilsk/forma
+- &forma
   origin: https://github.com/kamilsk/form-api
 
-- id: kamilsk/passport
+- &passport
   origin: https://github.com/kamilsk/passport
+
+find:
+  kamilsk/click:    *click
+  kamilsk/forma:    *forma
+  kamilsk/passport: *passport

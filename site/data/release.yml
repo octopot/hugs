@@ -1,0 +1,56 @@
+---
+
+list:
+
+- &click125
+  href: https://github.com/kamilsk/click/releases/tag/1.2.5
+  text: 1.2.5
+  icon: fa fa-check-circle
+
+- &click200
+  href: https://github.com/kamilsk/click/milestone/2
+  text: 2.0.0
+  icon: fa fa-spinner
+
+- &forma121
+  href: https://github.com/kamilsk/form-api/releases/tag/1.2.1
+  text: 1.2.1
+  icon: fa fa-check-circle
+
+- &forma200
+  href: https://github.com/kamilsk/form-api/milestone/2
+  text: 2.0.0
+  icon: fa fa-spinner
+
+- &passport110
+  href: https://github.com/kamilsk/passport/milestone/1
+  text: 1.1.0
+  icon: fa fa-spinner
+
+- &passport200
+  href: https://github.com/kamilsk/passport/milestone/2
+  text: 2.0.0
+  icon: fa fa-spinner
+
+projects:
+- &click    Click!
+- &forma    Forma
+- &passport Passport
+
+latest:
+- branch: v1
+  versions:
+  - project: *click
+    version: *click125
+  - project: *forma
+    version: *forma121
+  - project: *passport
+    version: *passport110
+- branch: v2
+  versions:
+  - project: *click
+    version: *click200
+  - project: *forma
+    version: *forma200
+  - project: *passport
+    version: *passport200
