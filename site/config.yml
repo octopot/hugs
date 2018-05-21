@@ -34,7 +34,7 @@ params:
 
   click:
     enabled: true
-    proxy:   /goto?url=
+    proxy:   /goto
     live:    https://click.127.0.0.1.xip.io
 
   forma:

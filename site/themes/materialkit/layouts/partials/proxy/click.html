@@ -1,13 +1,26 @@
-{{- $id   := .id -}}
-{{- $text := .text -}}
+{{- $id    := .id -}}
+{{- $class := .class -}}
+{{- $text  := .text | default (title $id) -}}
 
 {{- with .page -}}
     {{- $config  := .Site.Params.click -}}
     {{- $enabled := index $config "enabled" | default false -}}
-    {{- $proxy   := index $config "proxy"   | default "/goto?url=" -}}
+    {{- $proxy   := index $config "proxy"   | default "/goto" -}}
     {{- $live    := index $config "live" -}}
+    {{- $url     := index .Site.Data.url.find $id | default (dict) -}}
+    {{- $origin  := index $url "origin" | default $id -}}
+    {{- $click   := index $url "click!" | default (print $proxy "?" (querify "url" $origin)) -}}
+
+<a rel="noopener nofollow" title="{{ $origin }}"
+{{- with $class }} class="{{ . }}"{{ end -}}
+{{- if $enabled }} href="{{ $click }}"
+{{- else -}}{{- $click := print $live "/pass?" (querify "url" $origin) }} href="{{ $click }}"
+{{- end }}>
+    {{- $text | markdownify -}}
+</a>
 {{- end -}}
 
 {{- define "powered-by/click" -}}
-<span class="small text-monospace">powered by <a href="promo/click/">Click!</a></span>
+<span class="small text-monospace float-right">powered by <a href="promo/click/">Click!</a></span>
+<br class="clearfix">
 {{- end -}}
