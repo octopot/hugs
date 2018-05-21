@@ -1,4 +1,4 @@
-baseURL:        https://hugs.octolab.net/
+baseURL:        https://hugo.127.0.0.1.xip.io/
 metaDataFormat: yaml
 theme:          materialkit
 
@@ -32,12 +32,12 @@ params:
   click:
     enabled: true
     proxy:   /goto?url=
-    live:    https://click.octolab.net
+    live:    https://click.127.0.0.1.xip.io
 
   forma:
     enabled: true
     proxy:   /forma
-    live:    https://form.octolab.net
+    live:    https://forma.127.0.0.1.xip.io
 
   keywords: [platform, static sites]
 

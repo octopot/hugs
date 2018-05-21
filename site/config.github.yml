@@ -1,0 +1,10 @@
+baseURL: https://octolab.github.io/hugs/
+
+params:
+  click:
+    enabled: false
+    live:    https://click.octolab.net
+
+  forma:
+    enabled: false
+    live:    https://form.octolab.net

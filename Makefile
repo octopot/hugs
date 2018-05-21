@@ -111,9 +111,8 @@ publish:
 	           -v $(PWD)/site:/usr/share/site \
 	           -v $(PWD)/docs:/usr/share/docs \
 	           -w /usr/share/site \
-	           kamilsk/hugo:latest hugo --baseURL https://octolab.github.io/hugs/ \
-	                                    --cleanDestinationDir \
-	                                    --config=config.yml \
+	           kamilsk/hugo:latest hugo --cleanDestinationDir \
+	                                    --config=config.yml,config.github.yml \
 	                                    --destination=/usr/share/docs
 
 
