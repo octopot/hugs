@@ -2,11 +2,30 @@
 (function ($) {
     'use strict';
 
-    if (!$('.forma').length) {
+    if (!$('.forma').length || !window.location.hash) {
         return;
     }
 
+    let hashMap = {};
+    try {
+        const feedback = window.JSON.parse(window.atob(window.location.hash.replace('\#', '')));
+        if (Array.isArray(feedback)) {
+            for (let i = 0, length = feedback.length; i < length; i++) {
+                hashMap[feedback[i].id] = Object.assign({presented: false, title: ''}, feedback[i]);
+            }
+        } else {
+            hashMap[feedback.id] = Object.assign({presented: false, title: ''}, feedback);;
+        }
+    } catch (err) {
+        return;
+    }
     $('body').append('<div id="messages"/>');
+    $('.forma').each(function (i, node) {
+        if (hashMap.hasOwnProperty(node.id)) {
+            hashMap[node.id].presented = true;
+            hashMap[node.id].title = node.title;
+        }
+    });
 
     const tpl = `
 <div class="alert {{ type }} alert-dismissible fade show">
@@ -20,24 +39,22 @@
         messages = $('#messages'),
         success = 'success',
         failure = 'failure';
-    let hashMap = {};
 
-    function showMessage(id, value) {
-        let node = $('#' + id),
-            type, title, desc, message;
-        switch (value) {
+    function showMessage(id, feedback) {
+        let type, title, desc, message;
+        switch (feedback.result) {
             case success:
                 type = 'alert-success';
-                title = '"' + node.attr('title') + '" form processed successfully!';
+                title = '"' + feedback.title + '" form processed successfully!';
                 desc = 'Aww yeah, you did the right thing!';
                 break;
             case failure:
                 type = 'alert-danger';
-                title = '"' + node.attr('title') + '" form processed unsuccessfully';
+                title = '"' + feedback.title + '" form processed unsuccessfully';
                 desc = 'Oops! But this also happens 😉';
                 break;
             default:
-                console.log('unknown value "' + value + '"');
+                console.log('unknown feedback "' + feedback.result + '"');
                 return;
         }
         message = $(tpl
@@ -55,9 +72,5 @@
         hashMap = {}
     }
 
-    $('.forma').each(function (i, node) {
-        let value = location.searchParams.get(node.id);
-        if (value) { hashMap[node.id] = value }
-    });
     showMessages();
 }(window.jQuery));
