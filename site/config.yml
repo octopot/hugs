@@ -41,34 +41,14 @@ params:
 
   keywords: [platform, static sites]
 
-  search:
-    ru:
-      url:   https://yandex.ru/search
-      title: поиск
-      desc:  введите слово
-      site:  blog.octolab.org
-
-    en:
-      url:   https://www.google.com/search
-      title: search
-      desc:  enter word
-      site:  blog.octolab.org
-
 # language specific
 
 enableMissingTranslationPlaceholders: false
 
 languages:
-  ru:
-    languageCode: ru
-    weight:       1
-
-    title:     Hugs
-    copyright: Проект [OctoLab](https://www.octolab.ru/)
-
   en:
     languageCode: en
-    weight:       2
+    weight:       1
 
     title:     Hugs
     copyright: "[OctoLab](https://www.octolab.ru/) project"
