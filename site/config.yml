@@ -29,6 +29,9 @@ outputs:
 # language fallback
 
 params:
+  company: { id: octolab }
+  lead:    { id: kamil.samigullin }
+
   click:
     enabled: true
     proxy:   /goto?url=
