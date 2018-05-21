@@ -2,6 +2,10 @@
 (function ($) {
     'use strict';
 
+    // Array.isArray    IE >= 9
+    // Object.assign    not IE
+    // const            IE >= 11
+
     if (!$('.forma').length || !window.location.hash) {
         return;
     }
@@ -35,7 +39,6 @@
     <p class="mb-0">As you can see it was very simple! 🤗</p>
     <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
 </div>`,
-        location = new URL(window.location.href),
         messages = $('#messages'),
         success = 'success',
         failure = 'failure';
