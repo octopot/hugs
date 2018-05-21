@@ -11,7 +11,7 @@ services:
     - pgdata:/var/lib/postgresql/data
 
   click-migration:
-    image: kamilsk/click:latest # https://hub.docker.com/r/kamilsk/click/
+    image: kamilsk/click:1.x # https://hub.docker.com/r/kamilsk/click/
     command: [ "migrate", "up" ]
     depends_on:
     - database
@@ -19,7 +19,7 @@ services:
     - etc/env/click.env
     restart: on-failure
   click:
-    image: kamilsk/click:latest
+    image: kamilsk/click:1.x
     command: [ "run", "--with-profiler", "--with-monitoring" ]
     depends_on:
     - click-migration
@@ -27,7 +27,7 @@ services:
     - etc/env/click.env
 
   forma-migration:
-    image: kamilsk/form-api:latest # https://hub.docker.com/r/kamilsk/form-api/
+    image: kamilsk/form-api:1.x # https://hub.docker.com/r/kamilsk/form-api/
     command: [ "migrate", "up" ]
     depends_on:
     - database
@@ -35,7 +35,7 @@ services:
     - etc/env/forma.env
     restart: on-failure
   forma:
-    image: kamilsk/form-api:latest
+    image: kamilsk/form-api:1.x
     command: [ "run", "--with-profiler", "--with-monitoring" ]
     depends_on:
     - forma-migration
@@ -50,24 +50,20 @@ services:
     - ./site:/usr/share/site
 
   passport-migration:
-    image: kamilsk/passport:latest # https://hub.docker.com/r/kamilsk/passport/
+    image: kamilsk/passport:1.x # https://hub.docker.com/r/kamilsk/passport/
     command: [ "migrate", "up" ]
     depends_on:
     - database
     env_file:
     - etc/env/passport.env
     restart: on-failure
-    volumes:
-    - deprecated:/usr/share/passport
   passport:
-    image: kamilsk/passport:latest
+    image: kamilsk/passport:1.x
     command: [ "run", "--with-profiler", "--with-monitoring" ]
     depends_on:
     - passport-migration
     env_file:
     - etc/env/passport.env
-    volumes:
-    - deprecated:/usr/share/passport
 
   server:
     image: kamilsk/nginx:alpine # https://hub.docker.com/r/kamilsk/nginx/
@@ -97,5 +93,3 @@ volumes:
   pgdata:      { driver: local }
 
   letsencrypt: { driver: local }
-
-  deprecated:  { driver: local }
