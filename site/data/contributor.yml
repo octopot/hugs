@@ -8,7 +8,8 @@ list:
   email: kamil@samigullin.info
   site:  { en: 'https://kamil.samigullin.info/', ru: 'https://kamil.samigullin.info/ru/' }
   bio: >
-    Software&nbsp;developer, OctoLab&nbsp;creator and Open&nbsp;Source enthusiast
+    Software&nbsp;developer, OctoLab&nbsp;creator and Open&nbsp;Source enthusiast.<br>
+    I'm creating something big, and I need your support and help!
 
   social:
   - { id: kamilsk,  icon: fab fa-github,         url: 'https://github.com/kamilsk' }
