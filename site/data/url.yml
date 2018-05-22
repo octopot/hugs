@@ -18,6 +18,9 @@ list:
 - &forma
   origin: https://github.com/kamilsk/form-api
 
+- &hugo
+  origin: https://gohugo.io/
+
 - &hugs
   origin: https://github.com/octolab/hugs
 - &hugs_fork
@@ -32,6 +35,7 @@ list:
 
 find:
   digitalocean:      *digitalocean
+  hugo:              *hugo
   kamilsk/check:     *check
   kamilsk/click:     *click
   kamilsk/forma:     *forma
