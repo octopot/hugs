@@ -9,13 +9,15 @@
     {{- $live    := index $config "live" -}}
     {{- $url     := index .Site.Data.url.find $id | default (dict) -}}
     {{- $origin  := index $url "origin" | default $id -}}
-    {{- $click   := index $url "click!" | default (print $proxy "?" (querify "url" $origin)) -}}
+    {{- $click   := index $url "click!" | default $origin -}}
+
+    {{- $_has    := or (hasPrefix $click "http://") (hasPrefix $click "https://") -}}
+    {{- $_pass   := print (cond $enabled (print $proxy "?") (print "/pass?")) (querify "url" $click) -}}
+    {{- $base    := strings.TrimRight "/" (cond $enabled .Site.BaseURL $live) -}}
+    {{- $path    := strings.TrimLeft  "/" (cond $_has $_pass $click) -}}
 
 <a rel="noopener nofollow" title="{{ $origin }}"
-{{- with $class }} class="{{ . }}"{{ end -}}
-{{- if $enabled }} href="{{ $click }}"
-{{- else -}}{{- $click := print $live "/pass?" (querify "url" $origin) }} href="{{ $click }}"
-{{- end }}>
+{{- with $class }} class="{{ . }}"{{ end }} href="{{ $base }}/{{ $path }}">
     {{- $text | markdownify -}}
 </a>
 {{- end -}}
