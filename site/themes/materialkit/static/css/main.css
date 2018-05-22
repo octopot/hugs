@@ -16,7 +16,7 @@ trix-editor.form-control { height: auto; }
 #home .footer .partner                { display: block; margin: 40px auto; text-align: center; }
 #home .footer .digitalocean img       { width: 100%; }
 #home .footer .patreon img            { width: 50%; margin-left: 14px; }
-#home .footer .social-feed .feed-line { margin: .75em 0; }
+#home .footer .social-feed .feed-line { margin: .25em 0; }
 #home .footer .social li              { display: list-item; }
 #home .footer .social a               { padding-left: 0; }
 #home .footer .social i               { margin-right: .2em; }
