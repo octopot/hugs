@@ -10,40 +10,35 @@ list:
   url:   { en: 'https://www.octolab.ru/en/', ru: 'https://www.octolab.ru/' }
 
   social:
-  - id:     octolab
-    icon:   fab fa-github
-    button: bnt-github
-    title:  GitHub
-    alt:    OctoLab on GitHub
-    url:    https://github.com/octolab
+  - id:    octolab
+    icon:  fab fa-github
+    title: GitHub
+    alt:   OctoLab on GitHub
+    url:   https://github.com/octolab
 
-  - id:     octolab_inc
-    icon:   fab fa-twitter
-    button: btn-twitter
-    title:  Twitter
-    alt:    OctoLab on Twitter
-    url:    https://twitter.com/octolab_inc
+  - id:    octolab_inc
+    icon:  fab fa-twitter
+    title: Twitter
+    alt:   OctoLab on Twitter
+    url:   https://twitter.com/octolab_inc
 
-  - id:     octolab
-    icon:   fab fa-vk
-    button: btn-vk
-    title:  VK
-    alt:    OctoLab on VK
-    url:    https://vk.com/octolab
+  - id:    octolab
+    icon:  fab fa-vk
+    title: VK
+    alt:   OctoLab on VK
+    url:   https://vk.com/octolab
 
-  - id:     octolab.inc
-    icon:   fab fa-facebook-square
-    button: btn-facebook
-    title:  Facebook
-    alt:    OctoLab on Facebook
-    url:    https://www.facebook.com/octolab.inc
+  - id:    octolab.inc
+    icon:  fab fa-facebook-square
+    title: Facebook
+    alt:   OctoLab on Facebook
+    url:   https://www.facebook.com/octolab.inc
 
-  - id:     OctolabNet
-    icon:   fab fa-google-plus-square
-    button: btn-google
-    title:  Google+
-    alt:    OctoLab on Google+
-    url:    https://plus.google.com/+OctolabNet
+  - id:    OctolabNet
+    icon:  fab fa-google-plus-square
+    title: Google+
+    alt:   OctoLab on Google+
+    url:   https://plus.google.com/+OctolabNet
 
 find:
   octolab: *octolab

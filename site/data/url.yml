@@ -20,14 +20,23 @@ list:
 
 - &hugs
   origin: https://github.com/octolab/hugs
+- &hugs_fork
+  origin: https://github.com/octolab/hugs/fork
+- &hugs_issues
+  origin: https://github.com/octolab/hugs/issues
+- &hugs_stargazers
+  origin: https://github.com/octolab/hugs/stargazers
 
 - &passport
   origin: https://github.com/kamilsk/passport
 
 find:
-  digitalocean:     *digitalocean
-  kamilsk/check:    *check
-  kamilsk/click:    *click
-  kamilsk/forma:    *forma
-  kamilsk/passport: *passport
-  octolab/hugs:     *hugs
+  digitalocean:      *digitalocean
+  kamilsk/check:     *check
+  kamilsk/click:     *click
+  kamilsk/forma:     *forma
+  kamilsk/passport:  *passport
+  octolab/hugs:      *hugs
+  octolab/hugs.fork: *hugs_fork
+  octolab/hugs.bug:  *hugs_issues
+  octolab/hugs.star: *hugs_stargazers

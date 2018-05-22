@@ -1,5 +1,20 @@
 ---
 
-list: ~
+list:
 
-find: ~
+- &kamilsk
+  name:  Kamil Samigullin
+  role:  Product Owner
+  email: kamil@samigullin.info
+  site:  { en: 'https://kamil.samigullin.info/', ru: 'https://kamil.samigullin.info/ru/' }
+  bio: >
+    Software developer, OctoLab creator and Open Source enthusiast
+
+  social:
+  - { id: kamilsk,  icon: fab fa-github,         url: 'https://github.com/kamilsk' }
+  - { id: kamilsk,  icon: fab fa-linkedin,       url: 'https://www.linkedin.com/in/kamilsk' }
+  - { id: ikamilsk, icon: fab fa-twitter-square, url: 'https://twitter.com/ikamilsk' }
+
+find:
+  kamil.samigullin: *kamilsk
+  kamilsk:          *kamilsk
