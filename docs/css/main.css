@@ -12,6 +12,10 @@ trix-editor.form-control { height: auto; }
 
 #messages { position: fixed; top: 1rem; right: 1rem; z-index: 10; width: 40%; max-width: 512px; }
 
-/* ported */
-
-.subscribe-line { padding: 1.875rem 0; }
+#home .footer .partner                { display: block; margin: 40px auto; text-align: center; }
+#home .footer .digitalocean img       { width: 100%; }
+#home .footer .patreon img            { width: 50%; margin-left: 14px; }
+#home .footer .social-feed .feed-line { margin: .75em 0; }
+#home .footer .social li              { display: list-item; }
+#home .footer .social a               { padding-left: 0; }
+#home .footer .social i               { margin-right: .2em; }
