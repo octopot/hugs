@@ -1,27 +1,70 @@
-<div class="section text-center">
-    <h2 class="title">Here is our team</h2>
-    <div class="team">
+{{- $image  := .Param "image.team-section" | default "img/bg/octopus.png" -}}
+{{- $person := index .Site.Data.contributor.find .Site.Params.lead.id -}}
+
+<div class="team-5 section-image" style="background-image: url('{{ $image }}')">
+    <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="team-player">
-                    <div class="card card-plain">
-                        <div class="col-md-6 ml-auto mr-auto">
-                            <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
-                                    alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+            {{- with $person -}}
+            <div class="col-md-6">
+                <div class="card card-profile card-plain">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="card-header card-header-image">
+                                <a class="pull-left" href="{{ index .site $.Site.Language.Lang }}">
+                                    <img class="media-object"
+                                         src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=250&d=mm"
+                                         alt="{{ .name }}">
+                                </a>
+                                <div class="ripple-container"></div>
+                            </div>
                         </div>
-                        <h4 class="card-title">No Name
-                            <br>
-                            <small class="card-description text-muted">Model</small>
-                        </h4>
-                        <div class="card-body">
-                            <p class="card-description">You can write here details about one of your team members.
-                                You can give more details about what they do. Feel free to add some <a href="#">links</a>
-                                for people to be able to follow them outside the site.</p>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ .name }}</h4>
+                                <h6 class="card-category text-muted">{{ .role }}</h6>
+                                <p class="card-description">{{ .bio | markdownify }}</p>
+                            </div>
+                            <div class="card-footer">
+                                {{- $class := "btn btn-just-icon btn-link btn-white" -}}
+                                {{- range .social -}}
+                                    {{- $text := printf "<i class=\"%s\"></i>" .icon -}}
+                                    {{- partial "proxy/click" (dict "page" $ "id" .url "class" $class "text" $text) -}}
+                                {{- end -}}
+                            </div>
                         </div>
-                        <div class="card-footer justify-content-center">
-                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fab fa-facebook-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            {{- end -}}
+            <div class="col-md-6">
+                <div class="card card-profile card-plain">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="card-header card-header-image">
+                                <img class="media-object"
+                                     src="https://www.gravatar.com/avatar/00000000000000000000000000000000?s=250&d=mp"
+                                     alt="Contributor">
+                                <div class="ripple-container"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h4 class="card-title">It can be you</h4>
+                                <h6 class="card-category text-muted">Contributor</h6>
+                                <p class="card-description">All you need is to contributing. Change&nbsp;the&nbsp;world!</p>
+                            </div>
+                            <div class="card-footer">
+                                {{- $class := "btn btn-just-icon btn-link btn-white" -}}
+                                {{- with "<i class=\"fas fa-thumbs-up\"></i>" -}}
+                                    {{- partial "proxy/click" (dict "page" $ "id" "octolab/hugs.star" "class" $class "text" .) -}}
+                                {{- end -}}
+                                {{- with "<i class=\"fas fa-bug\"></i>" -}}
+                                    {{- partial "proxy/click" (dict "page" $ "id" "octolab/hugs.bug" "class" $class "text" .) -}}
+                                {{- end -}}
+                                {{- with "<i class=\"fas fa-code-branch\"></i>" -}}
+                                    {{- partial "proxy/click" (dict "page" $ "id" "octolab/hugs.fork" "class" $class "text" .) -}}
+                                {{- end -}}
+                            </div>
                         </div>
                     </div>
                 </div>
