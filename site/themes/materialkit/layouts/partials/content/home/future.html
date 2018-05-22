@@ -1,3 +1,23 @@
+{{- define "card" -}}
+<div class="card card-plain">
+    <a>
+        <div class="card-header card-header-image">
+            <img src="{{ .image }}">
+        </div>
+    </a>
+    <div class="card-body">
+        <h6 class="card-category">{{ .category }}</h6>
+        <a>
+            <h4 class="card-title">{{ .title }}</h4>
+        </a>
+        <p class="card-description">{{ .description | markdownify }}</p>
+        <button class="btn btn-info">
+            <i class="far fa-star"></i> Like <i class="fas fa-star d-none"></i>
+        </button>
+    </div>
+</div>
+{{- end -}}
+
 <div class="projects-3 section-dark">
     <div class="container">
         <div class="row">
@@ -7,86 +27,11 @@
             </div>
         </div>
         <div class="row">
+            {{- range .Param "future" -}}
             <div class="col-md-5 ml-auto">
-                <div class="card card-plain">
-                    <a>
-                        <div class="card-header card-header-image">
-                            <img src="img/octopus/partner.png">
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-category">Advertising</h6>
-                        <a>
-                            <h4 class="card-title">Partner</h4>
-                        </a>
-                        <p class="card-description">
-                            Manage your referrals.<br>
-                            Show most relevant in your sites.<br>
-                            Track and audit your traffic.<br>
-                        </p>
-                    </div>
-                </div>
+                {{- template "card" . -}}
             </div>
-            <div class="col-md-5 mr-auto">
-                <div class="card card-plain">
-                    <a>
-                        <div class="card-header card-header-image">
-                            <img src="img/octopus/status.png">
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-category">Monitoring</h6>
-                        <a>
-                            <h4 class="card-title">Status</h4>
-                        </a>
-                        <p class="card-description">
-                            Check your site availability in different Geo zones.<br>
-                            Healthcheck your services.<br>
-                            Check resources and URLs on your site.<br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 ml-auto">
-                <div class="card card-plain">
-                    <a>
-                        <div class="card-header card-header-image">
-                            <img src="img/octopus/octopus.png">
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-category">Image storage</h6>
-                        <a>
-                            <h4 class="card-title">Octopus</h4>
-                        </a>
-                        <p class="card-description">
-                            Manage your images.<br>
-                            Resize on fly.<br>
-                            Hotlink protection.<br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 mr-auto">
-                <div class="card card-plain">
-                    <a>
-                        <div class="card-header card-header-image">
-                            <img src="img/octopus/sepia.png">
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h6 class="card-category">Marketing</h6>
-                        <a>
-                            <h4 class="card-title">Sepia</h4>
-                        </a>
-                        <p class="card-description">
-                            A/B Testing.<br>
-                            DSL for traffic splitting.<br>
-                            Tracking and analytics.<br>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {{- end -}}
         </div>
     </div>
 </div>
