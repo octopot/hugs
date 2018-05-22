@@ -1,10 +1,16 @@
 ---
 
+# https://lzone.de/cheat-sheet/YAML
+# https://yaml-online-parser.appspot.com
+
 list:
 
 - &digitalocean
   origin: https://www.digitalocean.com/
   click!: https://m.do.co/c/b2a387de5da4
+
+- &check
+  origin: https://github.com/kamilsk/check
 
 - &click
   origin: https://github.com/kamilsk/click
@@ -12,11 +18,16 @@ list:
 - &forma
   origin: https://github.com/kamilsk/form-api
 
+- &hugs
+  origin: https://github.com/octolab/hugs
+
 - &passport
   origin: https://github.com/kamilsk/passport
 
 find:
   digitalocean:     *digitalocean
+  kamilsk/check:    *check
   kamilsk/click:    *click
   kamilsk/forma:    *forma
   kamilsk/passport: *passport
+  octolab/hugs:     *hugs

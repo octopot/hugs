@@ -46,6 +46,9 @@
             </div>
         </div>
 
+        <span class="small text-monospace float-left">built with {{ partial "proxy/click" (dict "page" $ "id" "octolab/hugs" "text" "Hugs") }},
+            validated by {{ partial "proxy/click" (dict "page" $ "id" "kamilsk/check" "text" "check") }} tool
+        </span>
         {{- /* template "powered-by/click" */ -}}
         <span class="small text-monospace float-right">powered by <a href="promo/click/">Click!</a></span>
         <br class="clearfix">
