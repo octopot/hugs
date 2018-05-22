@@ -51,15 +51,31 @@
         <br class="clearfix">
 
         <hr>
-        <ul class="float-left">
-            {{- range .Site.Menus.home_footer -}}
-                {{- if $.IsMenuCurrent "home_footer" . -}}
-                    <li class="active"><a>{{ .Pre }} {{ .Name }}</a></li>
-                {{- else -}}
-                    <li><a href="{{ .URL | relLangURL }}">{{ .Pre }} {{ .Name }}</a></li>
-                {{- end -}}
-            {{- end -}}
-        </ul>
-        <div class="copyright float-right">{{ now.Year }} &copy; {{ .Site.Copyright | markdownify }}</div>
+        <div class="row">
+            <div class="col-md-3">
+                <ul>
+                    {{- range .Site.Menus.home_footer -}}
+                        {{- if $.IsMenuCurrent "home_footer" . -}}
+                            <li class="active"><a>{{ .Pre }} {{ .Name }}</a></li>
+                        {{- else -}}
+                            <li><a href="{{ .URL | relLangURL }}">{{ .Pre }} {{ .Name }}</a></li>
+                        {{- end -}}
+                    {{- end -}}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="copyright text-center">
+                    {{- with index .Site.Data.partner.find "creative_tim" -}}
+                    <p>Template {{ partial "proxy/click" (dict "page" $ "id" .products.material_kit.href "text" .products.material_kit.text) }}
+                       is provided by {{ partial "proxy/click" (dict "page" $ "id" .href "text" .name) }}
+                       <i class="fas fa-heart"></i>
+                    </p>
+                    {{- end -}}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="copyright float-right">{{ now.Year }} &copy; {{ .Site.Copyright | markdownify }}</div>
+            </div>
+        </div>
     </div>
 </footer>

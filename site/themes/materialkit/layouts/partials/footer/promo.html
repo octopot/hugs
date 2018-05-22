@@ -1,10 +1,19 @@
+{{- $patreon  := index .Site.Data.partner.find "patreon" -}}
+{{- $creative := index .Site.Data.partner.find "creative_tim" -}}
+
 <footer class="footer">
     <div class="container">
-        <p>Feel free to support us at</p>
-        <a href="https://www.patreon.com/octolab"><img height="50" src="img/logo/patreon.black.svg" alt="Patreon"></a>
-        <p>Template <a href="https://www.creative-tim.com/product/material-kit">Material Kit</a>
-            is provided by <a href="https://github.com/creativetimofficial/material-kit">Creative Tim</a>
-            <i class="fas fa-heart"></i>
+        {{- with $patreon -}}
+        <p>Feel free to support us at<br>
+           {{- $text := printf "![Patreon](%s)" .logo.black.src -}}
+           {{- partial "proxy/click" (dict "page" $ "id" .href "class" .id "text" $text) -}}
         </p>
+        {{- end -}}
+        {{- with $creative -}}
+        <p>Template {{ partial "proxy/click" (dict "page" $ "id" .products.material_kit.href "text" .products.material_kit.text) }}
+           is provided by {{ partial "proxy/click" (dict "page" $ "id" .href "text" .name) }}
+           <i class="fas fa-heart"></i>
+        </p>
+        {{- end -}}
     </div>
 </footer>

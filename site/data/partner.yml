@@ -4,17 +4,31 @@ list:
 
 - &digitalocean
   id:   digitalocean
+  name: DigitalOcean
   href: digitalocean
   logo:
     black: { src: img/logo/digitalocean.black.svg, alt: Powered by DigitalOcean }
 
 - &patreon
   id:   patreon
+  name: Patreon
   href: https://www.patreon.com/octolab
   logo:
     black: { src: img/logo/patreon.black.svg, alt: Become a Patron }
+
+- &creative_tim
+  id:   creative-tim
+  name: Creative Tim
+  href: https://www.creative-tim.com/
+  logo: ~
+  products:
+    material_kit:
+      href: https://www.creative-tim.com/product/material-kit
+      text: Material Kit
 
 find:
   digitalocean: *digitalocean
   do:           *digitalocean
   patreon:      *patreon
+  creative_tim: *creative_tim
+  ct:           *creative_tim
