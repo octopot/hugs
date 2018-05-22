@@ -12,6 +12,7 @@ trix-editor.form-control { height: auto; }
 .promo-page .footer .patreon img      { height: 50px; }
 
 #messages { position: fixed; top: 1rem; right: 1rem; z-index: 10; width: 40%; max-width: 512px; }
+#wip      { margin: 0; }
 
 #home .footer .partner                { display: block; margin: 40px auto; text-align: center; }
 #home .footer .digitalocean img       { width: 100%; }
