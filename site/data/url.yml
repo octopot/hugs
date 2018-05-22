@@ -2,6 +2,10 @@
 
 list:
 
+- &digitalocean
+  origin: https://www.digitalocean.com/
+  click!: https://m.do.co/c/b2a387de5da4
+
 - &click
   origin: https://github.com/kamilsk/click
 
@@ -12,6 +16,7 @@ list:
   origin: https://github.com/kamilsk/passport
 
 find:
+  digitalocean:     *digitalocean
   kamilsk/click:    *click
   kamilsk/forma:    *forma
   kamilsk/passport: *passport

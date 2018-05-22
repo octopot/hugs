@@ -56,6 +56,24 @@ languages:
     title:     Hugs
     copyright: "[OctoLab](https://www.octolab.ru/) project"
 
+    menu:
+      home_footer:
+      - identifier: site
+        name:       Site
+        pre:        <i class="fas fa-home"></i>
+        weight:     1
+        url:        https://www.octolab.org/
+      - identifier: blog
+        name:       Blog
+        pre:        <i class="far fa-newspaper"></i>
+        weight:     2
+        url:        https://blog.octolab.org/
+      - identifier: idea
+        name:       Ideas
+        pre:        <i class="far fa-lightbulb"></i>
+        weight:     3
+        url:        https://idea.octolab.org/
+
 # defaults
 
 defaultContentLanguage:         en

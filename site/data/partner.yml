@@ -1,5 +1,20 @@
 ---
 
-list: ~
+list:
 
-find: ~
+- &digitalocean
+  id:   digitalocean
+  href: digitalocean
+  logo:
+    black: { src: img/logo/digitalocean.black.svg, alt: Powered by DigitalOcean }
+
+- &patreon
+  id:   patreon
+  href: https://www.patreon.com/octolab
+  logo:
+    black: { src: img/logo/patreon.black.svg, alt: Become a Patron }
+
+find:
+  digitalocean: *digitalocean
+  do:           *digitalocean
+  patreon:      *patreon

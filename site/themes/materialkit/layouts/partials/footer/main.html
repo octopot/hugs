@@ -1,10 +1,65 @@
-<footer class="footer">
+{{- $company  := index .Site.Data.company.find .Site.Params.company.id -}}
+{{- $releases := .Site.Data.release.latest -}}
+{{- $partners := where .Site.Data.partner.list "id" "in" (slice "digitalocean" "patreon") -}}
+
+<footer class="footer footer-big">
     <div class="container">
-        <p>Feel free to support us at</p>
-        <a href="https://www.patreon.com/octolab"><img height="50" src="img/logo/patreon.black.svg" alt="Patreon"></a>
-        <p>Template <a href="https://www.creative-tim.com/product/material-kit">Material Kit</a>
-            is provided by <a href="https://github.com/creativetimofficial/material-kit">Creative Tim</a>
-            <i class="fas fa-heart"></i>
-        </p>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <div class="partners">
+                        {{- range $partners -}}
+                            {{- $class := print "partner " .id -}}
+                            {{- $text  := printf "![%s](%s)" .logo.black.alt .logo.black.src -}}
+                            {{- partial "proxy/click" (dict "page" $ "id" .href "class" $class "text" $text) -}}
+                        {{- end -}}
+                    </div>
+                </div>
+                <div class="col-md-3 offset-md-1">
+                    <h5>Latest releases</h5>
+                    <div class="social-feed">
+                        {{- range $idx, $branch := $releases -}}
+                            {{- range $branch.versions -}}
+                            <div class="feed-line">
+                                <i class="{{ .version.icon }}"></i> <strong>{{ .project }}</strong>
+                                version {{ partial "proxy/click" (dict "page" $ "id" .version.href "text" .version.text) -}}
+                            </div>
+                            {{- end -}}
+                            {{- if ne (add $idx 1) (len $releases) }}<hr>{{ end -}}
+                        {{- end -}}
+                    </div>
+                </div>
+                {{- with $company.social -}}
+                <div class="col-md-2">
+                    <h5>We in social</h5>
+                    <ul class="social">
+                        {{- range . -}}
+                            <li>
+                                {{- $class := "btn btn-link btn-social" -}}
+                                {{- $text  := printf "<i class=\"%s\"></i> %s" .icon .title -}}
+                                {{- partial "proxy/click" (dict "page" $ "id" .url "class" $class "text" $text) -}}
+                            </li>
+                        {{- end -}}
+                    </ul>
+                </div>
+                {{- end -}}
+            </div>
+        </div>
+
+        {{- /* template "powered-by/click" */ -}}
+        <span class="small text-monospace float-right">powered by <a href="promo/click/">Click!</a></span>
+        <br class="clearfix">
+
+        <hr>
+        <ul class="float-left">
+            {{- range .Site.Menus.home_footer -}}
+                {{- if $.IsMenuCurrent "home_footer" . -}}
+                    <li class="active"><a>{{ .Pre }} {{ .Name }}</a></li>
+                {{- else -}}
+                    <li><a href="{{ .URL | relLangURL }}">{{ .Pre }} {{ .Name }}</a></li>
+                {{- end -}}
+            {{- end -}}
+        </ul>
+        <div class="copyright float-right">{{ now.Year }} &copy; {{ .Site.Copyright | markdownify }}</div>
     </div>
 </footer>

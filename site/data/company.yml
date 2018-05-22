@@ -3,6 +3,7 @@
 list:
 
 - &octolab
+  id:    octolab
   name:  OctoLab
   desc:  IT solutions for small and medium business
   email: info@octolab.ru
@@ -13,36 +14,36 @@ list:
     icon:   fab fa-github
     button: bnt-github
     title:  GitHub
-    url:    '/goto?url=https://github.com/octolab'
     alt:    OctoLab on GitHub
+    url:    https://github.com/octolab
 
   - id:     octolab_inc
     icon:   fab fa-twitter
     button: btn-twitter
     title:  Twitter
-    url:    '/goto?url=https://twitter.com/octolab_inc'
     alt:    OctoLab on Twitter
+    url:    https://twitter.com/octolab_inc
 
   - id:     octolab
     icon:   fab fa-vk
     button: btn-vk
     title:  VK
-    url:   '/goto?url=https://vk.com/octolab'
     alt:    OctoLab on VK
+    url:    https://vk.com/octolab
 
   - id:     octolab.inc
     icon:   fab fa-facebook-square
     button: btn-facebook
     title:  Facebook
-    url:    '/goto?url=https://www.facebook.com/octolab.inc'
     alt:    OctoLab on Facebook
+    url:    https://www.facebook.com/octolab.inc
 
   - id:     OctolabNet
     icon:   fab fa-google-plus-square
     button: btn-google
     title:  Google+
-    url:    '/goto?url=https://plus.google.com/+OctolabNet'
     alt:    OctoLab on Google+
+    url:    https://plus.google.com/+OctolabNet
 
 find:
   octolab: *octolab
