@@ -8,28 +8,20 @@
     <link rel="stylesheet" href="css/main.css">
 {{ end }}
 
-{{ define "content" }}
-    {{- $image := .Param "image.page-header" | default "img/bg/octopus.png" -}}
+{{ define "header" }}
+    {{- partial "content/home/wip" . -}}
+    {{- partial "header/main" . -}}
+{{ end }}
 
-    <div class="page-header header-filter"
-         style="background-image: url('{{ $image }}');" data-parallax="true">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="title">This is static!</h1>
-                    <h4>Hugs platform helps you to create a live site built with static site generators
-                        such as <strong>Hugo</strong> or <strong>Gatsby</strong>.</h4>
-                </div>
-            </div>
-        </div>
-    </div>
+{{ define "content" }}
+    {{- partial "content/home/promo" . -}}
     <div class="main main-raised">
-        <div class="container">
-            {{- partial "content/home/product" . -}}
-            {{- partial "content/home/team" . -}}
-            {{- partial "content/home/feedback" . -}}
-            {{- partial "content/home/subscribe" . -}}
-        </div>
+        {{- partial "content/home/product" . -}}
+        {{- partial "content/home/solutions" . -}}
+        {{- partial "content/home/future" . -}}
+        {{- partial "content/home/feedback" . -}}
+        {{- partial "content/home/team" . -}}
+        {{- partial "content/home/subscribe" . -}}
     </div>
 {{ end }}
 

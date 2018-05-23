@@ -1,0 +1,41 @@
+{{- $blocks := where .Data.Pages "Section" "promo" -}}
+
+<div class="projects-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <h2 class="title">Building blocks</h2>
+                <h5 class="description">What's inside</h5>
+                <div class="section-space"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 ml-auto mr-auto text-center">
+                {{- partial "proxy/click" (dict "page" . "id" "hugo" "text" "![Hugo](img/logo/hugo.svg)") -}}
+                <h2 class="title">The <i class="fas fa-heartbeat" title="heart"></i> of Hugs </h2>
+                <h5 class="description">And the world's fastest framework for building websites.</h5>
+                <div class="section-space"></div>
+            </div>
+        </div>
+
+        {{- range $idx, $page := $blocks -}}
+        <div class="row">
+            <div class="col-md-5 ml-auto">
+                {{- if modBool $idx 2 -}}
+                    {{- $page.Render "block.card" -}}
+                {{- else -}}
+                    {{- $page.Render "block.info" -}}
+                {{- end -}}
+            </div>
+            <div class="col-md-5 ml-auto">
+                {{- if modBool $idx 2 -}}
+                    {{- $page.Render "block.info" -}}
+                {{- else -}}
+                    {{- $page.Render "block.card" -}}
+                {{- end -}}
+            </div>
+        </div>
+        {{- if ne (add $idx 1) (len $blocks) -}}<hr>{{- end -}}
+        {{- end -}}
+    </div>
+</div>

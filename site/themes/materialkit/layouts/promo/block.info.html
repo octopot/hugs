@@ -1,0 +1,11 @@
+{{- range .Param "features" -}}
+<div class="info info-horizontal">
+    <div class="icon {{ .icon.color }}">
+        <i class="material-icons">{{ .icon.type }}</i>
+    </div>
+    <div class="description">
+        <h4 class="info-title">{{ .title }}</h4>
+        <p class="description">{{ .description | markdownify }}</p>
+    </div>
+</div>
+{{- end -}}

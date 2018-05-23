@@ -16,6 +16,23 @@ sponsors:
 
 googleAnalytics: UA-109817251-15
 
+image:
+  card-background: img/octopus/forma.png
+
+features:
+- icon:  { color: icon-info, type: format_paint }
+  title: ...
+  description: >
+    ...
+- icon:  { color: icon-primary, type: code }
+  title: ...
+  description: >
+    ...
+- icon:  { color: icon-danger, type: dashboard }
+  title: ...
+  description: >
+    ...
+
 tmp:
   gitter:  https://gitter.im/kamilsk/form-api
   mailto:  mailto:feedback@octolab.org?subject=Forma%20(from%20GitHub%20page)
