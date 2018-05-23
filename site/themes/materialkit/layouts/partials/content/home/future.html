@@ -27,10 +27,16 @@
             </div>
         </div>
         <div class="row">
-            {{- range .Param "future" -}}
-            <div class="col-md-5 ml-auto">
-                {{- template "card" . -}}
-            </div>
+            {{- range $idx, $product := .Param "future" -}}
+                {{- if modBool $idx 2 -}}
+                <div class="col-md-5 offset-md-1">
+                    {{- template "card" $product -}}
+                </div>
+                {{- else -}}
+                <div class="col-md-5">
+                    {{- template "card" $product -}}
+                </div>
+                {{- end -}}
             {{- end -}}
         </div>
     </div>
