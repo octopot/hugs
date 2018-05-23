@@ -70,40 +70,40 @@ $ open https://passport.127.0.0.1.xip.io/
 
 ### Services
 
-#### [github.com/kamilsk/click](https://kamilsk.github.io/click/)
+#### Click!
 
-Mirror at bitbucket: [bitbucket.org/kamilsk/click](https://bitbucket.org/kamilsk/click/src/master/)
+- Source code at GitHub: [github.com/kamilsk/click](https://github.com/kamilsk/click)
+- Mirror at Bitbucket: [bitbucket.org/kamilsk/click](https://bitbucket.org/kamilsk/click)
+- Docker image: [kamilsk/click](https://hub.docker.com/r/kamilsk/click/)
+- Mirror at Quay: [quay.io/kamilsk/click](https://quay.io/repository/kamilsk/click)
 
-Docker image: [kamilsk/click](https://hub.docker.com/r/kamilsk/click/)
-Mirror at quay.io: [quay.io/kamilsk/click](https://quay.io/repository/kamilsk/click)
+#### Forma
 
-#### [github.com/kamilsk/form-api](https://kamilsk.github.io/form-api/)
+- Source code at GitHub: [github.com/kamilsk/form-api](https://github.com/kamilsk/form-api)
+- Mirror at Bitbucket: [bitbucket.org/kamilsk/form-api](https://bitbucket.org/kamilsk/form-api)
+- Docker image: [kamilsk/form-api](https://hub.docker.com/r/kamilsk/form-api/)
+- Mirror at Quay: [quay.io/kamilsk/form-api](https://quay.io/repository/kamilsk/form-api)
 
-Mirror at bitbucket: [bitbucket.org/kamilsk/form-api](https://bitbucket.org/kamilsk/form-api/src/master/)
+#### Passport
 
-Docker image: [kamilsk/form-api](https://hub.docker.com/r/kamilsk/form-api/)
-Mirror at quay.io: [quay.io/kamilsk/form-api](https://quay.io/repository/kamilsk/form-api)
-
-#### [github.com/kamilsk/passport](https://kamilsk.github.io/passport/)
-
-Mirror at bitbucket: [bitbucket.org/kamilsk/passport](https://bitbucket.org/kamilsk/passport/src/master/)
-
-Docker image: [kamilsk/passport](https://hub.docker.com/r/kamilsk/passport/)
-Mirror at quay.io: [quay.io/kamilsk/passport](https://quay.io/repository/kamilsk/passport)
+- Source code at GitHub: [github.com/kamilsk/passport](https://github.com/kamilsk/passport)
+- Mirror at Bitbucket: [bitbucket.org/kamilsk/passport](https://bitbucket.org/kamilsk/passport)
+- Docker image: [kamilsk/passport](https://hub.docker.com/r/kamilsk/passport/)
+- Mirror at Quay: [quay.io/kamilsk/passport](https://quay.io/repository/kamilsk/passport)
 
 ### Infrustructure
 
-#### [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
+#### kamilsk/nginx
 
-Mirror at quay.io: [quay.io/kamilsk/nginx](https://quay.io/repository/kamilsk/nginx)
+- Source code at GitHub: [kamilsk/docker/nginx](https://github.com/kamilsk/shared/tree/docker-common#kamilsknginx-mirror-at-quayio)
+- Docker image: [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
+- Mirror at Quay: [quay.io/kamilsk/nginx](https://quay.io/repository/kamilsk/nginx)
 
-Source code: [kamilsk/docker/nginx](https://github.com/kamilsk/shared/tree/docker-common#kamilsknginx-mirror-at-quayio)
+#### kamilsk/hugo
 
-#### [kamilsk/hugo](https://hub.docker.com/r/kamilsk/hugo/)
-
-Mirror at quay.io: ~
-
-Source code: [kamilsk/docker/hugo](https://github.com/kamilsk/shared/tree/docker-go#kamilskhugo)
+- Source code at GitHub: [kamilsk/docker/hugo](https://github.com/kamilsk/shared/tree/docker-go#kamilskhugo)
+- Docker image: [kamilsk/hugo](https://hub.docker.com/r/kamilsk/hugo/)
+- Mirror at Quay: ~
 
 ---
 
