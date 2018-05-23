@@ -11,5 +11,12 @@
 </div>
 <div class="github-vote text-center">
     <a class="github-button" href="{{ $src }}"
-       data-size="large" data-show-count="true" aria-label="Star {{ $github }} on GitHub">Star</a>
+       data-icon="octicon-star" data-size="large"
+       aria-label="Star {{ $github }} on GitHub">Star</a>
+    <a class="github-button" href="{{ $src }}/subscription"
+       data-icon="octicon-eye" data-size="large"
+       aria-label="Watch {{ $github }} on GitHub">Watch</a>
+    <a class="github-button" href="{{ $github }}/fork"
+       data-icon="octicon-repo-forked" data-size="large"
+       aria-label="Fork {{ $github }} on GitHub">Fork</a>
 </div>
