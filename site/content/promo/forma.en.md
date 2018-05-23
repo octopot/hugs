@@ -20,20 +20,24 @@ image:
   card-background: img/octopus/forma.png
 
 features:
-- icon:  { color: icon-info, type: format_paint }
-  title: ...
+- icon:  { color: icon-success, type: face }
+  title: Personal FormKeep
   description: >
-    ...
-- icon:  { color: icon-primary, type: code }
-  title: ...
+    Same as **FormKeep** or **Pageclip** but your and free.
+- icon:  { color: icon-info, type: code }
+  title: Very Simple
   description: >
-    ...
-- icon:  { color: icon-danger, type: dashboard }
-  title: ...
+    It looks like a usual HTML5 form.
+- icon:  { color: icon-primary, type: view_quilt }
+  title: Multiple Views
   description: >
-    ...
+    One form, many placements, and templates.
+- icon:  { color: icon-default, type: timeline }
+  title: Status
+  description: >
+    Version **2.x** in development, stabilization on **3.x**.
 
-tmp:
+tmp: # TODO use menu instead
   gitter:  https://gitter.im/kamilsk/form-api
   mailto:  mailto:feedback@octolab.org?subject=Forma%20(from%20GitHub%20page)
   project: https://github.com/kamilsk/form-api
