@@ -82,12 +82,22 @@
 (function ($) {
     'use strict';
 
-    if (!$('.vode').length) {
+    // const IE >= 11
+
+    const $votes = $('.vote'),
+          $likes = $('#likes');
+
+    if (!$votes.length || !$likes.length) {
         return;
     }
 
+    const mirror = {
+        like: 'liked',
+        liked: 'like',
+    };
+
     // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
-    var docCookies = {
+    const cookies = {
         getItem: function (sKey) {
             if (!sKey) { return null; }
             return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
@@ -126,4 +136,27 @@
             return aKeys;
         }
     };
+
+    function swap() {
+        const $to = $(this);
+        if (!mirror.hasOwnProperty($to.data('state'))) {
+            return;
+        }
+        const $from = $likes.children('[data-state="' + mirror[$to.data('state')] + '"]');
+        if (!$from.length) {
+            return;
+        }
+        $to.html($from.html()).data('state', $from.data('state'));
+        cookies.setItem(this.id, $from.data('state'));
+    }
+
+    $votes.removeClass('d-none').click(function () {
+        swap.apply(this);
+    }).each(function () {
+        if (cookies.hasItem(this.id)) {
+            if (cookies.getItem(this.id) !== $(this).data('state')) {
+                swap.apply(this);
+            }
+        }
+    });
 }(window.jQuery));
