@@ -8,7 +8,7 @@ id:          click-promo
 class:       promo-page
 
 author:      kamil.samigullin
-source:      kamilsk/click
+github:      kamilsk/click
 tagline:     your personal link storage and URL shortener
 
 sponsors:

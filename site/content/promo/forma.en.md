@@ -8,7 +8,7 @@ id:          forma-promo
 class:       promo-page
 
 author:      kamil.samigullin
-source:      kamilsk/forma
+github:      kamilsk/forma
 tagline:     your personal server for HTML forms
 
 sponsors:

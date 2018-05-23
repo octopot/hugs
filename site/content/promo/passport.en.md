@@ -8,7 +8,7 @@ id:          passport-promo
 class:       promo-page
 
 author:      kamil.samigullin
-source:      kamilsk/passport
+github:      kamilsk/passport
 tagline:     your personal user tracker and auth service
 
 sponsors:
