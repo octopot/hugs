@@ -11,9 +11,14 @@
             <h4 class="card-title">{{ .title }}</h4>
         </a>
         <p class="card-description">{{ .description | markdownify }}</p>
-        <button class="btn btn-info">
-            <i class="far fa-star"></i> Like <i class="fas fa-star d-none"></i>
-        </button>
+        <div class="vote">
+            <button id="{{ .id }}" class="btn btn-info">
+                <i class="far fa-star"></i> Like
+            </button>
+            <div class="d-none">
+                <i class="fas fa-star"></i> Liked
+            </div>
+        </div>
     </div>
 </div>
 {{- end -}}
