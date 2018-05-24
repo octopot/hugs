@@ -35,12 +35,12 @@ params:
   click:
     enabled: true
     proxy:   /goto
-    live:    https://click.127.0.0.1.xip.io
+    service: https://click.127.0.0.1.xip.io
 
   forma:
     enabled: true
     proxy:   /forma
-    live:    https://forma.127.0.0.1.xip.io
+    service: https://forma.127.0.0.1.xip.io
 
   keywords: [platform, static sites]
 

@@ -92,9 +92,9 @@ restore-database:
 .PHONY: demo
 demo:                       #| Insert demo data to the database.
 	@(docker cp ./etc/demo $$(make status | tail +3 | awk '{print $$1}' | grep _database_ | sort | head -1):/tmp/)
-	#@($(COMPOSE) exec database /bin/sh -c 'for sql in $$(ls /tmp/demo/click/*.sql); do su - postgres -c "psql click < $$sql"; done')
+	@($(COMPOSE) exec database /bin/sh -c 'for sql in $$(ls /tmp/demo/click/*.sql); do su - postgres -c "psql click < $$sql"; done')
 	@($(COMPOSE) exec database /bin/sh -c 'for sql in $$(ls /tmp/demo/forma/*.sql); do su - postgres -c "psql forma < $$sql"; done')
-	#@($(COMPOSE) exec database /bin/sh -c 'for sql in $$(ls /tmp/demo/passport/*.sql); do su - postgres -c "psql passport < $$sql"; done')
+	@#@($(COMPOSE) exec database /bin/sh -c 'for sql in $$(ls /tmp/demo/passport/*.sql); do su - postgres -c "psql passport < $$sql"; done')
 #|
 .PHONY: psql
 psql:                       #| Connect to the database with psql.

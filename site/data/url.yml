@@ -5,15 +5,23 @@
 
 list:
 
-- &digitalocean
-  origin: https://www.digitalocean.com/
-  click!: https://m.do.co/c/b2a387de5da4
-
 - &check
   origin: https://github.com/kamilsk/check
 
 - &click
   origin: https://github.com/kamilsk/click
+
+- &designmodo
+  origin: https://designmodo.com/products/
+  click!: designmodo
+
+- &digitalocean
+  origin: https://www.digitalocean.com/
+  click!: digitalocean
+
+- &ecwid
+  origin: https://www.ecwid.com/
+  click!: ecwid
 
 - &forma
   origin: https://github.com/kamilsk/form-api
@@ -30,17 +38,39 @@ list:
 - &hugs_stargazers
   origin: https://github.com/octolab/hugs/stargazers
 
+- &linode
+  origin: https://www.linode.com/
+  click!: linode
+
 - &passport
   origin: https://github.com/kamilsk/passport
 
+- &patreon
+  origin: https://www.patreon.com/octolab/memberships
+  click!: patreon
+
+- &themeforest
+  origin: https://themeforest.net/
+  click!: themeforest
+
+- &vultr
+  origin: https://www.vultr.com/
+  click!: vultr
+
 find:
+  designmodo:        *designmodo
   digitalocean:      *digitalocean
+  ecwid:             *ecwid
   hugo:              *hugo
   kamilsk/check:     *check
   kamilsk/click:     *click
   kamilsk/forma:     *forma
   kamilsk/passport:  *passport
+  linode:            *linode
   octolab/hugs:      *hugs
   octolab/hugs.fork: *hugs_fork
   octolab/hugs.bug:  *hugs_issues
   octolab/hugs.star: *hugs_stargazers
+  patreon:           *patreon
+  themeforest:       *themeforest
+  vultr:             *vultr

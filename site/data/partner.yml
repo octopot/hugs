@@ -12,7 +12,7 @@ list:
 - &patreon
   id:   patreon
   name: Patreon
-  href: https://www.patreon.com/octolab
+  href: patreon
   logo:
     black: { src: img/logo/patreon.black.svg, alt: Become a Patron }
 
@@ -27,8 +27,14 @@ list:
       text: Material Kit
 
 find:
-  digitalocean: *digitalocean
-  do:           *digitalocean
-  patreon:      *patreon
   creative_tim: *creative_tim
   ct:           *creative_tim
+  #designmodo:   *designmodo
+  #dm:           *designmodo
+  digitalocean: *digitalocean
+  do:           *digitalocean
+  #ecwid:        *ecwid
+  #linode:       *linode
+  patreon:      *patreon
+  #themeforest:  *themeforest
+  #vultr:        *vultr

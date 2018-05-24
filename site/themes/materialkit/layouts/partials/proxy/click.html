@@ -5,16 +5,29 @@
 {{- with .page -}}
     {{- $config  := .Site.Params.click -}}
     {{- $enabled := index $config "enabled" | default false -}}
-    {{- $proxy   := index $config "proxy"   | default "/goto" -}}
-    {{- $live    := index $config "live" -}}
+    {{- $proxy   := index $config "proxy" -}}
+    {{- $service := index $config "service" -}}
     {{- $url     := index .Site.Data.url.find $id | default (dict) -}}
     {{- $origin  := index $url "origin" | default $id -}}
     {{- $click   := index $url "click!" | default $origin -}}
 
-    {{- $_has    := or (hasPrefix $click "http://") (hasPrefix $click "https://") -}}
-    {{- $_pass   := print (cond $enabled (print $proxy "?") (print "/pass?")) (querify "url" $click) -}}
-    {{- $base    := strings.TrimRight "/" (cond $enabled .Site.BaseURL $live) -}}
-    {{- $path    := strings.TrimLeft  "/" (cond $_has $_pass $click) -}}
+    {{- /*
+      %service%  e.g. https://click.127.0.0.1.xip.io
+      %site%     e.g. https://127.0.0.1.xip.io/, https://octolab.github.io/hugs/
+      %proxy%    /goto
+      %pass%     /pass
+      %alias%    hidden %uri%
+
+      possible combinations:        | $enabled | $_has |
+      - %service%/%alias%           | false    | false |
+      - %service%/%pass%?url=%uri%  | false    | true  |
+      - %site%/%proxy%/%alias%      | true     | false |
+      - %site%/%proxy%?url=%uri%    | true     | true  |
+    */ -}}
+    {{- $_has := or (or (hasPrefix $click "http://") (hasPrefix $click "https://")) (hasPrefix $click "//") -}}
+    {{- $base := strings.TrimRight "/" (cond $enabled .Site.BaseURL $service) -}}
+    {{- $pass := print (cond $enabled (print $proxy "?") (print "/pass?")) (querify "url" $click) -}}
+    {{- $path := strings.TrimLeft  "/" (cond $_has $pass (cond $enabled (print $proxy "/" $click) $click)) -}}
 
 <a rel="noopener nofollow" title="{{ $origin }}"
 {{- with $class }} class="{{ . }}"{{ end }} href="{{ $base }}/{{ $path }}">
