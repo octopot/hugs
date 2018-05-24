@@ -7,10 +7,23 @@
     {{- $proxy   := index $config "proxy" -}}
     {{- $service := index $config "service" -}}
 
+    {{- /*
+      %service%  e.g. https://forma.127.0.0.1.xip.io
+      %site%     e.g. https://127.0.0.1.xip.io/, https://octolab.github.io/hugs/
+      %proxy%    /forma
+      %api%      /api/v1
+      %id%       form identifier
+      possible combinations:  | $enabled |
+      - %service%/%api%/%id%  | false    |
+      - %site%/%proxy%/%id%   | true     |
+    */ -}}
+    {{- $base := strings.TrimRight "/" (cond $enabled .Site.BaseURL $service) -}}
+    {{- $path := strings.TrimLeft  "/" (cond $enabled (print $proxy "/" $id) (print "/api/v1/" $id)) -}}
+
 <form id="{{ $id }}" class="forma" lang="{{ .Site.Language.Lang }}" title="{{ $title }}"
-    {{ if $enabled }}action="{{ $proxy }}/{{ $id }}"{{ else }}action="{{ $service }}/api/v1/{{ $id }}"{{ end }}
+    action="{{ $base }}/{{ $path }}"
     method="post" enctype="application/x-www-form-urlencoded">
-    {{- partial (print "forma/" $id) (dict "id" $id "page" .) -}}
+    {{- partial (print "forma/" $id) (dict "page" . "id" $id) -}}
 </form>
 {{- end -}}
 
