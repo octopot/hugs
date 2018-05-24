@@ -65,7 +65,7 @@
             .replace('{{ title }}', title)
             .replace('{{ desc }}', desc));
         messages.append(message);
-        setTimeout(function () { message.alert('close'); }, 4000 + 1000 * Math.random());
+        setTimeout(function () { message.alert('close'); window.location.hash = ''; }, 4000 + 1000 * Math.random());
     }
 
     function showMessages() {
@@ -78,7 +78,7 @@
     showMessages();
 }(window.jQuery));
 
-// Vote
+// Simple vote
 (function ($) {
     'use strict';
 
