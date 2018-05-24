@@ -30,8 +30,6 @@ BEGIN
     (designmodo, 'designmodo')
     ON CONFLICT DO NOTHING;
 
-  -- TODO waiting https://github.com/kamilsk/click/issues/58
-  DELETE FROM "target" WHERE "link_id" IN (digitalocean, patreon, ecwid, themeforest, linode, vultr, designmodo);
   INSERT INTO "target" ("link_id", "uri")
   VALUES
     (digitalocean, 'https://m.do.co/c/b2a387de5da4'),

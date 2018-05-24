@@ -7,6 +7,11 @@ list:
   text: 1.2.5
   icon: fa fa-check-circle
 
+- &click126
+  href: https://github.com/kamilsk/click/releases/tag/1.2.6
+  text: 1.2.6
+  icon: fa fa-check-circle
+
 - &click200
   href: https://github.com/kamilsk/click/milestone/2
   text: 2.0.0
@@ -15,6 +20,11 @@ list:
 - &forma121
   href: https://github.com/kamilsk/form-api/releases/tag/1.2.1
   text: 1.2.1
+  icon: fa fa-check-circle
+
+- &forma122
+  href: https://github.com/kamilsk/form-api/releases/tag/1.2.2
+  text: 1.2.2
   icon: fa fa-check-circle
 
 - &forma200
@@ -41,9 +51,9 @@ latest:
 - branch: v1
   versions:
   - project: *click
-    version: *click125
+    version: *click126
   - project: *forma
-    version: *forma121
+    version: *forma122
   - project: *passport
     version: *passport110
 - branch: v2

@@ -25,6 +25,9 @@ list:
     material_kit:
       href: https://www.creative-tim.com/product/material-kit
       text: Material Kit
+    material_kit_pro:
+      href: https://www.creative-tim.com/product/material-kit-pro
+      text: Material Kit Pro
 
 find:
   creative_tim: *creative_tim
