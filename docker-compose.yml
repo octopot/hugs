@@ -66,7 +66,7 @@ services:
     - etc/env/passport.env
 
   server:
-    image: kamilsk/nginx:alpine # https://hub.docker.com/r/kamilsk/nginx/
+    image: kamilsk/nginx:1.x # https://hub.docker.com/r/kamilsk/nginx/
     depends_on:
     - click
     - forma
@@ -74,10 +74,10 @@ services:
     - passport
     entrypoint: |
       /bin/bash -c "echo $$BASIC_USER:`(echo $$BASIC_PASS | openssl passwd -crypt -stdin -noverify)` >> /etc/nginx/.htpasswd \
-                    && ./entrypoint.sh 127.0.0.1.xio.io \
-                                       click.127.0.0.1.xio.io \
-                                       forma.127.0.0.1.xio.io \
-                                       passport.127.0.0.1.xio.io"
+                    && /entrypoint.sh 127.0.0.1.xio.io \
+                                      click.127.0.0.1.xio.io \
+                                      forma.127.0.0.1.xio.io \
+                                      passport.127.0.0.1.xio.io"
     env_file:
     - etc/env/balancer.env
     ports:
