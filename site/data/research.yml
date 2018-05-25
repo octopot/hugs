@@ -1,0 +1,35 @@
+---
+
+list: ~
+
+candidates:
+- title: Automation and Deploy
+  icon:  autorenew
+  description: >
+    ///
+  candidates: ~
+- title: Communication
+  icon:  question_answer
+  description: >
+    ///
+  candidates: ~
+- title: Content Management
+  icon:  translate
+  description: >
+    Image storage, file storage and backups, CMS and translate management.
+  candidates: ~
+- title: E-commerce
+  icon:  store
+  description: >
+    ///
+  candidates: ~
+- title: GUI
+  icon:  dashboard
+  description: >
+    ///
+  candidates: ~
+- title: Search
+  icon:  search
+  description: >
+    ///
+  candidates: ~
