@@ -9,8 +9,9 @@ id:          home
 class:       page
 
 image:
-  page-header:  img/content/7d1e8826a7d085e5183e41d2ad66182c.jpg
-  team-section: img/content/013b04881a6177ff0648349533ef0447.jpg
+  page-header:      img/content/7d1e8826a7d085e5183e41d2ad66182c.jpg
+  team-section:     img/content/013b04881a6177ff0648349533ef0447.jpg
+  research-section: img/content/c48e508b9ec3de8bdf68a834f43d45f9.jpg
 
 future:
 - id:       3c862d17-6a3e-4e49-b26c-d1b387fd4a43
