@@ -14,6 +14,9 @@ Requirements:
 - GNU Make 3.81 or above
 
 ```bash
+$ git clone git@github.com:octolab/hugs.git
+# git clone git@bitbucket.org:kamilsk/hugs.git
+$ cd hugs
 $ make up demo status
 
      Name                    Command               State                    Ports
