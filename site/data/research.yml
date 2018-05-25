@@ -1,35 +1,101 @@
 ---
 
-list: ~
+list:
+
+- &algolia
+  name:  Algolia
+  href:  https://www.algolia.com/
+  class: btn btn-default btn-sm
+
+- &creative_tim
+  name:  Creative Tim
+  href:  creative_tim
+  class: btn btn-success btn-sm
+
+- &designmodo
+  name:  Designmodo
+  href:  designmodo
+  class: btn btn-success btn-sm
+
+- &ecwid
+  name:  Ecwid
+  href:  ecwid
+  class: btn btn-default btn-sm
+
+- &forestry
+  name:  Forestry
+  href:  https://forestry.io/
+  class: btn btn-default btn-sm
+
+- &minio
+  name: Minio
+  href: https://minio.io/
+  src:  https://github.com/minio/minio
+
+- &mouthful
+  name: Mouthful
+  href: https://mouthful.dizzy.zone/
+  src:  https://github.com/vkuznecovas/mouthful
+
+- &netlify
+  name:  Netlify
+  href:  https://www.netlify.com/
+  class: btn btn-default btn-sm
+
+- &ponzu
+  name: Ponzu
+  href: https://docs.ponzu-cms.org/
+  src:  https://github.com/ponzu-cms/ponzu
+
+- &remark
+  name: Remark42
+  href: https://remark42.com/
+  src:  https://github.com/umputun/remark
+
+- &stripe
+  name:  Stripe
+  href:  https://stripe.com/
+  class: btn btn-default btn-sm
 
 candidates:
 - title: Automation and Deploy
   icon:  autorenew
   description: >
-    ///
-  candidates: ~
+    Publishing scheduler, update deliverer, backup.
+  candidates:
+  - *forestry
+  - *netlify
 - title: Communication
   icon:  question_answer
   description: >
-    ///
-  candidates: ~
+    Comments, votes, user feedback.
+  candidates:
+  - *mouthful
+  - *remark
 - title: Content Management
   icon:  translate
   description: >
-    Image storage, file storage and backups, CMS and translate management.
-  candidates: ~
+    File manager, image storage, CMS and translation management.
+  candidates:
+  - *minio
+  - *ponzu
 - title: E-commerce
   icon:  store
   description: >
-    ///
-  candidates: ~
+    Shopping cart, store solution, payment processor.
+  candidates:
+  - *ecwid
+  - *stripe
 - title: GUI
   icon:  dashboard
   description: >
-    ///
-  candidates: ~
+    Admin panel, WYSIWYG editor, template generator.
+  candidates:
+  - *creative_tim
+  - *designmodo
 - title: Search
   icon:  search
   description: >
-    ///
-  candidates: ~
+    Search integrations.
+  candidates:
+  - *algolia
