@@ -114,6 +114,7 @@ publish:
 	           kamilsk/hugo:latest hugo --cleanDestinationDir \
 	                                    --config=config.yml,config.github.yml \
 	                                    --destination=/usr/share/docs
+	git checkout docs/CNAME
 
 
 .PHONY: pull-template
