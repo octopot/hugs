@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 ml-auto mr-auto text-center">
-                {{- partial "proxy/click" (dict "page" . "id" "hugo" "text" "![Hugo](img/logo/hugo.svg)") -}}
+                {{- partial "proxy/click" (dict "page" . "id" "hugo" "text" (markdownify "![Hugo](img/logo/hugo.svg)")) -}}
                 <h2 class="title">The <i class="fas fa-heartbeat" title="heart"></i> of Hugs </h2>
                 <h5 class="description">And the world's fastest framework for building websites.</h5>
                 <div class="section-space"></div>

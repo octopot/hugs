@@ -4,7 +4,7 @@
 
 <div class="card card-background" style="background-image:url('{{ $image }}')">
     <div class="card-body">
-        {{- $text := printf "<h3 class=\"card-title\">%s</h3>" .Title -}}
+        {{- $text := printf `<h3 class="card-title">%s</h3>` .Title -}}
         {{- partial "proxy/click" (dict "page" . "id" $github "text" $text) -}}
         <p class="card-description">{{ .Description }}</p>
     </div>

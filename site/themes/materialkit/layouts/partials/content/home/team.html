@@ -27,7 +27,7 @@
                             <div class="card-footer">
                                 {{- $class := "btn btn-just-icon btn-link btn-white" -}}
                                 {{- range .social -}}
-                                    {{- $text := printf "<i class=\"%s\"></i>" .icon -}}
+                                    {{- $text := printf `<i class="%s"></i>` .icon -}}
                                     {{- partial "proxy/click" (dict "page" $ "id" .url "class" $class "text" $text) -}}
                                 {{- end -}}
                             </div>
@@ -55,13 +55,13 @@
                             </div>
                             <div class="card-footer">
                                 {{- $class := "btn btn-just-icon btn-link btn-white" -}}
-                                {{- with "<i class=\"fas fa-thumbs-up\"></i>" -}}
+                                {{- with `<i class="fas fa-thumbs-up"></i>` -}}
                                     {{- partial "proxy/click" (dict "page" $ "id" "octolab/hugs.star" "class" $class "text" .) -}}
                                 {{- end -}}
-                                {{- with "<i class=\"fas fa-bug\"></i>" -}}
+                                {{- with `<i class="fas fa-bug"></i>` -}}
                                     {{- partial "proxy/click" (dict "page" $ "id" "octolab/hugs.bug" "class" $class "text" .) -}}
                                 {{- end -}}
-                                {{- with "<i class=\"fas fa-code-branch\"></i>" -}}
+                                {{- with `<i class="fas fa-code-branch"></i>` -}}
                                     {{- partial "proxy/click" (dict "page" $ "id" "octolab/hugs.fork" "class" $class "text" .) -}}
                                 {{- end -}}
                             </div>

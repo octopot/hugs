@@ -30,7 +30,7 @@
 
 <a rel="noopener nofollow" title="{{ $origin }}"
 {{- with $class }} class="{{ . }}"{{ end }} href="{{ $base }}/{{ $path }}">
-    {{- $text | markdownify -}}
+    {{- $text | safeHTML -}}
 </a>
 {{- end -}}
 

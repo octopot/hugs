@@ -10,7 +10,7 @@
                     <div class="partners">
                         {{- range $partners -}}
                             {{- $class := print "partner " .id -}}
-                            {{- $text  := printf "![%s](%s)" .logo.black.alt .logo.black.src -}}
+                            {{- $text  := printf "![%s](%s)" .logo.black.alt .logo.black.src | markdownify -}}
                             {{- partial "proxy/click" (dict "page" $ "id" .href "class" $class "text" $text) -}}
                         {{- end -}}
                     </div>
@@ -36,7 +36,7 @@
                         {{- range . -}}
                             <li>
                                 {{- $class := "btn btn-link btn-social" -}}
-                                {{- $text  := printf "<i class=\"%s\"></i> %s" .icon .title -}}
+                                {{- $text  := printf `<i class="%s"></i> %s` .icon .title -}}
                                 {{- partial "proxy/click" (dict "page" $ "id" .url "class" $class "text" $text) -}}
                             </li>
                         {{- end -}}
@@ -69,7 +69,7 @@
             <div class="col-md-6">
                 <div class="copyright text-center">
                     {{- with index .Site.Data.partner.find "creative_tim" -}}
-                    <p>Template {{ partial "proxy/click" (dict "page" $ "id" .products.material_kit_pro.href "text" .products.material_kit_pro.text) }}
+                    <p>Template {{ partial "proxy/click" (dict "page" $ "id" .products.material_kit_pro.href "text" .products.material_kit_pro.title) }}
                        is provided by {{ partial "proxy/click" (dict "page" $ "id" .href "text" .name) }}
                        <i class="fas fa-heart"></i>
                     </p>

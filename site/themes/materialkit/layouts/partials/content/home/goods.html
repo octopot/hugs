@@ -1,0 +1,36 @@
+{{- $partners := where .Site.Data.partner.list "id" "in" (slice "designmodo" "ecwid" "themeforest") -}}
+
+<div class="projects-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <h6 class="text-muted">Vendor</h6>
+                <h2 class="title">Good stuffs</h2>
+                <h5 class="description">We found next products very handy.</h5>
+                <div class="section-space"></div>
+            </div>
+        </div>
+        <div class="row">
+            {{- range $partners -}}
+                {{- $image := printf `
+                    <div class="card-header card-header-image">
+                        <img src="%[1]s">
+                        <div class="colored-shadow" style="background-image: url('%[1]s'); opacity: 1;"></div>
+                    </div>
+                ` (index . "image" "card-header-image") -}}
+                {{- $title := printf `<h4 class="card-title">%s</h4>` .name -}}
+
+                <div class="col-md-4">
+                    <div class="card card-plain">
+                        {{- partial "proxy/click" (dict "page" $ "id" .id "text" $image) -}}
+                        <div class="card-body">
+                            {{- partial "proxy/click" (dict "page" $ "id" .id "text" $title) -}}
+                            <h6 class="card-category">{{ .category }}</h6>
+                            <p class="card-description">{{ .desc | markdownify }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
