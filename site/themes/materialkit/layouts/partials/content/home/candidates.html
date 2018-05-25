@@ -36,8 +36,10 @@
             {{- with first 3 (after (mul . 3) $research) }}{{ template "area" (dict "page" $ "context" .) }}{{ end -}}
         {{- end -}}
     </div>
-    <div class="col-md-8 ml-auto mr-auto text-center">
-        <h2 class="title">more soon</h2>
-        <h6 class="text-muted">event API, webhooks, debugging and many others...</h6>
+    <div class="container">
+        <div class="col-md-8 ml-auto mr-auto text-center" style="border: none;">
+            <h2 class="title">more soon</h2>
+            <h6 class="text-muted">event API, webhooks, debugging and many others...</h6>
+        </div>
     </div>
 </div>
