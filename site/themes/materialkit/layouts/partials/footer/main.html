@@ -47,7 +47,8 @@
         </div>
 
         <span class="small text-monospace float-left">built with {{ partial "proxy/click" (dict "page" $ "id" "octolab/hugs" "text" "Hugs") }},
-            validated by {{ partial "proxy/click" (dict "page" $ "id" "kamilsk/check" "text" "check") }} tool
+            validated by {{ partial "proxy/click" (dict "page" $ "id" "kamilsk/check" "text" "check") }} tool,
+            hosted on {{ partial "proxy/click" (dict "page" $ "id" "https://pages.github.com/" "text" "GitHub Pages")}}
         </span>
         {{- /* template "powered-by/click" */ -}}
         <span class="small text-monospace float-right">powered by {{ partial "proxy/click" (dict "page" . "id" "kamilsk/click" "text" "Click!") }}</span>
