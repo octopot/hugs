@@ -20,20 +20,20 @@ image:
   card-background: img/octopus/forma.png
 
 features:
-- icon:  { color: icon-success, type: face }
-  title: Personal FormKeep
+- title: Personal FormKeep
+  icon:  { color: icon-success, type: face }
   description: >
     Same as **FormKeep** or **Pageclip** but your and free.
-- icon:  { color: icon-info, type: code }
-  title: Very Simple
+- title: Very Simple
+  icon:  { color: icon-info, type: code }
   description: >
     It looks like a usual HTML5 form.
-- icon:  { color: icon-primary, type: view_quilt }
-  title: Multiple Views
+- title: Multiple Views
+  icon:  { color: icon-primary, type: view_quilt }
   description: >
     One form, many placements, and templates.
-- icon:  { color: icon-default, type: timeline }
-  title: Status
+- title: Status
+  icon:  { color: icon-default, type: timeline }
   description: >
     Version **2.x** in development, stabilization on **3.x**.
 

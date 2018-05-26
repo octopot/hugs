@@ -20,20 +20,20 @@ image:
   card-background: img/octopus/click.png
 
 features:
-- icon:  { color: icon-info, type: face }
-  title: Personal Bitly
+- title: Personal Bitly
+  icon:  { color: icon-info, type: face }
   description: >
     Your own **Bitly**, just with better data control.
-- icon:  { color: icon-success, type: bookmark_border }
-  title: Link Storage
+- title: Link Storage
+  icon:  { color: icon-success, type: bookmark_border }
   description: >
     It can be used as bookmarking tool.
-- icon:  { color: icon-danger, type: loyalty }
-  title: Multiple Targets
+- title: Multiple Targets
+  icon:  { color: icon-danger, type: loyalty }
   description: >
     It has DSL to define which redirect to prefer.
-- icon:  { color: icon-default, type: timeline }
-  title: Status
+- title: Status
+  icon:  { color: icon-default, type: timeline }
   description: >
     Version **2.x** in development, stabilization on **3.x**.
 

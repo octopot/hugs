@@ -13,6 +13,32 @@ image:
   team-section:     img/content/013b04881a6177ff0648349533ef0447.jpg
   research-section: img/content/c48e508b9ec3de8bdf68a834f43d45f9.jpg
 
+features:
+- title: Open Source
+  icon:  { color: icon-default, type: money_off }
+  description: >
+    It is free to use and can be hosted on<br>your infrastructure.
+- title: HTTPS by default
+  icon:  { color: icon-success, type: https }
+  description: >
+    It allows you to use a secure connection without a headache.
+- title: Expandable and flexible
+  icon:  { color: icon-warning, type: extension }
+  description: >
+    You can choose which services you want to use.
+- title: Performance
+  icon:  { color: icon-primary, type: memory }
+  description: >
+    All components are written to be<br>high performance.
+- title: Cloud ready
+  icon:  { color: icon-info, type: cloud_done }
+  description: >
+    Running in **Docker Swarm** or **Kubernetes** is easy.
+- title: Scalable
+  icon:  { color: icon-danger, type: apps }
+  description: >
+    You can scale it horizontally without any constraints.
+
 future:
 - id:       3c862d17-6a3e-4e49-b26c-d1b387fd4a43
   title:    Partner

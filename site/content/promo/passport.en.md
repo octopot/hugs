@@ -20,20 +20,20 @@ image:
   card-background: img/octopus/passport.png
 
 features:
-- icon:  { color: icon-danger, type: face }
-  title: Personal Auth0
+- title: Personal Auth0
+  icon:  { color: icon-danger, type: face }
   description: >
     Authentication center you like.
-- icon:  { color: icon-warning, type: perm_identity }
-  title: Activity Tracker
+- title: Activity Tracker
+  icon:  { color: icon-warning, type: perm_identity }
   description: >
     Know your users more closely.
-- icon:  { color: icon-success, type: chat }
-  title: Notification Center
+- title: Notification Center
+  icon:  { color: icon-success, type: chat }
   description: >
     Send personal messages through the WebSocket.
-- icon:  { color: icon-default, type: timeline }
-  title: Status
+- title: Status
+  icon:  { color: icon-default, type: timeline }
   description: >
     Version **1.x** in development, stabilization on **3.x**.
 

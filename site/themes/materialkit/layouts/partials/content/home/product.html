@@ -8,33 +8,17 @@
         </div>
         <div class="features">
             <div class="row">
+                {{- range .Param "features" -}}
                 <div class="col-md-4">
                     <div class="info">
-                        <div class="icon icon-default">
-                            <i class="material-icons">money_off</i>
+                        <div class="icon {{ .icon.color }}">
+                            <i class="material-icons">{{ .icon.type }}</i>
                         </div>
-                        <h4 class="info-title">Open Source</h4>
-                        <p>It is free to use and can be hosted on<br>your infrastructure.</p>
+                        <h4 class="info-title">{{ .title }}</h4>
+                        <p>{{ .description | markdownify }}</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="info">
-                        <div class="icon icon-success">
-                            <i class="material-icons">https</i>
-                        </div>
-                        <h4 class="info-title">HTTPS by default</h4>
-                        <p>It allows you to use a secure connection without a headache.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="info">
-                        <div class="icon icon-info">
-                            <i class="material-icons">extension</i>
-                        </div>
-                        <h4 class="info-title">Expandable and flexible</h4>
-                        <p>You can choose which services you want to use.</p>
-                    </div>
-                </div>
+                {{- end -}}
             </div>
         </div>
     </div>
