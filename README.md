@@ -71,12 +71,20 @@ $ open https://passport.127.0.0.1.xip.io/
 
 ## Related projects
 
-| Hugs blocks   | GitHub                                                       | Bitbucket                                                       | Docker Hub                                         | Quay                                                |
+| Hugs blocks   | GitHub                                                       | Bitbucket                                                       | Docker Hub                                         | Quay                                                | Brew                  |
+|:-------------:|:------------------------------------------------------------:|:---------------------------------------------------------------:|:--------------------------------------------------:|:---------------------------------------------------:|:---------------------:|
+| Click!        | [link](https://github.com/kamilsk/click)                     | [link](https://bitbucket.org/kamilsk/click)                     | [link](https://hub.docker.com/r/kamilsk/click/)    | [link](https://quay.io/repository/kamilsk/click)    | kamilsk/tap/click     |
+| Forma         | [link](https://github.com/kamilsk/form-api)                  | [link](https://bitbucket.org/kamilsk/form-api)                  | [link](https://hub.docker.com/r/kamilsk/form-api/) | [link](https://quay.io/repository/kamilsk/form-api) | kamilsk/tap/form-api  |
+| Passport      | [link](https://github.com/kamilsk/passport)                  | [link](https://bitbucket.org/kamilsk/passport)                  | [link](https://hub.docker.com/r/kamilsk/passport/) | [link](https://quay.io/repository/kamilsk/passport) | kamilsk/tap/passport  |
+
+| Hugs tools    | GitHub                                                       | Bitbucket                                                       | Docker Hub                                         | Quay                                                | Brew                  |
+|:-------------:|:------------------------------------------------------------:|:---------------------------------------------------------------:|:--------------------------------------------------:|:---------------------------------------------------:|:---------------------:|
+| check         | [link](https://github.com/kamilsk/check)                     | [link](https://bitbucket.org/kamilsk/check)                     | -                                                  | -                                                   | kamilsk/tap/check     |
+| retry         | [link](https://github.com/kamilsk/retry)                     | [link](https://bitbucket.org/kamilsk/retry)                     | -                                                  | -                                                   | kamilsk/tap/retry     |
+| semaphore     | [link](https://github.com/kamilsk/semaphore)                 | [link](https://bitbucket.org/kamilsk/semaphore)                 | -                                                  | -                                                   | kamilsk/tap/semaphore |
+
+| Misc          | GitHub                                                       | Bitbucket                                                       | Docker Hub                                         | Quay                                                |
 |:-------------:|:------------------------------------------------------------:|:---------------------------------------------------------------:|:--------------------------------------------------:|:---------------------------------------------------:|
-| Click!        | [link](https://github.com/kamilsk/click)                     | [link](https://bitbucket.org/kamilsk/click)                     | [link](https://hub.docker.com/r/kamilsk/click/)    | [link](https://quay.io/repository/kamilsk/click)    |
-| Forma         | [link](https://github.com/kamilsk/form-api)                  | [link](https://bitbucket.org/kamilsk/form-api)                  | [link](https://hub.docker.com/r/kamilsk/form-api/) | [link](https://quay.io/repository/kamilsk/form-api) |
-| Passport      | [link](https://github.com/kamilsk/passport)                  | [link](https://bitbucket.org/kamilsk/passport)                  | [link](https://hub.docker.com/r/kamilsk/passport/) | [link](https://quay.io/repository/kamilsk/passport) |
-|               |                                                              |                                                                 |                                                    |                                                     |
 | kamilsk/nginx | [link](https://github.com/kamilsk/shared/tree/docker-common) | [link](https://bitbucket.org/kamilsk/shared/src/docker-common/) | [link](https://hub.docker.com/r/kamilsk/nginx/)    | [link](https://quay.io/repository/kamilsk/nginx)    |
 | kamilsk/hugo  | [link](https://github.com/kamilsk/shared/tree/docker-go)     | [link](https://bitbucket.org/kamilsk/shared/src/docker-go/)     | [link](https://hub.docker.com/r/kamilsk/hugo/)     | -                                                   |
 
