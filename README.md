@@ -71,22 +71,18 @@ $ open https://passport.127.0.0.1.xip.io/
 
 ## Related projects
 
-| Hugs blocks   | GitHub                                                       | Bitbucket                                                       | Docker Hub                                         | Quay                                                | Brew                  |
-|:-------------:|:------------------------------------------------------------:|:---------------------------------------------------------------:|:--------------------------------------------------:|:---------------------------------------------------:|:---------------------:|
-| Click!        | [link](https://github.com/kamilsk/click)                     | [link](https://bitbucket.org/kamilsk/click)                     | [link](https://hub.docker.com/r/kamilsk/click/)    | [link](https://quay.io/repository/kamilsk/click)    | kamilsk/tap/click     |
-| Forma         | [link](https://github.com/kamilsk/form-api)                  | [link](https://bitbucket.org/kamilsk/form-api)                  | [link](https://hub.docker.com/r/kamilsk/form-api/) | [link](https://quay.io/repository/kamilsk/form-api) | kamilsk/tap/form-api  |
-| Passport      | [link](https://github.com/kamilsk/passport)                  | [link](https://bitbucket.org/kamilsk/passport)                  | [link](https://hub.docker.com/r/kamilsk/passport/) | [link](https://quay.io/repository/kamilsk/passport) | kamilsk/tap/passport  |
-
-| Hugs tools    | GitHub                                                       | Bitbucket                                                       | Docker Hub                                         | Quay                                                | Brew                  |
-|:-------------:|:------------------------------------------------------------:|:---------------------------------------------------------------:|:--------------------------------------------------:|:---------------------------------------------------:|:---------------------:|
-| check         | [link](https://github.com/kamilsk/check)                     | [link](https://bitbucket.org/kamilsk/check)                     | -                                                  | -                                                   | kamilsk/tap/check     |
-| retry         | [link](https://github.com/kamilsk/retry)                     | [link](https://bitbucket.org/kamilsk/retry)                     | -                                                  | -                                                   | kamilsk/tap/retry     |
-| semaphore     | [link](https://github.com/kamilsk/semaphore)                 | [link](https://bitbucket.org/kamilsk/semaphore)                 | -                                                  | -                                                   | kamilsk/tap/semaphore |
-
-| Misc          | GitHub                                                       | Bitbucket                                                       | Docker Hub                                         | Quay                                                |
-|:-------------:|:------------------------------------------------------------:|:---------------------------------------------------------------:|:--------------------------------------------------:|:---------------------------------------------------:|
-| kamilsk/nginx | [link](https://github.com/kamilsk/shared/tree/docker-common) | [link](https://bitbucket.org/kamilsk/shared/src/docker-common/) | [link](https://hub.docker.com/r/kamilsk/nginx/)    | [link](https://quay.io/repository/kamilsk/nginx)    |
-| kamilsk/hugo  | [link](https://github.com/kamilsk/shared/tree/docker-go)     | [link](https://bitbucket.org/kamilsk/shared/src/docker-go/)     | [link](https://hub.docker.com/r/kamilsk/hugo/)     | -                                                   |
+| Hugs blocks    | GitHub                                                    | Bitbucket                                                    | Docker Hub                                      | Quay                                             | Brew                  |
+|:--------------:|:---------------------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------------------:|:------------------------------------------------:|:---------------------:|
+| Click!         | [+](https://github.com/kamilsk/click)                     | [+](https://bitbucket.org/kamilsk/click)                     | [+](https://hub.docker.com/r/kamilsk/click/)    | [+](https://quay.io/repository/kamilsk/click)    | kamilsk/tap/click     |
+| Forma          | [+](https://github.com/kamilsk/form-api)                  | [+](https://bitbucket.org/kamilsk/form-api)                  | [+](https://hub.docker.com/r/kamilsk/form-api/) | [+](https://quay.io/repository/kamilsk/form-api) | kamilsk/tap/form-api  |
+| Passport       | [+](https://github.com/kamilsk/passport)                  | [+](https://bitbucket.org/kamilsk/passport)                  | [+](https://hub.docker.com/r/kamilsk/passport/) | [+](https://quay.io/repository/kamilsk/passport) | kamilsk/tap/passport  |
+| **Hugs tools** |
+| check          | [+](https://github.com/kamilsk/check)                     | [+](https://bitbucket.org/kamilsk/check)                     | -                                               | -                                                | kamilsk/tap/check     |
+| retry          | [+](https://github.com/kamilsk/retry)                     | [+](https://bitbucket.org/kamilsk/retry)                     | -                                               | -                                                | kamilsk/tap/retry     |
+| semaphore      | [+](https://github.com/kamilsk/semaphore)                 | [+](https://bitbucket.org/kamilsk/semaphore)                 | -                                               | -                                                | kamilsk/tap/semaphore |
+| **Misc**       |
+| kamilsk/nginx  | [+](https://github.com/kamilsk/shared/tree/docker-common) | [+](https://bitbucket.org/kamilsk/shared/src/docker-common/) | [+](https://hub.docker.com/r/kamilsk/nginx/)    | [+](https://quay.io/repository/kamilsk/nginx)    | -                     |
+| kamilsk/hugo   | [+](https://github.com/kamilsk/shared/tree/docker-go)     | [+](https://bitbucket.org/kamilsk/shared/src/docker-go/)     | [+](https://hub.docker.com/r/kamilsk/hugo/)     | -                                                | -                     |
 
 ---
 
