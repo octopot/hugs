@@ -49,12 +49,12 @@
             case success:
                 type = 'alert-success';
                 title = '"' + feedback.title + '" form processed successfully!';
-                desc = 'Aww yeah, you did the right thing!';
+                desc = 'Forma works!';
                 break;
             case failure:
                 type = 'alert-danger';
                 title = '"' + feedback.title + '" form processed unsuccessfully';
-                desc = 'Oops! But this also happens 😉';
+                desc = 'But Forma works!';
                 break;
             default:
                 console.log('unknown feedback "' + feedback.result + '"');
