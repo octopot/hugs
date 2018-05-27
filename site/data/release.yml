@@ -2,6 +2,36 @@
 
 list:
 
+- &check100
+  href: https://github.com/kamilsk/check/releases/tag/1.0.0
+  text: 1.0.0
+  icon: fa fa-check-circle
+
+- &check101
+  href: https://github.com/kamilsk/check/releases/tag/1.0.1
+  text: 1.0.1
+  icon: fa fa-check-circle
+
+- &check102
+  href: https://github.com/kamilsk/check/releases/tag/1.0.2
+  text: 1.0.2
+  icon: fa fa-check-circle
+
+- &check110
+  href: https://github.com/kamilsk/check/releases/tag/1.1.0
+  text: 1.1.0
+  icon: fa fa-check-circle
+
+- &click123
+  href: https://github.com/kamilsk/click/releases/tag/1.2.3
+  text: 1.2.3
+  icon: fa fa-check-circle
+
+- &click124
+  href: https://github.com/kamilsk/click/releases/tag/1.2.4
+  text: 1.2.4
+  icon: fa fa-check-circle
+
 - &click125
   href: https://github.com/kamilsk/click/releases/tag/1.2.5
   text: 1.2.5
@@ -12,10 +42,20 @@ list:
   text: 1.2.6
   icon: fa fa-check-circle
 
+- &click127
+  href: https://github.com/kamilsk/click/releases/tag/1.2.7
+  text: 1.2.7
+  icon: fa fa-check-circle
+
 - &click200
   href: https://github.com/kamilsk/click/milestone/2
   text: 2.0.0
   icon: fa fa-spinner
+
+- &forma120
+  href: https://github.com/kamilsk/form-api/releases/tag/1.2.0
+  text: 1.2.0
+  icon: fa fa-check-circle
 
 - &forma121
   href: https://github.com/kamilsk/form-api/releases/tag/1.2.1
@@ -25,6 +65,11 @@ list:
 - &forma122
   href: https://github.com/kamilsk/form-api/releases/tag/1.2.2
   text: 1.2.2
+  icon: fa fa-check-circle
+
+- &forma123
+  href: https://github.com/kamilsk/form-api/releases/tag/1.2.3
+  text: 1.2.3
   icon: fa fa-check-circle
 
 - &forma200
@@ -47,13 +92,32 @@ projects:
 - &forma    Forma
 - &passport Passport
 
+may:
+  check:
+  - *check110
+  - *check102
+  - *check101
+  - *check100
+  click:
+  - *click127
+  - *click126
+  - *click125
+  - *click124
+  - *click123
+  forma:
+  - *forma123
+  - *forma122
+  - *forma121
+  - *forma120
+  passport: ~
+
 latest:
 - branch: v1
   versions:
   - project: *click
-    version: *click126
+    version: *click127
   - project: *forma
-    version: *forma122
+    version: *forma123
   - project: *passport
     version: *passport110
 - branch: v2
