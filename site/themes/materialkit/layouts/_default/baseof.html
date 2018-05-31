@@ -15,6 +15,7 @@
         {{- partial "meta/keywords" . -}}
         {{- partial "meta/author" . -}}
     {{- end -}}
+    {{- partial "src/scripts.gtm" . -}}
     {{- block "styles" . -}}
         {{- partial "src/styles.default" . -}}
         <link rel="stylesheet" href="css/main.css">
@@ -39,6 +40,7 @@
     {{- end -}}
 </head>
 <body id="{{ $id }}" class="{{ $class }}">
+{{- partial "src/scripts.gtm-fallback" . -}}
 {{- block "header" . }}{{ partial "header/main" . }}{{ end -}}
 {{- block "content" . }}{{ .Content }}{{ end -}}
 {{- block "footer" . }}{{ partial "footer/main" . }}{{ end -}}
@@ -46,7 +48,6 @@
     {{- partial "src/scripts.default" . -}}
     <script src="js/main.js"></script>
 {{- end -}}
-{{- partial "src/scripts.analytics" . -}}
 {{- partial "debug" . -}}
 </body>
 </html>
