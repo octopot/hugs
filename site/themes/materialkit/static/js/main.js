@@ -4,7 +4,6 @@
 
     // Array.isArray    IE >= 9
     // Object.assign    not IE
-    // const            IE >= 11
 
     if (!$('.forma').length || !window.location.hash) {
         return;
@@ -12,7 +11,7 @@
 
     let hashMap = {};
     try {
-        const feedback = window.JSON.parse(window.atob(window.location.hash.replace('\#', '')));
+        var feedback = window.JSON.parse(window.atob(window.location.hash.replace('\#', '')));
         if (Array.isArray(feedback)) {
             for (let i = 0, length = feedback.length; i < length; i++) {
                 hashMap[feedback[i].id] = Object.assign({presented: false, title: ''}, feedback[i]);
@@ -31,7 +30,7 @@
         }
     });
 
-    const tpl = `
+    var tpl = `
 <div class="alert {{ type }} alert-dismissible fade show">
     <h4 class="alert-heading">{{ title }}</h4>
     <p>{{ desc }}</p>
@@ -82,22 +81,20 @@
 (function ($) {
     'use strict';
 
-    // const IE >= 11
-
-    const $votes = $('.vote'),
-          $likes = $('#likes');
+    var $votes = $('.vote'),
+        $likes = $('#likes');
 
     if (!$votes.length || !$likes.length) {
         return;
     }
 
-    const mirror = {
+    var mirror = {
         like: 'liked',
         liked: 'like',
     };
 
     // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
-    const cookies = {
+    var cookies = {
         getItem: function (sKey) {
             if (!sKey) { return null; }
             return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
@@ -138,11 +135,11 @@
     };
 
     function swap() {
-        const $to = $(this);
+        var $to = $(this);
         if (!mirror.hasOwnProperty($to.data('state'))) {
             return;
         }
-        const $from = $likes.children('[data-state="' + mirror[$to.data('state')] + '"]');
+        var $from = $likes.children('[data-state="' + mirror[$to.data('state')] + '"]');
         if (!$from.length) {
             return;
         }
@@ -159,4 +156,17 @@
             }
         }
     });
+}(window.jQuery));
+
+// Scroll spy
+(function ($){
+    'use strict';
+
+    var $menu = $('#navigation');
+
+    if (!$menu.length) {
+        return;
+    }
+
+    $('body').scrollspy({target: $menu});
 }(window.jQuery));

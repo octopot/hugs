@@ -1,7 +1,7 @@
 {{- $image  := .Param "image.team-section" | default "img/bg/octopus.png" -}}
 {{- $person := index .Site.Data.contributor.find .Site.Params.lead.id -}}
 
-<div class="team-5 section-image" style="background-image: url('{{ $image }}')">
+<div id="team" class="team-5 section-image" style="background-image: url('{{ $image }}')">
     <div class="container">
         <div class="row">
             {{- with $person -}}

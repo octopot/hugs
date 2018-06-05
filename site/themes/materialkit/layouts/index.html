@@ -16,15 +16,10 @@
     <link rel="stylesheet" href="css/main.css">
 {{ end }}
 
-{{ define "header" }}
-    {{- partial "content/home/wip" . -}}
-    {{- partial "header/main" . -}}
-{{ end }}
-
 {{ define "content" }}
     {{- partial "content/home/promo" . -}}
     <div class="main main-raised">
-        {{- partial "content/home/product" . -}}
+        {{- partial "content/home/features" . -}}
         {{- partial "content/home/solutions" . -}}
         {{- partial "content/home/future" . -}}
         {{- partial "content/home/goods" . -}}

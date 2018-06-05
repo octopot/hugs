@@ -1,18 +1,11 @@
-img { max-width: 100%; }
+body { position: relative; }
+img  { max-width: 100%; }
 
-footer .fa-heart { color: red; }
+trix-editor.form-control              { height: auto; }
+footer .fa-heart                      { color: red; }
 
-trix-editor.form-control { height: auto; }
-
-.promo-page #header                   { border-radius: 0; margin-bottom: 0; }
-.promo-page #header .navbar-brand img { height: 30px; }
-.promo-page #header .ribbon img       { position: absolute; top: 0; right: 0; }
-.promo-page #hero                     { background: url('../img/bg/octopus.png') top center; }
-.promo-page .features.saas .info      { max-width: none; margin: 0 auto; padding: 10px 0 0; }
-.promo-page .footer .patreon img      { height: 50px; }
-
-#messages { position: fixed; top: 1rem; right: 1rem; z-index: 10; width: 40%; max-width: 512px; }
-#wip      { margin: 0; }
+.navbar .navbar-brand img             { max-height: 100%; }
+.navbar .nav-link.active              { color: inherit; background-color: rgba(255, 255, 255, 0.1); }
 
 #home .github-vote                    { padding: 1em 0; }
 #home .footer .partner                { display: block; margin: 40px auto; text-align: center; }
@@ -23,9 +16,8 @@ trix-editor.form-control { height: auto; }
 #home .footer .social a               { padding-left: 0; }
 #home .footer .social i               { margin-right: .2em; }
 
-#home .section-roadmap  { padding-bottom: 0; }
-#home .section-contacts { padding-top: 0; }
-
+#home .section-roadmap           { padding-bottom: 0; }
+#home .section-contacts          { padding-top: 0; }
 #home .section-roadmap .timeline { position: relative; margin: 2em 0; padding: 2em 0; }
 #home .section-roadmap .timeline::before {
     content: "";
@@ -96,3 +88,13 @@ trix-editor.form-control { height: auto; }
         border-color: transparent; border-right-color: #f7f7f9;
     }
 }
+
+#messages   { position: fixed; top: 1rem; right: 1rem; z-index: 10; width: 40%; max-width: 512px; }
+#wip, #gdpr { margin: 0; }
+
+.promo-page #header                   { border-radius: 0; margin-bottom: 0; }
+.promo-page #header .navbar-brand img { height: 30px; }
+.promo-page #header .ribbon img       { position: absolute; top: 0; right: 0; }
+.promo-page #hero                     { background: url('../img/bg/octopus.png') top center; }
+.promo-page .features.saas .info      { max-width: none; margin: 0 auto; padding: 10px 0 0; }
+.promo-page .footer .patreon img      { height: 50px; }
