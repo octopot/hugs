@@ -1,0 +1,3 @@
+{{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
+<noscript><div><img src="https://mc.yandex.ru/watch/49138258" style="position:absolute; left:-9999px;" alt="Yandex.Metrika"></div></noscript>
+{{- end -}}

@@ -10,12 +10,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{- block "analytics.async" . }}{{ end -}}
     {{- block "meta" . -}}
         {{- partial "meta/description" . -}}
         {{- partial "meta/keywords" . -}}
         {{- partial "meta/author" . -}}
     {{- end -}}
-    {{- partial "src/scripts.gtm" . -}}
     {{- block "styles" . -}}
         {{- partial "src/styles.default" . -}}
         <link rel="stylesheet" href="css/main.css">
@@ -40,10 +40,11 @@
     {{- end -}}
 </head>
 <body id="{{ $id }}" class="{{ $class }}">
-{{- partial "src/scripts.gtm-fallback" . -}}
+{{- block "analytics.fallback" . }}{{ end -}}
 {{- block "header" . }}{{ partial "header/main" . }}{{ end -}}
 {{- block "content" . }}{{ .Content }}{{ end -}}
 {{- block "footer" . }}{{ partial "footer/main" . }}{{ end -}}
+{{- block "analytics.sync" . }}{{ end -}}
 {{- block "scripts" . -}}
     {{- partial "src/scripts.default" . -}}
     <script src="js/main.js"></script>

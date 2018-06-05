@@ -2,6 +2,14 @@
     {{- .Title }} &mdash; {{ .Description -}}
 {{ end }}
 
+{{ define "analytics.async" }}
+    {{- partial "src/analytics/head" . -}}
+{{ end }}
+
+{{ define "analytics.fallback" }}
+    {{- partial "src/analytics/fallback" . -}}
+{{ end }}
+
 {{ define "styles" }}
     {{- partial "src/styles.default" . -}}
     <link rel="stylesheet" href="css/trix.css">

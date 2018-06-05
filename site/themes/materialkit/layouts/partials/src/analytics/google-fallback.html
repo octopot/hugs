@@ -1,0 +1,2 @@
+{{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
+{{- end -}}
