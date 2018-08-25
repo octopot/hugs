@@ -57,7 +57,7 @@ list:
   href:  https://stripe.com/
   class: btn btn-default btn-sm
 
-candidates:
+marketplace:
 - title: Automation and Deploy
   icon:  autorenew
   description: >

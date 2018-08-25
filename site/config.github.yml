@@ -3,8 +3,8 @@ baseURL: https://hugs.octolab.net/
 params:
   click:
     enabled: false
-    service: https://click.octolab.net
+    service: https://click.octolab.net/
 
   forma:
     enabled: false
-    service: https://form.octolab.net
+    service: https://form.octolab.net/

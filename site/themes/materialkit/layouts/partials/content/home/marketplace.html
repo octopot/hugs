@@ -1,5 +1,5 @@
 {{- $image    := .Param "image.research-section" -}}
-{{- $research := .Site.Data.research.candidates -}}
+{{- $research := .Site.Data.research.marketplace -}}
 {{- $repeat   := sub (math.Ceil (div (len $research) 3)) 1 -}}
 
 {{- define "area" -}}
@@ -25,10 +25,10 @@
     {{- end -}}
 {{- end -}}
 
-<div id="candidates" class="features-5" style="background-image: url('{{ $image }}')">
+<div id="marketplace" class="features-5" style="background-image: url('{{ $image }}')">
     <div class="col-md-8 ml-auto mr-auto text-center">
-        <h2 class="title">Candidates</h2>
-        <h6 class="text-muted">Our research</h6>
+        <h2 class="title">Marketplace</h2>
+        <h6 class="text-muted">Our research candidates</h6>
     </div>
     <div class="container">
         {{- with first 3 $research }}{{ template "area" (dict "page" $ "context" .) }}{{ end -}}
