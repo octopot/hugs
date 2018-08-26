@@ -1,11 +1,14 @@
 ---
 
+id:          e565b53a-1d55-4a18-8b78-e2b76cd6868c
+
 title:       Passport
 description: Person Identifier as a Service
 draft:       false
 
-id:          passport-promo
-class:       promo-page
+html:
+  id:        passport-promo
+  class:     promo-page
 
 author:      kamil.samigullin
 github:      kamilsk/passport

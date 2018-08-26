@@ -1,7 +1,7 @@
 <!doctype html>
 
-{{- $id    := .Params.id    | default .UniqueID | default .Kind -}}
-{{- $class := .Params.class | default .Type -}}
+{{- $id    := .Param "html.id"    | default .UniqueID | default .Kind -}}
+{{- $class := .Param "html.class" | default .Type -}}
 
 <html class="no-js" lang="{{ .Site.Language.Lang }}" dir="ltr">
 <head>

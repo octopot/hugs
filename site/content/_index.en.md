@@ -1,12 +1,15 @@
 ---
 
+id:          ce465427-9de9-46ce-ad49-536c75b33070
+
 title:       Hugs
 description: Platform for Static Sites
 draft:       false
 weight:      1
 
-id:          home
-class:       page
+html:
+  id:        home
+  class:     page
 
 image:
   page-header:      img/content/7d1e8826a7d085e5183e41d2ad66182c.jpg
