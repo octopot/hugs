@@ -1,19 +1,100 @@
+// Polyfills
+(function () {
+    'use strict';
+
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray#Polyfill
+    if (!Array.isArray) {
+        Array.isArray = function(arg) {
+            return Object.prototype.toString.call(arg) === '[object Array]';
+        };
+    }
+
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill
+    if (!Object.assign) {
+        Object.defineProperty(Object, 'assign', {
+            enumerable: false,
+            configurable: true,
+            writable: true,
+            value: function(target, firstSource) {
+                'use strict';
+                if (target === undefined || target === null) {
+                    throw new TypeError('Cannot convert first argument to object');
+                }
+                var to = Object(target);
+                for (var i = 1; i < arguments.length; i++) {
+                    var nextSource = arguments[i];
+                    if (nextSource === undefined || nextSource === null) {
+                        continue;
+                    }
+                    var keysArray = Object.keys(Object(nextSource));
+                    for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+                        var nextKey = keysArray[nextIndex];
+                        var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+                        if (desc !== undefined && desc.enumerable) {
+                            to[nextKey] = nextSource[nextKey];
+                        }
+                    }
+                }
+                return to;
+            }
+        });
+    }
+});
+
+// Trix configuration
+(function (trix) {
+    'use strict';
+
+    if (!trix) { return; }
+
+    trix.config.toolbar.getDefaultHTML = function () {
+        return `
+<div class="trix-button-row">
+    <span class="trix-button-group trix-button-group--text-tools" data-trix-button-group="text-tools">
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-bold" data-trix-attribute="bold" data-trix-key="b" title="#{lang.bold}" tabindex="-1">#{lang.bold}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-italic" data-trix-attribute="italic" data-trix-key="i" title="#{lang.italic}" tabindex="-1">#{lang.italic}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-strike" data-trix-attribute="strike" title="#{lang.strike}" tabindex="-1">#{lang.strike}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-link" data-trix-attribute="href" data-trix-action="link" data-trix-key="k" title="#{lang.link}" tabindex="-1">#{lang.link}</button>
+    </span>
+    <span class="trix-button-group trix-button-group--block-tools" data-trix-button-group="block-tools">
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-heading-1" data-trix-attribute="heading1" title="#{lang.heading1}" tabindex="-1">#{lang.heading1}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-bullet-list" data-trix-attribute="bullet" title="#{lang.bullets}" tabindex="-1">#{lang.bullets}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-number-list" data-trix-attribute="number" title="#{lang.numbers}" tabindex="-1">#{lang.numbers}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-decrease-nesting-level" data-trix-action="decreaseNestingLevel" title="#{lang.outdent}" tabindex="-1">#{lang.outdent}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-increase-nesting-level" data-trix-action="increaseNestingLevel" title="#{lang.indent}" tabindex="-1">#{lang.indent}</button>
+    </span>
+    <span class="trix-button-group trix-button-group--history-tools" data-trix-button-group="history-tools">
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-undo" data-trix-action="undo" data-trix-key="z" title="#{lang.undo}" tabindex="-1">#{lang.undo}</button>
+        <button type="button" class="trix-button trix-button--icon trix-button--icon-redo" data-trix-action="redo" data-trix-key="shift+z" title="#{lang.redo}" tabindex="-1">#{lang.redo}</button>
+    </span>
+</div>
+<div class="trix-dialogs" data-trix-dialogs>
+    <div class="trix-dialog trix-dialog--link" data-trix-dialog="href" data-trix-dialog-attribute="href">
+        <div class="trix-dialog__link-fields">
+            <input type="url" name="href" class="trix-input trix-input--dialog" placeholder="#{lang.urlPlaceholder}" aria-label="#{lang.url}" required data-trix-input>
+            <div class="trix-button-group">
+                <input type="button" class="trix-button trix-button--dialog" value="#{lang.link}" data-trix-method="setAttribute">
+                <input type="button" class="trix-button trix-button--dialog" value="#{lang.unlink}" data-trix-method="removeAttribute">
+            </div>
+        </div>
+    </div>
+</div>`;
+    }
+}(window.Trix));
+
 // Forma messages
 (function ($) {
     'use strict';
-
-    // Array.isArray    IE >= 9
-    // Object.assign    not IE
 
     if (!$('.forma').length || !window.location.hash) {
         return;
     }
 
-    let hashMap = {};
+    var hashMap = {};
     try {
         var feedback = window.JSON.parse(window.atob(window.location.hash.replace('\#', '')));
         if (Array.isArray(feedback)) {
-            for (let i = 0, length = feedback.length; i < length; i++) {
+            for (var i = 0, length = feedback.length; i < length; i++) {
                 hashMap[feedback[i].id] = Object.assign({presented: false, title: ''}, feedback[i]);
             }
         } else {
@@ -43,7 +124,7 @@
         failure = 'failure';
 
     function showMessage(id, feedback) {
-        let type, title, desc, message;
+        var type, title, desc, message;
         switch (feedback.result) {
             case success:
                 type = 'alert-success';
@@ -68,7 +149,7 @@
     }
 
     function showMessages() {
-        for (let id in hashMap) {
+        for (var id in hashMap) {
             if (hashMap.hasOwnProperty(id)) { showMessage(id, hashMap[id]); }
         }
         hashMap = {}
