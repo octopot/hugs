@@ -44,6 +44,8 @@ params:
 
   keywords: [platform, static sites]
 
+  yandexMetrika: 49138258
+
 # language specific
 
 enableMissingTranslationPlaceholders: false

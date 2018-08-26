@@ -3,9 +3,11 @@
 {{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+(function (w) {
+    w.dataLayer = w.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', '{{ $ga }}');
+})(window);
 </script>
 {{- end -}}

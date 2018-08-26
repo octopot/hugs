@@ -1,2 +1,9 @@
+{{- $ga := .Param "googleAnalytics" | default .Site.GoogleAnalytics -}}
+
 {{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
+<noscript>
+    <div>
+        <img src="https://ga-beacon.appspot.com/{{ $ga }}/hugs/readme?pixel" style="position:absolute; left:-9999px;" alt="Google.Analytics">
+    </div>
+</noscript>
 {{- end -}}
