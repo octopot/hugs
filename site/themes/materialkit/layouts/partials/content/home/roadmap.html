@@ -8,12 +8,17 @@
                 </h1>
                 <div class="timeline">
                     <div class="block">
-                        <div class="icon complete">
-                            <i class="far fa-calendar-check"></i>
+                        <div class="icon {{- /* complete */}}">
+                            <i class="far fa-calendar-alt {{- /* fa-calendar-check */}}"></i>
                         </div>
                         <div class="content">
-                            <h2>Pre-alpha</h2>
+                            {{- with `https://github.com/octolab/hugs/milestone/2` -}}
+                                <h2>Pre-alpha, {{ partial "proxy/click" (dict "page" $ "id" . "text" "August 31") }}</h2>
+                            {{- end -}}
                             <p>Integration of components is complete. Versions 1.x in active development.</p>
+                            {{- with `https://github.com/octolab/hugs/projects/2` -}}
+                                {{ partial "proxy/click" (dict "page" $ "id" . "class" "btn btn-info" "text" "Progress") }}
+                            {{- end -}}
                         </div>
                     </div>
                     <div class="block">
@@ -21,8 +26,13 @@
                             <i class="far fa-calendar-alt"></i>
                         </div>
                         <div class="content">
-                            <h2>Alpha</h2>
+                            {{- with `https://github.com/octolab/hugs/milestone/3` -}}
+                                <h2>Alpha, {{ partial "proxy/click" (dict "page" $ "id" . "text" "September 30") }}</h2>
+                            {{- end -}}
                             <p>Versions 1.x are complete. Versions 2.x in active development.</p>
+                            {{- with `https://github.com/octolab/hugs/projects/3` -}}
+                                {{ partial "proxy/click" (dict "page" $ "id" . "class" "btn btn-info" "text" "Progress") }}
+                            {{- end -}}
                         </div>
                     </div>
                     <div class="block">
@@ -30,8 +40,13 @@
                             <i class="far fa-calendar-alt"></i>
                         </div>
                         <div class="content">
-                            <h2>Beta</h2>
+                            {{- with `https://github.com/octolab/hugs/milestone/4` -}}
+                                <h2>Beta, {{ partial "proxy/click" (dict "page" $ "id" . "text" "October 31") }}</h2>
+                            {{- end -}}
                             <p>Versions 2.x are complete. Versions 3.x in active development.</p>
+                            {{- with `https://github.com/octolab/hugs/projects/4` -}}
+                                {{ partial "proxy/click" (dict "page" $ "id" . "class" "btn btn-info" "text" "Progress") }}
+                            {{- end -}}
                         </div>
                     </div>
                     <div class="block">
@@ -39,17 +54,14 @@
                             <i class="far fa-calendar-alt"></i>
                         </div>
                         <div class="content">
-                            <h2><abbr title="Release Candidate">RC</abbr></h2>
+                            {{- with `https://github.com/octolab/hugs/milestone/5` -}}
+                                <h2><abbr title="Release Candidate">RC</abbr>,
+                                    {{ partial "proxy/click" (dict "page" $ "id" . "text" "November 30") }}</h2>
+                            {{- end -}}
                             <p>Versions 3.x are complete. A process of covering integration tests.</p>
-                        </div>
-                    </div>
-                    <div class="block">
-                        <div class="icon">
-                            <i class="far fa-calendar-alt"></i>
-                        </div>
-                        <div class="content">
-                            <h2><abbr title="Release to Marketing">RTM</abbr></h2>
-                            <p>Integration tests completed. Writing documentation and checking scaling.</p>
+                            {{- with `https://github.com/octolab/hugs/projects/5` -}}
+                                {{ partial "proxy/click" (dict "page" $ "id" . "class" "btn btn-info" "text" "Progress") }}
+                            {{- end -}}
                         </div>
                     </div>
                     <div class="block">
@@ -57,8 +69,14 @@
                             <i class="fas fa-flag-checkered"></i>
                         </div>
                         <div class="content">
-                            <h2><abbr title="Release to the Web">RTW</abbr>, <abbr title="Software as a service">SaaS</abbr></h2>
-                            <p>Ready to use as self-hosted or in the cloud.</p>
+                            {{- with `https://github.com/octolab/hugs/milestone/6` -}}
+                                <h2><abbr title="Release to the Web">RTW</abbr>, <abbr title="Software as a Service">SaaS</abbr>,
+                                    {{ partial "proxy/click" (dict "page" $ "id" . "text" "December 31") }}</h2>
+                            {{- end -}}
+                            <p>Ready to use as self-hosted or in the Cloud.</p>
+                            {{- with `https://github.com/octolab/hugs/projects/6` -}}
+                                {{ partial "proxy/click" (dict "page" $ "id" . "class" "btn btn-info" "text" "Progress") }}
+                            {{- end -}}
                         </div>
                     </div>
                 </div>
