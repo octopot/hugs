@@ -5,7 +5,11 @@ list:
 - &creative_tim
   id:   creative-tim
   name: Creative Tim
-  href: https://www.creative-tim.com/
+  desc: Premium Bootstrap Themes and Templates
+  href: creative-tim
+  category: Template
+  image:
+    card-header-image: img/partner/bdc6d14bb11273c5343c8ca77e2affb4.png
   logo: ~
   products:
     material_kit:
@@ -16,15 +20,6 @@ list:
       href: https://www.creative-tim.com/product/material-kit-pro
       title: Material Kit Pro
       category: Template
-
-- &designmodo
-  id:   designmodo
-  name: Designmodo
-  desc: Web Design Blog, Website and Email Template Builders.
-  href: designmodo
-  category: Template Generator
-  image:
-    card-header-image: img/partner/d0c123b0c77028c4284dded96717fe43.png
 
 - &digitalocean
   id:   digitalocean
@@ -61,8 +56,6 @@ list:
 find:
   creative_tim: *creative_tim
   ct:           *creative_tim
-  designmodo:   *designmodo
-  dm:           *designmodo
   digitalocean: *digitalocean
   do:           *digitalocean
   ecwid:        *ecwid

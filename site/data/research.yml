@@ -12,11 +12,6 @@ list:
   href:  creative_tim
   class: btn btn-success btn-sm
 
-- &designmodo
-  name:  Designmodo
-  href:  designmodo
-  class: btn btn-success btn-sm
-
 - &ecwid
   name:  Ecwid
   href:  ecwid
@@ -92,7 +87,6 @@ marketplace:
     Admin panel, WYSIWYG editor, template generator.
   candidates:
   - *creative_tim
-  - *designmodo
 - title: Search
   icon:  search
   description: >

@@ -11,12 +11,8 @@ list:
 - &click
   origin: https://github.com/kamilsk/click
 
-- &creative_tim
+- &creative-tim
   origin: https://www.creative-tim.com/
-
-- &designmodo
-  origin: https://designmodo.com/products/
-  click!: designmodo
 
 - &digitalocean
   origin: https://www.digitalocean.com/
@@ -61,8 +57,7 @@ list:
   click!: vultr
 
 find:
-  creative_tim:      *creative_tim
-  designmodo:        *designmodo
+  creative-tim:      *creative-tim
   digitalocean:      *digitalocean
   ecwid:             *ecwid
   hugo:              *hugo
