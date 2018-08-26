@@ -1,5 +1,6 @@
 {{- $id    := .id -}}
 {{- $title := .title -}}
+{{- $class := .class | default "forma" -}}
 
 {{- with .page -}}
     {{- $config  := .Site.Params.forma -}}
@@ -20,7 +21,7 @@
     {{- $base := strings.TrimRight "/" (cond $enabled .Site.BaseURL $service) -}}
     {{- $path := strings.TrimLeft  "/" (cond $enabled (print $proxy "/" $id) (print "/api/v1/" $id)) -}}
 
-<form id="{{ $id }}" class="forma" lang="{{ .Site.Language.Lang }}" title="{{ $title }}"
+<form id="{{ $id }}" class="{{ $class }}" lang="{{ .Site.Language.Lang }}" title="{{ $title }}"
     action="{{ $base }}/{{ $path }}"
     method="post" enctype="application/x-www-form-urlencoded">
     {{- partial (print "forma/" $id) (dict "page" . "id" $id) -}}

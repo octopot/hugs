@@ -1,1 +1,5 @@
-{{- partial "proxy/click" (dict "page" .Page "id" (.Get "id") "class" (.Get "class") "text" (.Get "title") "origin" (.Get "origin")) -}}
+{{- $id    := .Get "id" -}}
+{{- $class := .Get "class" -}}
+{{- $title := .Get "title" | markdownify -}}
+
+{{- partial "proxy/click" (dict "page" .Page "id" $id "class" $class "text" $title) -}}

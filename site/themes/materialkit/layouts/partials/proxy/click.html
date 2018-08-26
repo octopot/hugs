@@ -1,7 +1,6 @@
 {{- $id    := .id -}}
 {{- $class := .class -}}
-{{- $text  := .text   | default (title $id) -}}
-{{- $asIs  := .origin | default false -}}
+{{- $text  := .text | default (title $id) -}}
 
 {{- with .page -}}
     {{- $config  := .Site.Params.click -}}
@@ -11,6 +10,7 @@
     {{- $url     := index .Site.Data.url.find $id | default (dict) -}}
     {{- $origin  := index $url "origin" | default $id -}}
     {{- $click   := index $url "click!" | default $origin -}}
+    {{- $direct  := index $url "direct" | default false -}}
 
     {{- /*
       %service%  e.g. https://click.127.0.0.1.xip.io
@@ -31,7 +31,7 @@
 
 <a title="{{ $origin }}"
 {{- with $class }} class="{{ . }}"{{ end -}}
-{{- if $asIs }} href="{{ $origin }}"{{ else }} href="{{ $base }}/{{ $path }}" rel="noopener nofollow"{{ end }}>
+{{- if $direct }} href="{{ $origin }}"{{ else }} href="{{ $base }}/{{ $path }}" rel="noopener nofollow"{{ end }}>
     {{- $text | safeHTML -}}
 </a>
 {{- end -}}

@@ -1,0 +1,5 @@
+{{- $id    := .Get "id" -}}
+{{- $class := .Get "class" -}}
+{{- $title := .Get "title" -}}
+
+{{- partial "proxy/forma" (dict "page" .Page "id" $id "class" $class "title" $title) -}}
