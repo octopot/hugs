@@ -2,6 +2,8 @@ body { position: relative; }
 img  { max-width: 100%; }
 
 trix-editor.form-control              { height: auto; }
+trix-toolbar .trix-button--icon-quote { display: none; }
+trix-toolbar .trix-button--icon-code  { display: none; }
 footer .fa-heart                      { color: red; }
 
 .navbar .navbar-brand img             { max-height: 100%; }

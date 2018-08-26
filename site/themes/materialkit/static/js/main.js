@@ -1,19 +1,59 @@
+// Polyfills
+(function () {
+    'use strict';
+
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray#Polyfill
+    if (!Array.isArray) {
+        Array.isArray = function(arg) {
+            return Object.prototype.toString.call(arg) === '[object Array]';
+        };
+    }
+
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill
+    if (!Object.assign) {
+        Object.defineProperty(Object, 'assign', {
+            enumerable: false,
+            configurable: true,
+            writable: true,
+            value: function(target, firstSource) {
+                'use strict';
+                if (target === undefined || target === null) {
+                    throw new TypeError('Cannot convert first argument to object');
+                }
+                var to = Object(target);
+                for (var i = 1; i < arguments.length; i++) {
+                    var nextSource = arguments[i];
+                    if (nextSource === undefined || nextSource === null) {
+                        continue;
+                    }
+                    var keysArray = Object.keys(Object(nextSource));
+                    for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+                        var nextKey = keysArray[nextIndex];
+                        var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+                        if (desc !== undefined && desc.enumerable) {
+                            to[nextKey] = nextSource[nextKey];
+                        }
+                    }
+                }
+                return to;
+            }
+        });
+    }
+});
+
 // Forma messages
 (function ($) {
     'use strict';
-
-    // Array.isArray    IE >= 9
-    // Object.assign    not IE
 
     if (!$('.forma').length || !window.location.hash) {
         return;
     }
 
-    let hashMap = {};
+    var hashMap = {};
     try {
         var feedback = window.JSON.parse(window.atob(window.location.hash.replace('\#', '')));
         if (Array.isArray(feedback)) {
-            for (let i = 0, length = feedback.length; i < length; i++) {
+            for (var i = 0, length = feedback.length; i < length; i++) {
                 hashMap[feedback[i].id] = Object.assign({presented: false, title: ''}, feedback[i]);
             }
         } else {
@@ -43,7 +83,7 @@
         failure = 'failure';
 
     function showMessage(id, feedback) {
-        let type, title, desc, message;
+        var type, title, desc, message;
         switch (feedback.result) {
             case success:
                 type = 'alert-success';
@@ -68,7 +108,7 @@
     }
 
     function showMessages() {
-        for (let id in hashMap) {
+        for (var id in hashMap) {
             if (hashMap.hasOwnProperty(id)) { showMessage(id, hashMap[id]); }
         }
         hashMap = {}
