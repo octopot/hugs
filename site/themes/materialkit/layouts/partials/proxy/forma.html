@@ -27,8 +27,3 @@
     {{- partial (print "forma/" $id) (dict "page" . "id" $id) -}}
 </form>
 {{- end -}}
-
-{{- define "powered-by/forma" -}}
-<span class="small text-monospace float-right">powered by {{ partial "proxy/click" (dict "page" . "id" "kamilsk/forma" "text" "Forma") }}</span>
-<br class="clearfix">
-{{- end -}}

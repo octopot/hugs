@@ -15,11 +15,7 @@
                        name="email" type="email" maxlength="64" required>
             </div>
         </span>
-
-        {{- /* template "powered-by/forma" */ -}}
-        <span class="small text-monospace float-right">powered by {{ partial "proxy/click" (dict "page" . "id" "kamilsk/forma" "text" "Forma") }}</span>
-        <br class="clearfix">
-
+        {{- partial "powered_by/forma" . -}}
     </div>
     <div class="col-md-4">
         <button class="btn btn-primary btn-block" type="submit">Subscribe</button>

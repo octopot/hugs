@@ -5,6 +5,10 @@
 
 list:
 
+- &airtable
+  origin: https://airtable.com/
+  click!: airtable
+
 - &check
   origin: https://github.com/kamilsk/check
 
@@ -13,6 +17,7 @@ list:
 
 - &creative-tim
   origin: https://www.creative-tim.com/
+  click!: creative-tim
 
 - &digitalocean
   origin: https://www.digitalocean.com/
@@ -57,6 +62,7 @@ list:
   click!: vultr
 
 find:
+  airtable:          *airtable
   creative-tim:      *creative-tim
   digitalocean:      *digitalocean
   ecwid:             *ecwid

@@ -50,9 +50,7 @@
             validated by {{ partial "proxy/click" (dict "page" $ "id" "kamilsk/check" "text" "check") }} tool,
             hosted on {{ partial "proxy/click" (dict "page" $ "id" "https://pages.github.com/" "text" "GitHub Pages")}}
         </span>
-        {{- /* template "powered-by/click" */ -}}
-        <span class="small text-monospace float-right">powered by {{ partial "proxy/click" (dict "page" . "id" "kamilsk/click" "text" "Click!") }}</span>
-        <br class="clearfix">
+        {{- partial "powered_by/click" . -}}
 
         <hr>
         <div class="row">

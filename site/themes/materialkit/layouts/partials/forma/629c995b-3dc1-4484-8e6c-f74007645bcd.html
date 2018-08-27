@@ -20,11 +20,7 @@
 <div class="form-group">
     <input id="{{ $id }}_feedback" name="feedback" type="hidden" maxlength="5120" required>
     <trix-editor class="form-control" input="{{ $id }}_feedback"></trix-editor>
-
-    {{- /* template "powered-by/forma" */ -}}
-    <span class="small text-monospace float-right">powered by {{ partial "proxy/click" (dict "page" . "id" "kamilsk/forma" "text" "Forma") }}</span>
-    <br class="clearfix">
-
+    {{- partial "powered_by/forma" . -}}
 </div>
 <div class="row">
     <div class="col-md-4 ml-auto mr-auto text-center">
