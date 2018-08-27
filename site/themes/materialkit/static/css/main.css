@@ -6,6 +6,7 @@ trix-toolbar .trix-button--icon-quote { display: none; }
 trix-toolbar .trix-button--icon-code  { display: none; }
 footer .fa-heart                      { color: red; }
 
+.modal-backdrop                       { z-index: initial; }
 .navbar .navbar-brand img             { max-height: 100%; }
 .navbar .nav-link.active              { color: inherit; background-color: rgba(255, 255, 255, 0.1); }
 

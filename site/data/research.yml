@@ -1,95 +1,29 @@
 ---
 
-list:
-
-- &algolia
-  name:  Algolia
-  href:  https://www.algolia.com/
-  class: btn btn-default btn-sm
-
-- &creative_tim
-  name:  Creative Tim
-  href:  creative_tim
-  class: btn btn-success btn-sm
-
-- &ecwid
-  name:  Ecwid
-  href:  ecwid
-  class: btn btn-default btn-sm
-
-- &forestry
-  name:  Forestry
-  href:  https://forestry.io/
-  class: btn btn-default btn-sm
-
-- &minio
-  name: Minio
-  href: https://minio.io/
-  src:  https://github.com/minio/minio
-
-- &mouthful
-  name: Mouthful
-  href: https://mouthful.dizzy.zone/
-  src:  https://github.com/vkuznecovas/mouthful
-
-- &netlify
-  name:  Netlify
-  href:  https://www.netlify.com/
-  class: btn btn-default btn-sm
-
-- &ponzu
-  name: Ponzu
-  href: https://docs.ponzu-cms.org/
-  src:  https://github.com/ponzu-cms/ponzu
-
-- &remark
-  name: Remark42
-  href: https://remark42.com/
-  src:  https://github.com/umputun/remark
-
-- &stripe
-  name:  Stripe
-  href:  https://stripe.com/
-  class: btn btn-default btn-sm
+list: ~
 
 marketplace:
-- title: Automation and Deploy
+- title: Automation, Backup and Deploy
   icon:  autorenew
   description: >
-    Publishing scheduler, update deliverer, backup.
-  candidates:
-  - *forestry
-  - *netlify
-- title: Communication
+    Publishing scheduler, update deliverer, backups.
+- title: Communication and User Management
   icon:  question_answer
   description: >
-    Comments, votes, user feedback.
-  candidates:
-  - *mouthful
-  - *remark
-- title: Content Management
+    Comments, votes, user feedback and CRM.
+- title: Content Management and Localization
   icon:  translate
   description: >
-    File manager, image storage, CMS and translation management.
-  candidates:
-  - *minio
-  - *ponzu
-- title: E-commerce
+    File manager, image storage, CMS and translations.
+- title: E-commerce and Payment
   icon:  store
   description: >
-    Shopping cart, store solution, payment processor.
-  candidates:
-  - *ecwid
-  - *stripe
-- title: GUI
+    Shopping cart, store solution and payment processing.
+- title: Admin Panel, Template and WYSIWYG
   icon:  dashboard
   description: >
-    Admin panel, WYSIWYG editor, template generator.
-  candidates:
-  - *creative_tim
-- title: Search
+    Admin panel, WYSIWYG editor and templates.
+- title: Data Processing and Search Engine
   icon:  search
   description: >
-    Search integrations.
-  candidates:
-  - *algolia
+    Search integrations, analytics and data processing.
