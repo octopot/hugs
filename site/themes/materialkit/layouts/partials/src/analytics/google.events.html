@@ -4,12 +4,13 @@
     'use strict';
 
     if (!sender) { return; }
-    function s(eventValue) {
+    function send(eventValue) {
         sender('send', 'event', 'Feature Request', 'vote', 'Future Section', eventValue);
+        console.log('event has been sent');
     }
     $('#future .vote').click(function () {
-        if ($(this).data('state') == 'like') { s(0); }
-        else { s(1); }
+        if ($(this).data('state') == 'like') { send(0); }
+        else { send(1); }
     });
 }(window.jQuery, window.ga));
 </script>
