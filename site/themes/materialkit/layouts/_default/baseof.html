@@ -44,11 +44,11 @@
 {{- block "header" . }}{{ partial "header/main" . }}{{ end -}}
 {{- block "content" . }}{{ .Content }}{{ end -}}
 {{- block "footer" . }}{{ partial "footer/main" . }}{{ end -}}
-{{- block "analytics.sync" . }}{{ end -}}
 {{- block "scripts" . -}}
     {{- partial "src/scripts.default" . -}}
     <script src="js/main.js"></script>
 {{- end -}}
+{{- block "analytics.sync" . }}{{ end -}}
 {{- partial "debug" . -}}
 </body>
 </html>

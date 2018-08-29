@@ -1,0 +1,27 @@
+{{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
+<script>
+(function ($, sender) {
+    'use strict';
+
+    if (!sender) { return; }
+    s = function (eventValue) {
+        sender('send', 'event', 'Feature Request', 'vote', 'Future Section', eventValue);
+    }
+    $('#future .vote').click(function () {
+        if ($(this).data('state') == 'like') { s(0); }
+        else { s(1); }
+    });
+}(window.jQuery, window.ga));
+</script>
+{{- else -}}
+<script>
+(function ($) {
+    'use strict';
+
+    $('#future .vote').click(function () {
+        if ($(this).data('state') == 'like') { console.log('unlike'); }
+        else { console.log('like'); }
+    });
+}(window.jQuery));
+</script>
+{{- end -}}

@@ -1,3 +1,4 @@
-digitalocean.white.svg - https://www.digitalocean.com/company/logos-and-badges/
-patreon.white.svg      - https://www.patreon.com/brand/downloads
-hugo.svg               - https://gohugo.io/
+digitalocean.*.svg - https://www.digitalocean.com/company/logos-and-badges/
+patreon.*.svg      - https://www.patreon.com/brand/downloads
+hugo.svg           - https://gohugo.io/
+startup_shool.svg  - https://www.startupschool.org/
