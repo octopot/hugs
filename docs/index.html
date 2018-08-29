@@ -825,7 +825,7 @@
     'use strict';
 
     if (!sender) { return; }
-    s = function (eventValue) {
+    function s(eventValue) {
         sender('send', 'event', 'Feature Request', 'vote', 'Future Section', eventValue);
     }
     $('#future .vote').click(function () {
