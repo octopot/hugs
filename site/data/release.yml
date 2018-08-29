@@ -92,39 +92,10 @@ projects:
 - &forma    Forma
 - &passport Passport
 
-may:
-  check:
-  - *check110
-  - *check102
-  - *check101
-  - *check100
-  click:
-  - *click127
-  - *click126
-  - *click125
-  - *click124
-  - *click123
-  forma:
-  - *forma123
-  - *forma122
-  - *forma121
-  - *forma120
-  passport: ~
-
 latest:
-- branch: v1
-  versions:
-  - project: *click
-    version: *click127
-  - project: *forma
-    version: *forma123
-  - project: *passport
-    version: *passport110
-- branch: v2
-  versions:
-  - project: *click
-    version: *click200
-  - project: *forma
-    version: *forma200
-  - project: *passport
-    version: *passport200
+- project: *click
+  version: *click127
+- project: *forma
+  version: *forma123
+- project: *passport
+  version: *passport110

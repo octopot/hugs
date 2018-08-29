@@ -12,9 +12,6 @@ footer .fa-heart                      { color: red; }
 
 #home .icon.digitalocean img          { width: 33%; }
 #home .github-vote                    { padding: 1em 0; }
-#home .footer .partner                { display: block; margin: 40px auto; text-align: center; }
-#home .footer .digitalocean img       { width: 100%; }
-#home .footer .patreon img            { width: 50%; margin-left: 14px; }
 #home .footer .social-feed .feed-line { margin: .25em 0; }
 #home .footer .social li              { display: list-item; }
 #home .footer .social a               { padding-left: 0; }

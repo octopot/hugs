@@ -1,16 +1,13 @@
-{{- $patreon  := index .Site.Data.partner.find "patreon" -}}
-{{- $creative := index .Site.Data.partner.find "creative_tim" -}}
-
 <footer class="footer">
     <div class="container">
-        {{- with $patreon -}}
+        {{- with index .Site.Data.partner.find "patreon" -}}
         <p>Feel free to support us at<br>
-           {{- $text := printf "![Patreon](%s)" .logo.black.src -}}
+           {{- $text := printf "![Patreon](%s)" .logo.black.src | markdownify -}}
            {{- partial "proxy/click" (dict "page" $ "id" .href "class" .id "text" $text) -}}
         </p>
         {{- end -}}
-        {{- with $creative -}}
-        <p>Template {{ partial "proxy/click" (dict "page" $ "id" .products.material_kit.href "text" .products.material_kit.text) }}
+        {{- with index .Site.Data.partner.find "creative_tim" -}}
+        <p>Template {{ partial "proxy/click" (dict "page" $ "id" .products.material_kit.href "text" .products.material_kit.title) }}
            is provided by {{ partial "proxy/click" (dict "page" $ "id" .href "text" .name) }}
            <i class="fas fa-heart"></i>
         </p>

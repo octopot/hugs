@@ -1,44 +1,40 @@
 {{- $company  := index .Site.Data.company.find .Site.Params.company.id -}}
-{{- $releases := .Site.Data.release.latest -}}
-{{- $partners := where .Site.Data.partner.list "id" "in" (slice "digitalocean" "patreon") -}}
 
 <footer class="footer footer-big">
     <div class="container">
         <div class="content">
             <div class="row">
-                <div class="col-md-5 offset-md-1">
-                    <div class="partners">
-                        {{- range $partners -}}
-                            {{- $class := print "partner " .id -}}
-                            {{- $text  := printf "![%s](%s)" .logo.black.alt .logo.black.src | markdownify -}}
-                            {{- partial "proxy/click" (dict "page" $ "id" .href "class" $class "text" $text) -}}
-                        {{- end -}}
-                    </div>
+                <div class="col-md-3">
+                    <h5>Startup School Member</h5>
+                    <img src="/img/logo/startup_school.svg" alt="Startup School">
+                </div>
+                <div class="col-md-3">
+                    {{- with index .Site.Data.partner.find "patreon" -}}
+                    {{- $text := printf "![Patreon](%s)" .logo.black.src | markdownify -}}
+                    <h5>Feel free to support us at {{ partial "proxy/click" (dict "page" $ "id" .href "class" .id "text" $text) }}</p>
+                    {{- end -}}
                 </div>
                 <div class="col-md-3 offset-md-1">
                     <h5>Latest releases</h5>
                     <div class="social-feed">
-                        {{- range $idx, $branch := $releases -}}
-                            {{- range $branch.versions -}}
-                            <div class="feed-line">
-                                <i class="{{ .version.icon }}"></i> <strong>{{ .project }}</strong>
-                                version {{ partial "proxy/click" (dict "page" $ "id" .version.href "text" .version.text) -}}
-                            </div>
-                            {{- end -}}
-                            {{- if ne (add $idx 1) (len $releases) }}<hr>{{ end -}}
+                        {{- range .Site.Data.release.latest -}}
+                        <div class="feed-line">
+                            <i class="{{ .version.icon }}"></i> <strong>{{ .project }}</strong>
+                            version {{ partial "proxy/click" (dict "page" $ "id" .version.href "text" .version.text) -}}
+                        </div>
                         {{- end -}}
                     </div>
                 </div>
                 {{- with $company.social -}}
                 <div class="col-md-2">
-                    <h5>Follow us</h5>
+                    <h5>Follow us at</h5>
                     <ul class="social">
                         {{- range . -}}
-                            <li>
-                                {{- $class := "btn btn-link btn-social" -}}
-                                {{- $text  := printf `<i class="%s"></i> %s` .icon .title -}}
-                                {{- partial "proxy/click" (dict "page" $ "id" .url "class" $class "text" $text) -}}
-                            </li>
+                        <li>
+                            {{- $class := "btn btn-link btn-social" -}}
+                            {{- $text  := printf `<i class="%s"></i> %s` .icon .title -}}
+                            {{- partial "proxy/click" (dict "page" $ "id" .url "class" $class "text" $text) -}}
+                        </li>
                         {{- end -}}
                     </ul>
                 </div>
