@@ -10,6 +10,7 @@ footer .fa-heart                      { color: red; }
 .navbar .navbar-brand img             { max-height: 100%; }
 .navbar .nav-link.active              { color: inherit; background-color: rgba(255, 255, 255, 0.1); }
 
+#home .icon.digitalocean img          { width: 33%; }
 #home .github-vote                    { padding: 1em 0; }
 #home .footer .partner                { display: block; margin: 40px auto; text-align: center; }
 #home .footer .digitalocean img       { width: 100%; }

@@ -19,6 +19,18 @@
                     </div>
                 </div>
                 {{- end -}}
+                {{- with index .Site.Data.partner.find "digitalocean" -}}
+                <div class="col-md-4 mr-auto ml-auto">
+                    <div class="info">
+                        <div class="icon {{ .id }}">
+                            {{- $text  := printf "![%s](%s)" .logo.vertical.alt .logo.vertical.src | markdownify -}}
+                            {{- partial "proxy/click" (dict "page" $ "id" .href "text" $text) -}}
+                        </div>
+                        <h4 class="info-title">Works on minimum available droplet</h4>
+                        <p>It has low memory footprint and CPU usage.</p>
+                    </div>
+                </div>
+                {{- end -}}
             </div>
         </div>
     </div>
