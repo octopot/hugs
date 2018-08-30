@@ -9,7 +9,7 @@
         <h6 class="card-category">{{ .category }}</h6>
         <a><h4 class="card-title">{{ .title }}</h4></a>
         <p class="card-description">{{ .description | markdownify }}</p>
-        <button id="{{ .id }}" class="btn btn-info vote d-none" data-state="like" data-title="{{ .title }}">
+        <button id="{{ .id }}" class="btn btn-info vote d-none" data-state="unlike" data-title="{{ .title }}">
             <i class="far fa-star"></i> Like
         </button>
     </div>
