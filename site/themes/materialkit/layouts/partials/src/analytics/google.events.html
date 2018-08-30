@@ -3,7 +3,7 @@
 (function (scope) {
     'use strict';
 
-    scope.ga = function (action, fieldsObject) {
+    scope.gtag = function (_, action, fieldsObject) {
         console.log(action, fieldsObject);
     }
 }(window));
@@ -14,14 +14,12 @@
     'use strict';
 
     function send($el) {
-        sender('send', {
-            hitType: 'event',
-            eventCategory: 'Feature Request',
-            eventAction: $el.data('state'),
-            eventLabel: $el.data('title') + ':' + $el.attr('id'),
-            eventValue: 1,
+        sender('event', $el.data('state'), {
+            'event_category': 'Feature Request',
+            'event_label': $el.data('title') + ':' + $el.attr('id'),
+            'value': 1,
         });
     }
     $('#future .vote').click(function () { send($(this)); });
-}(window.jQuery, window.ga));
+}(window.jQuery, window.gtag));
 </script>

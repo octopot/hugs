@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hugs &mdash; Platform for Static Sites</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-109817251-25"></script>
 <script>
-(function (w) {
-    w.dataLayer = w.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-109817251-25');
+(function (scope) {
+    scope.dataLayer = scope.dataLayer || [];
+    scope.gtag = function () { dataLayer.push(arguments); }
+    scope.gtag('js', new Date());
+    scope.gtag('config', 'UA-109817251-25');
 })(window);
 </script><script>
 (function (d, w, c) {
@@ -815,16 +815,14 @@
     'use strict';
 
     function send($el) {
-        sender('send', {
-            hitType: 'event',
-            eventCategory: 'Feature Request',
-            eventAction: $el.data('state'),
-            eventLabel: $el.data('title') + ':' + $el.attr('id'),
-            eventValue: 1,
+        sender('event', $el.data('state'), {
+            'event_category': 'Feature Request',
+            'event_label': $el.data('title') + ':' + $el.attr('id'),
+            'value': 1,
         });
     }
     $('#future .vote').click(function () { send($(this)); });
-}(window.jQuery, window.ga));
+}(window.jQuery, window.gtag));
 </script>
 </body>
 </html>
