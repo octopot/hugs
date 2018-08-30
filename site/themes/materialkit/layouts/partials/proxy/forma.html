@@ -25,5 +25,6 @@
     action="{{ $base }}/{{ $path }}"
     method="post" enctype="application/x-www-form-urlencoded">
     {{- partial (print "forma/" $id) (dict "page" . "id" $id) -}}
+    {{- with index .Params "uid" }}<input type="hidden" name="_resource" value="{{ . }}">{{ end -}}
 </form>
 {{- end -}}

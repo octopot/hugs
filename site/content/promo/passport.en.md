@@ -1,6 +1,6 @@
 ---
 
-id:          e565b53a-1d55-4a18-8b78-e2b76cd6868c
+uid:         e565b53a-1d55-4a18-8b78-e2b76cd6868c
 
 title:       Passport
 description: Person Identifier as a Service

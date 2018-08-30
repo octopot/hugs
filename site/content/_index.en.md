@@ -1,6 +1,6 @@
 ---
 
-id:          ce465427-9de9-46ce-ad49-536c75b33070
+uid:         ce465427-9de9-46ce-ad49-536c75b33070
 
 title:       Hugs
 description: Platform for Static Sites

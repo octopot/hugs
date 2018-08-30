@@ -1,6 +1,6 @@
 ---
 
-id:          641696e1-7c4a-4358-8aa5-66a43ab7bfa6
+uid:         641696e1-7c4a-4358-8aa5-66a43ab7bfa6
 
 title:       Click!
 description: Link Manager as a Service

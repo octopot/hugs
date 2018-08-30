@@ -1,6 +1,6 @@
 ---
 
-id:          e34980e0-e4ff-4a4b-93a4-7876c7f8d28c
+uid:         e34980e0-e4ff-4a4b-93a4-7876c7f8d28c
 
 title:       Forma
 description: Data Collector as a Service
