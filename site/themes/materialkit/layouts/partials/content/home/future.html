@@ -7,11 +7,9 @@
     </a>
     <div class="card-body">
         <h6 class="card-category">{{ .category }}</h6>
-        <a>
-            <h4 class="card-title">{{ .title }}</h4>
-        </a>
+        <a><h4 class="card-title">{{ .title }}</h4></a>
         <p class="card-description">{{ .description | markdownify }}</p>
-        <button id="{{ .id }}" class="btn btn-info vote d-none" data-state="like">
+        <button id="{{ .id }}" class="btn btn-info vote d-none" data-state="like" data-title="{{ .title }}">
             <i class="far fa-star"></i> Like
         </button>
     </div>
@@ -41,8 +39,8 @@
             <div class="col-md-12 vote d-none text-center">
                 <h2 class="title">You vote - We work!</h2>
                 <div id="likes" class="d-none">
-                    <div data-state="like"><i class="far fa-star"></i> Like</div>
-                    <div data-state="liked"><i class="fas fa-star"></i> Liked</div>
+                    <div data-state="unlike"><i class="far fa-star"></i> Like</div>
+                    <div data-state="like"><i class="fas fa-star"></i> Liked</div>
                 </div>
             </div>
         </div>

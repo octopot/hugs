@@ -1,28 +1,27 @@
-{{- if not (findRE "127.0.0.1|localhost" .Site.BaseURL) -}}{{- /* TODO .Site.IsServer */ -}}
+{{- if findRE "127.0.0.1|localhost" .Site.BaseURL -}}{{- /* TODO .Site.IsServer */ -}}
+<script>
+(function (scope) {
+    'use strict';
+
+    scope.ga = function (action, fieldsObject) {
+        console.log(action, fieldsObject);
+    }
+}(window));
+</script>
+{{- end -}}
 <script>
 (function ($, sender) {
     'use strict';
 
-    if (!sender) { return; }
-    function send(eventValue) {
-        sender('send', 'event', 'Feature Request', 'vote', 'Future Section', eventValue);
-        console.log('event has been sent');
+    function send($el) {
+        sender('send', {
+            hitType: 'event',
+            eventCategory: 'Feature Request',
+            eventAction: $el.data('state'),
+            eventLabel: $el.data('title') + ':' + $el.attr('id'),
+            eventValue: 1,
+        });
     }
-    $('#future .vote').click(function () {
-        if ($(this).data('state') == 'like') { send(0); }
-        else { send(1); }
-    });
+    $('#future .vote').click(function () { send($(this)); });
 }(window.jQuery, window.ga));
 </script>
-{{- else -}}
-<script>
-(function ($) {
-    'use strict';
-
-    $('#future .vote').click(function () {
-        if ($(this).data('state') == 'like') { console.log('unlike'); }
-        else { console.log('like'); }
-    });
-}(window.jQuery));
-</script>
-{{- end -}}
