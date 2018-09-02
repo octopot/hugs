@@ -22,6 +22,7 @@ $ make up demo status
      Name                    Command               State                    Ports
 ---------------------------------------------------------------------------------------------------
 hugs_click_1      click run --with-profiler  ...   Up      80/tcp, 8090/tcp, 8091/tcp
+hugs_cms_1        /run.sh                          Up      80/tcp
 hugs_database_1   docker-entrypoint.sh postgres    Up      5432/tcp
 hugs_forma_1      form-api run --with-profil ...   Up      80/tcp, 8090/tcp, 8091/tcp
 hugs_hugo_1       /bin/sh -c hugo server --b ...   Up      1313/tcp
@@ -64,6 +65,7 @@ $ make help
 #
 # refresh-nginx:   Sync configurations, process them and reload nginx.
 $ open https://127.0.0.1.xip.io/
+$ open https://cms.127.0.0.1.xip.io/
 $ open https://click.127.0.0.1.xip.io/
 $ open https://forma.127.0.0.1.xip.io/
 $ open https://passport.127.0.0.1.xip.io/
@@ -83,6 +85,8 @@ $ open https://passport.127.0.0.1.xip.io/
 | **Misc**       |
 | kamilsk/nginx  | [+](https://github.com/kamilsk/shared/tree/docker-common) | [+](https://bitbucket.org/kamilsk/shared/src/docker-common/) | [+](https://hub.docker.com/r/kamilsk/nginx/)    | [+](https://quay.io/repository/kamilsk/nginx)    | -                     |
 | kamilsk/hugo   | [+](https://github.com/kamilsk/shared/tree/docker-go)     | [+](https://bitbucket.org/kamilsk/shared/src/docker-go/)     | [+](https://hub.docker.com/r/kamilsk/hugo/)     | -                                                | -                     |
+| **Vendor**     |
+| Grav           | [+](https://getgrav.org/)                                 | -                                                            | [+](https://hub.docker.com/r/yobasystems/alpine-grav/) | -                                         | -                     |
 
 ---
 

@@ -65,19 +65,32 @@ services:
     env_file:
     - etc/env/passport.env
 
+  # experimental integration to test Grav
+  cms:
+    image: yobasystems/alpine-grav:latest
+    env_file:
+    - etc/env/grav.env
+    depends_on:
+    - hugo
+    volumes:
+    - content:/usr
+    - ./site/content:/usr/html/user/pages/hugo
+
   server:
     image: kamilsk/nginx:1.x # https://hub.docker.com/r/kamilsk/nginx/
     depends_on:
     - click
+    - cms
     - forma
     - hugo
     - passport
     entrypoint: |
       /bin/bash -c "echo $$BASIC_USER:`(echo $$BASIC_PASS | openssl passwd -crypt -stdin -noverify)` >> /etc/nginx/.htpasswd \
-                    && /entrypoint.sh 127.0.0.1.xio.io \
-                                      click.127.0.0.1.xio.io \
-                                      forma.127.0.0.1.xio.io \
-                                      passport.127.0.0.1.xio.io"
+                    && /entrypoint.sh 127.0.0.1.xip.io \
+                                      cms.127.0.0.1.xip.io \
+                                      click.127.0.0.1.xip.io \
+                                      forma.127.0.0.1.xip.io \
+                                      passport.127.0.0.1.xip.io"
     env_file:
     - etc/env/balancer.env
     ports:
@@ -90,6 +103,6 @@ services:
 
 volumes:
 
+  content:     { driver: local }
   pgdata:      { driver: local }
-
   letsencrypt: { driver: local }
