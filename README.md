@@ -5,6 +5,33 @@
 [![Patreon][icon_patreon]](https://www.patreon.com/octolab)
 [![License][icon_license]](LICENSE)
 
+## Roadmap
+
+- [x] [MVP][project_v1]
+  - [**May 31, 2018**][project_v1_dl]
+  - Main concept and components integration.
+- [x] [Pre-alpha][project_v2]
+  - [**August 31, 2018**][project_v2_dl]
+  - Integration of components is complete.
+  - Versions 1.x in active development.
+- [ ] [Alpha][project_v3]
+  - [**September 30, 2018**][project_v3_dl]
+  - Versions 1.x are complete.
+  - Versions 2.x in active development.
+- [ ] [Beta][project_v4]
+  - [**October 31, 2018**][project_v4_dl]
+  - Versions 2.x are complete.
+  - Versions 3.x in active development.
+- [ ] [Release Candidate][project_v5]
+  - [**November 30, 2018**][project_v5_dl]
+  - Versions 3.x are complete.
+  - A process of covering integration tests.
+- [ ] [Release to the Web][project_v6]
+  - [**December 31, 2018**][project_v6_dl]
+  - **December 31, 2018**
+  - Hugs Platform, SaaS.
+  - Ready to use as self-hosted or in the Cloud.
+
 ## Quick start
 
 Requirements:
