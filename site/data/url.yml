@@ -30,6 +30,9 @@ list:
 - &forma
   origin: https://github.com/kamilsk/form-api
 
+- &guard
+  origin: https://github.com/kamilsk/guard
+
 - &hugo
   origin: https://gohugo.io/
 
@@ -70,6 +73,7 @@ find:
   kamilsk/check:     *check
   kamilsk/click:     *click
   kamilsk/forma:     *forma
+  kamilsk/guard:     *guard
   kamilsk/passport:  *passport
   linode:            *linode
   octolab/hugs:      *hugs
