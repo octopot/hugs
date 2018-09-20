@@ -28,7 +28,6 @@
   - A process of covering integration tests.
 - [ ] [Release to the Web][project_v6]
   - [**December 31, 2018**][project_v6_dl]
-  - **December 31, 2018**
   - Hugs Platform, SaaS.
   - Ready to use as self-hosted or in the Cloud.
 
