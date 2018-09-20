@@ -1,9 +1,9 @@
-> # Hugs [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Platform%20for%20Static%20Sites&url=https://octolab.github.io/hugs/&via=octolab_inc&hashtags=platform,static-sites)
-> [![Analytics](https://ga-beacon.appspot.com/UA-109817251-25/hugs/readme?pixel)](https://octolab.github.io/hugs/)
+> # 🤗 Hugs [![Tweet][icon_twitter]][twitter_publish]
+> [![Analytics][analytics_pixel]][page_promo]
 > Platform for Static Sites.
 
-[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Patreon][icon_patreon]](https://www.patreon.com/octolab)
+[![License][icon_license]](LICENSE)
 
 ## Quick start
 
@@ -14,15 +14,13 @@ Requirements:
 - GNU Make 3.81 or above
 
 ```bash
-$ git clone git@github.com:octolab/hugs.git
-# git clone git@bitbucket.org:kamilsk/hugs.git
+$ git clone git@github.com:octolab/hugs.git # or git@bitbucket.org:kamilsk/hugs.git
 $ cd hugs
 $ make up demo status
 
      Name                    Command               State                    Ports
 ---------------------------------------------------------------------------------------------------
 hugs_click_1      click run --with-profiler  ...   Up      80/tcp, 8090/tcp, 8091/tcp
-hugs_cms_1        /run.sh                          Up      80/tcp
 hugs_database_1   docker-entrypoint.sh postgres    Up      5432/tcp
 hugs_forma_1      form-api run --with-profil ...   Up      80/tcp, 8090/tcp, 8091/tcp
 hugs_hugo_1       /bin/sh -c hugo server --b ...   Up      1313/tcp
@@ -30,42 +28,7 @@ hugs_passport_1   passport run --with-profil ...   Up      80/tcp, 8090/tcp, 809
 hugs_server_1     /bin/bash -c echo $BASIC_U ...   Up      0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp
 
 $ make help
-# up:              Builds, (re)creates, starts, and attaches to containers for a service.
-#
-# clean:           Removes stopped service containers.
-#
-# status:          List containers and their status.
-#
-# down:            Stops containers and removes them with networks.
-#
-# destroy:         Stops containers and removes them with networks, volumes, and images
-#                  created by `up`.
-#                  ---
-# services:        Shows available services.
-#
-# up-$(1):         Builds, (re)creates, starts, and attaches to a container of the service $(1).
-#                  For example `make up-server`. See `make services`.
-#
-# enter-$(1):      Enter to a running container of the service $(1).
-#                  For example `make enter-server`. See `make services`.
-#
-# start-$(1):      Start an existing container of the service $(1).
-#                  For example `make start-server`. See `make services`.
-#
-# restart-$(1):    Restart a running container of the service $(1).
-#                  For example `make restart-server`. See `make services`.
-#
-# stop-$(1):       Stop a running container of the service $(1) without removing them.
-#                  For example `make stop-server`. See `make services`.
-#
-# log-$(1):        View output from a container of the service $(1).
-#                  For example `make log-server`. See `make services`.
-#                  ---
-# psql:            Connect to the database with psql.
-#
-# refresh-nginx:   Sync configurations, process them and reload nginx.
 $ open https://127.0.0.1.xip.io/
-$ open https://cms.127.0.0.1.xip.io/
 $ open https://click.127.0.0.1.xip.io/
 $ open https://forma.127.0.0.1.xip.io/
 $ open https://passport.127.0.0.1.xip.io/
@@ -87,15 +50,35 @@ $ open https://passport.127.0.0.1.xip.io/
 | **Misc**       |
 | kamilsk/hugo   | [+](https://github.com/kamilsk/shared/tree/docker-go)     | [+](https://bitbucket.org/kamilsk/shared/src/docker-go/)     | [+](https://hub.docker.com/r/kamilsk/hugo/)     | -                                                | -                     |
 | kamilsk/nginx  | [+](https://github.com/kamilsk/shared/tree/docker-common) | [+](https://bitbucket.org/kamilsk/shared/src/docker-common/) | [+](https://hub.docker.com/r/kamilsk/nginx/)    | [+](https://quay.io/repository/kamilsk/nginx)    | -                     |
-| octolab/hugo   | [+](https://github.com/octolab/hugo)                      | -                                                            | -                                               | -                                                | -                     |
 | octolab/lens   | [+](https://github.com/octolab/lens)                      | -                                                            | -                                               | -                                                | -                     |
-| **Vendor**     |
-| [Grav](https://getgrav.org/) | [+](https://github.com/getgrav/grav)        | -                                                            | [+](https://hub.docker.com/r/yobasystems/alpine-grav/) | -                                         | -                     |
 
 ---
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/octolab/hugs)
-[![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
-[![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
+[![Gitter][icon_gitter]](https://gitter.im/octolab/hugs)
 
 made with ❤️ by [OctoLab](https://www.octolab.org/)
+
+[analytics_pixel]: https://ga-beacon.appspot.com/UA-109817251-25/hugs/readme?pixel
+
+[icon_gitter]:     https://badges.gitter.im/Join%20Chat.svg
+[icon_license]:    https://img.shields.io/badge/license-MIT-blue.svg
+[icon_patreon]:    https://img.shields.io/badge/patreon-donate-orange.svg
+[icon_research]:   https://img.shields.io/badge/research-in%20progress-yellow.svg
+[icon_twitter]:    https://img.shields.io/twitter/url/http/shields.io.svg?style=social
+
+[page_promo]:      https://octolab.github.io/hugs/
+
+[project_v1]:      https://github.com/kamilsk/form-api/projects/1
+[project_v1_dl]:   https://github.com/kamilsk/form-api/milestone/1
+[project_v2]:      https://github.com/kamilsk/form-api/projects/2
+[project_v2_dl]:   https://github.com/kamilsk/form-api/milestone/2
+[project_v3]:      https://github.com/kamilsk/form-api/projects/3
+[project_v3_dl]:   https://github.com/kamilsk/form-api/milestone/3
+[project_v4]:      https://github.com/kamilsk/form-api/projects/4
+[project_v4_dl]:   https://github.com/kamilsk/form-api/milestone/4
+[project_v5]:      https://github.com/kamilsk/form-api/projects/5
+[project_v5_dl]:   https://github.com/kamilsk/form-api/milestone/5
+[project_v6]:      https://github.com/kamilsk/form-api/projects/6
+[project_v6_dl]:   https://github.com/kamilsk/form-api/milestone/6
+
+[twitter_publish]: https://twitter.com/intent/tweet?text=Platform%20for%20Static%20Sites&url=https://octolab.github.io/hugs/&via=octolab_inc&hashtags=platform,static-sites

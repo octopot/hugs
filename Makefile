@@ -34,7 +34,6 @@ destroy:                    #| Stops containers and removes them with networks, 
 #|
 CONTAINERS = database \
              click \
-             cms \
              forma \
              hugo \
              passport \
