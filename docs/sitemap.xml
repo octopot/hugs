@@ -20,6 +20,12 @@
     </url>
     
     <url>
+        <loc>https://hugs.octolab.net/promo/guard/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://hugs.octolab.net/promo/passport/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
