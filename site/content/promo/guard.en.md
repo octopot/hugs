@@ -24,9 +24,13 @@ image:
 
 features:
 - title: Content Protection
-  icon:  { color: icon-success, type: security }
+  icon:  { color: icon-danger, type: security }
   description: >
     Limit access to your static pages.
+- title: Turn on Monetization
+  icon:  { color: icon-success, type: monetization_on }
+  description: >
+    Organize paid access to any entry point you want.
 - title: Status
   icon:  { color: icon-default, type: timeline }
   description: >
