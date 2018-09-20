@@ -7,7 +7,7 @@ description: Link Manager as a Service
 draft:       false
 
 html:
-  id:        click-promo
+  id:        click
   class:     promo-page
 
 author:      kamil.samigullin

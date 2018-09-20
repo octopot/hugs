@@ -7,7 +7,7 @@ description: Access Control as a Service
 draft:       false
 
 html:
-  id:        guard-promo
+  id:        guard
   class:     promo-page
 
 author:      kamil.samigullin

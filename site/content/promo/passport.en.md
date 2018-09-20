@@ -7,7 +7,7 @@ description: Person Identifier as a Service
 draft:       false
 
 html:
-  id:        passport-promo
+  id:        passport
   class:     promo-page
 
 author:      kamil.samigullin

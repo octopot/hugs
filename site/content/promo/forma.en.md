@@ -7,7 +7,7 @@ description: Data Collector as a Service
 draft:       false
 
 html:
-  id:        forma-promo
+  id:        forma
   class:     promo-page
 
 author:      kamil.samigullin

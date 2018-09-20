@@ -18,7 +18,7 @@
             </div>
         </div>
         {{- range $idx, $page := $blocks -}}
-        <div class="row">
+        <div class="row" id="{{ $page.Params.html.id }}">
             <div class="col-md-5 offset-md-1">
                 {{- if modBool $idx 2 -}}
                     {{- $page.Render "block.card" -}}
