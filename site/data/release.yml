@@ -73,8 +73,18 @@ list:
   icon: fa fa-check-circle
 
 - &forma200
-  href: https://github.com/kamilsk/form-api/milestone/2
+  href: https://github.com/kamilsk/form-api/releases/tag/2.0.0
   text: 2.0.0
+  icon: fa fa-check-circle
+
+- &forma201
+  href: https://github.com/kamilsk/form-api/releases/tag/2.0.1
+  text: 2.0.1
+  icon: fa fa-check-circle
+
+- &guard100
+  href: https://github.com/kamilsk/guard/milestone/1
+  text: 1.0.0
   icon: fa fa-spinner
 
 - &passport110
@@ -90,12 +100,15 @@ list:
 projects:
 - &click    Click!
 - &forma    Forma
+- &guard    Guard
 - &passport Passport
 
 latest:
 - project: *click
   version: *click127
 - project: *forma
-  version: *forma123
+  version: *forma201
+- project: *guard
+  version: *guard100
 - project: *passport
   version: *passport110
