@@ -7,8 +7,7 @@
             <div class="col-md-6">
                 <h1 class="title">{{ .Title }}</h1>
                 <h2>&mdash; {{ .Description }}</h2>
-                <h4>Good point to start your new excellent website<br>
-                    with static site generators such as <strong>Hugo</strong>.</h4>
+                <h4>Good point to start your new rich static website!</h4>
                 {{- with `<i class="fab fa-github"></i> View at GitHub` -}}
                     {{- partial "proxy/click" (dict "page" $ "id" "octolab/hugs" "class" "btn btn-danger" "text" .) -}}
                 {{- end -}}

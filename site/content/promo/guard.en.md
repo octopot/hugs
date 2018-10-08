@@ -12,7 +12,7 @@ html:
 
 author:      kamil.samigullin
 github:      kamilsk/guard
-tagline:     protect any API or sites and content you want
+tagline:     your personal paywall to protect any API or site's content.
 
 sponsors:
 - digitalocean

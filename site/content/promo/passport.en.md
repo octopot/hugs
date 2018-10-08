@@ -34,7 +34,7 @@ features:
 - title: Notification Center
   icon:  { color: icon-success, type: chat }
   description: >
-    Send personal messages through the WebSocket.
+    Send personal messages using push notification.
 - title: Status
   icon:  { color: icon-default, type: timeline }
   description: >
