@@ -35,12 +35,17 @@ params:
   click:
     enabled: true
     proxy:   /goto
-    service: https://click.127.0.0.1.xip.io
+    service: https://click.127.0.0.1.xip.io/
 
   forma:
     enabled: true
     proxy:   /forma
-    service: https://forma.127.0.0.1.xip.io
+    service: https://forma.127.0.0.1.xip.io/
+
+  passport:
+    enabled: true
+    proxy:   /passport
+    service: https://passport.127.0.0.1.xip.io/
 
   keywords: [platform, static sites]
 

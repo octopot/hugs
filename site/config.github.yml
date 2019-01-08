@@ -8,3 +8,7 @@ params:
   forma:
     enabled: false
     service: https://form.octolab.net/
+
+  passport:
+    enabled: false
+    service: https://id.octolab.net/
