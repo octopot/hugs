@@ -14,20 +14,20 @@
   - [**August 31, 2018**][project_v2_dl]
   - Integration of components is complete.
   - Versions 1.x in active development.
-- [ ] [Alpha][project_v3]
-  - [**September 30, 2018**][project_v3_dl]
+- [x] [Alpha][project_v3]
+  - [**January 9, 2019**][project_v3_dl]
   - Versions 1.x are complete.
   - Versions 2.x in active development.
 - [ ] [Beta][project_v4]
-  - [**October 31, 2018**][project_v4_dl]
+  - [**Someday, 20xx**][project_v4_dl]
   - Versions 2.x are complete.
   - Versions 3.x in active development.
 - [ ] [Release Candidate][project_v5]
-  - [**November 30, 2018**][project_v5_dl]
+  - [**Sometime, 20xx**][project_v5_dl]
   - Versions 3.x are complete.
   - A process of covering integration tests.
 - [ ] [Release to the Web][project_v6]
-  - [**December 31, 2018**][project_v6_dl]
+  - [**Somehow, 20xx**][project_v6_dl]
   - Hugs Platform, SaaS.
   - Ready to use as self-hosted or in the Cloud.
 
@@ -35,8 +35,8 @@
 
 Requirements:
 
-- Docker 18.03.1-ce or above
-- Docker Compose 1.21.1 or above
+- Docker 18.06.0-ce or above
+- Docker Compose 1.22.0 or above
 - GNU Make 3.81 or above
 
 ```bash
