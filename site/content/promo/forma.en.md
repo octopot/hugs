@@ -38,7 +38,7 @@ features:
 - title: Status
   icon:  { color: icon-default, type: timeline }
   description: >
-    Version **2.x** in active development.
+    Version **3.x** in active development.
 
 tmp: # TODO use menu instead
   gitter:  https://gitter.im/kamilsk/form-api
