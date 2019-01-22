@@ -1,5 +1,5 @@
 > # 🤗 Hugs [![Tweet][icon_twitter]][twitter_publish]
-> [![Analytics][analytics_pixel]][page_promo]
+>
 > Platform for Static Sites.
 
 [![Patreon][icon_patreon]](https://www.patreon.com/octolab)
